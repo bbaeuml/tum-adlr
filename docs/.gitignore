@@ -1,0 +1,24 @@
+\#*\#
+*.xlsx
+*~
+
+# python related
+.ipynb_checkpoints/
+_*.npy
+*.pyc
+
+*.out
+*.bak
+*.aux
+*.bbl
+*.blg
+*.log
+*.synctex.gz
+*.toc
+*.dvi
+*.xml
+
+# latexmk
+*.fdb_latexmk
+*.fls
+
