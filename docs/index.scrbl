@@ -15,7 +15,18 @@ This is the advanced deep learning lecture with a specific focus on  Robotics an
 
 @section[#:style 'unnumbered]{Practical}
 
-The practical part will consist of a semester long project in teams of 2. For each student, $1000 credits for the Google Compute Engine will be provided via a Google Educational Grant.
+The practical part will consist of a semester long project in teams of two. For each student, $1000 credits for the Google Compute Engine will be provided via a Google Educational Grant.
+
+More details about the project topics and the team matching process will be given in the first lecture.
+
+@section[#:style 'unnumbered]{Organizational}
+
+This year's course will be given completely online.
+@itemlist[         
+ @item{Each week a lecture video and the slides will be provided on this web page.}
+ @item{(Bi-)weekly we will in addition have a Q&A round via a Zoom video conference (we will send you a link and password).}
+ @item{Discussions will be done via Piazza.}]
+
 
 
 @section[#:style 'unnumbered]{Content}
@@ -33,7 +44,7 @@ The practical part will consist of a semester long project in teams of 2. For ea
           @item{Deep Reinforcement Learning IV }
           @item{Guest Lecture from DeepMind }]
 
-The lecture slides will be added shortly before the lecture. The @bold{password} for the slides is communicated in the lecture.
+The @bold{password} for the slides is communicated in the lecture.
 
 @section[#:style 'unnumbered]{Materials}
 
