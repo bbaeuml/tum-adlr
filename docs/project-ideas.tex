@@ -1,0 +1,30 @@
+\documentclass[a4paper]{article}
+
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+
+\title{IN2349 ADLR: Project Ideas}
+\begin{document}
+\maketitle
+
+Here you can find a number of ideas for projects we collected. Take this as an inspiration for your own project. Some of the ideas are rather "big", meaning they could result in more than one project. After you have registered your team (including a draft proposal) you will discuss the extent of your final proposal with your assigned tutor.
+
+\subsubsection{Closing the Sim-to-Real Loop: Adapting Simulation Randomization with Real World Experience}
+\begin{itemize}
+\item In~\cite{Chebotar2018} an efficient method for solving the sim2real by iteratively adapting the simulation parameters to the real system is proposed.
+\item Change the experimental setup to a sim2sim setting because no real robot is available (i.e., try to adapt one simulation to a given one with unknown parameters).
+\item Investigate the convergence of estimated parameters.
+\item Investigate the influence of a broader starting distribution on the final performance.
+\item Investigate the influence of fully training the policy in every iteration vs. iterative training (the paper only covers full retraining).
+\end{itemize}
+
+\subsubsection{Comparing robustness of learned (quadruped walking) policies from different learning algorithms}
+\begin{itemize}
+\item Investigate how stochastic policies (SAC, PPO) perform in novel environments when compared to deterministic algorithms like DDPG. SAC and PPO claim to be far more robust.
+\item Investigate the influence of different distributions used for SAC (first SAC paper used GMMs) on the performance in novel environments.
+\item Investigate the methods for a quadruped with a more complex powertrain dynamics than the one used in the SAC paper. This can be combined with the Combinable with 3, 4b
+
+\end{itemize}
+\bibliographystyle{apalike}
+\bibliography{minimal-research}
+
+\end{document}
