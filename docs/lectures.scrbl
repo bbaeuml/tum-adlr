@@ -7,14 +7,14 @@
           @item{Advanced Network Architectures & Recursive Neural Networks (LSTMs)}
           @item{Hyperparameter & Architecture Search}
           @item{Adversarial Samples & Adversarial Training}
-          @item{Bayesian Deep Learning }
-          @item{Generative Models: VAEs & GANs }
+          @item{Bayesian Deep Learning}
+          @item{Generative Models: VAEs & GANs}
           @item{Data Efficient Learning: Transfer & Semi-Supervised Learning}
-          @item{Deep Reinforcement Learning I }
-          @item{Deep Reinforcement Learning II }
-          @item{Deep Reinforcement Learning III }
-          @item{Deep Reinforcement Learning IV }
-          @item{Guest Lecture from DeepMind }]
+          @item{Deep Reinforcement Learning I}
+          @item{Deep Reinforcement Learning II}
+          @item{Deep Reinforcement Learning III}
+          @item{Deep Reinforcement Learning IV}
+          @item{Guest Lecture from DeepMind}]
 
 The @bold{password} for the slides is communicated in the lecture.
 
