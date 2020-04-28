@@ -16,7 +16,7 @@ The deliverables are:
  @item{@bold{Milestone report & presentation}: one page & 10min talk; @bold{early June}}
  @item{@bold{Final report & presentation}: three pages & poster session; @bold{end of course}}]
 
-In addition, you will have to provide the code of the project via sharing the Github repository with your tutor.
+In addition, you will have to provide the code of the project via sharing the GitHub repository with your tutor.
 
 The project will give 50% of your final grade, the other 50% are from the exam at the end of the semester. All deliverables contribute to the project grade with about 33.3% for the reports, 33.3% for the presentations and 33.3% for code quality.
 
@@ -32,7 +32,7 @@ The project will give 50% of your final grade, the other 50% are from the exam a
 
  Attachment: draft-proposal.pdf} 
  
-Send this email by @bold{10 May 2020} the latest, including a first draft version of your project proposal. The draft proposal should a least in
+Send this email by @bold{10 May 2020, 24:00} the latest, including a first draft version of your project proposal.
 
 @bold{Tutoring} After registration, we will assign a project-id and a tutor to your team. Before writing the final project proposal, you will have a meeting with your tutor to discuss your topic and resolve potential conflicts/overlapp with the projects of other teams (the better your draft proposal is the higher is the chance that your team "wins" the topic).
 
@@ -40,7 +40,7 @@ The biweekly meetings of a team with its tutor are done via Zoom video meetings.
 
 @bold{Submission} All submissions are done via the team's private Piazza group. The proposal, the reports as well as the presentations have to be sent as pdf files where the filename starts with your project-id, e.g., @tt{07-proposal.pdf}.
 
-In addition, each team has to create a Github repository for their project where all source code is stored. The name of this repository has to be @tt{adlr-<project-id>}, e.g., @tt{adlr-12}. You have to invite your tutor (and the course lecturerer) to this repository.
+In addition, each team has to create a GitHub repository for their project where all source code is stored. The name of this repository has to be @tt{adlr-<project-id>}, e.g., @tt{adlr-12}. You have to invite your tutor (and the course lecturerer) to this repository.
 
 
 @section[#:style 'unnumbered]{Choosing a project}
