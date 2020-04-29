@@ -39,6 +39,7 @@ Generalized Hindsight for Reinforcement Learning presented by~\cite{Li2020} comb
 \end{itemize}
 
 \subsubsection{Comparing different methods for uncertainty estimation}
+\label{sec:uncertainty-estimation}
 Interesting methods include (but are not limited to) MC-Dropoout \cite{Gal2016} and Normalizing Flows \cite{louizos2017multiplicative}. Thsese methods could be compared in vastly different settings.
 \begin{itemize}
     \item Investigate how the uncertainty estimation changes during the training process (relevant to RL since we generally don’t update the networks until convergence before collecting more data).
@@ -60,6 +61,14 @@ Note: Requires previous experience with GNNs \cite{kipf2016semisupervised}.
     \item Modify PyBullet environments (Hopper, Walker, HalfCheetah, Ant) such that the observations contain a graph representing the robot. Use message passing network(s) in addition or instead of the MLP for value/Q function and policy in standard algorithms like PPO \cite{Schulman2017} or SAC \cite{Haarnoja2018a}.
 \end{itemize}
 
+\subsubsection{AlphaZero Implementation \& Tweaks}
+Deep dive into the AlphaGo/AlphaZero algorithm~\cite{Silver2016, Silver2017, Silver2017a}. Pick a very small game for feasible computational \& time cost and quick experimentation. Either implement from scratch or maybe get very familiar with an existing implementation. Then try variations or possible algorithm improvements.
+
+Modification ideas:
+\begin{itemize}
+  \item Refined handling of explore/exploit tradeoff in MCTS by adding Uncertainty Estimation (see section~\ref{sec:uncertainty-estimation}) in value \& prior networks for better upper confidence bounds in PUCT. Can this speed up discovery of good strategies?
+  \item Comparison to model-free RL: Does AlphaZero learn better/worse? Does this depend on environment (game) characteristics? What metrics should be compared here?
+\end{itemize}
 
 \bibliographystyle{apalike}
 \bibliography{minimal-research}
