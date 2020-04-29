@@ -70,6 +70,31 @@ Modification ideas:
   \item Comparison to model-free RL: Does AlphaZero learn better/worse? Does this depend on environment (game) characteristics? What metrics should be compared here?
 \end{itemize}
 
+\subsubsection{Make Reinforcement Learning Safe Again}
+Look at different policy gradient algorithms for a 2D robot badminton example and compare risk-averse vs. risk-seeking gradient directions by examining the reward statistics as in \textit{Entropic Risk Measure in Policy Search}~\cite{Nass2019}.
+\begin{itemize}
+	\item Modify the environment to include (self-)collision.
+	\item What other options are there to measure/control the safety?
+	\end{itemize}
+
+\subsubsection{Learning the Inverse Kinematic}
+Look at the possibilities for representing inverse problems with neural networks.
+\textit{Analyzing Inverse Problems with Invertible Neural Networks}~\cite{Ardizzone2018}
+compare different flavors of GANs, VAEs and INN(theirs) for Inverse Problems in general. Extend their simple robotic example of a planner arm to 3D / more DoFs / multiple TCPs.
+\begin{itemize}
+  \item What is the best approach to represent the high dimensional nullspaces existing for complex robot geometries?
+  \item Predict not only the position of the TCP but also the rotation. Connection to continuous rotation representation ~\cite{Zhou2018}.
+  \item How to measure the performance if the real nullspace is not known?
+\end{itemize}
+
+\subsubsection{Harnessing Reinforcement Learning for Neural Motion Planning}
+Motion planning for a planar robotic arm from a start configuration to a cartesian goal position. Comparison between DDPG, DDPG+HER, and DDPG-MP(theirs) ~\cite{Jurgenson2019}.
+They use RRT* to generate expert knowledge in difficult cases, where random exploration does not find a feasible solution.
+\begin{itemize}
+    \item Modify the code and try it for different robots and environments.
+    \item They state that supervised learning is inferior to RL for this problem because of the insufficient data on the boundary of the obstacles. Is it possible to achieve similar results by tweaking the distribution of the supervised examples?
+\end{itemize}
+
 \bibliographystyle{apalike}
 \bibliography{minimal-research}
 
