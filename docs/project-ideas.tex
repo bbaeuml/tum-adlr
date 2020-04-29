@@ -25,11 +25,11 @@ In~\cite{Chebotar2018} an efficient method for solving the sim2real problem by i
 \item Investigate the methods for a quadruped with more complex powertrain dynamics than the one used by~\cite{Haarnoja2018b}.
 \end{itemize}
 
-\subsubsection{Investigate the Transferability of Policies to Altered Parameters using Multiple Approaches}
-In recent years, different methods to tackle the sim2real problem in robotics have emerged. Especially for POMDPs or complex tasks that employ domain randomization for the sim2real transfer, the incorporation of LSTM cells into the network architecture leads to impressive results as shown by~\cite{OpenAI2019}. One downside to using recurrent architecture is the increased training complexity. Other methods like observation stacking or explicit physical parameter estimation using supervised learning are far easier to implement and train.
+\subsubsection{Investigate Reinforcement Learning with Augmented Networks}
+In recent years, different methods to tackle problems in robotics have emerged. Especially for POMDPs or complex tasks that employ domain randomization for the sim2real transfer, the incorporation of LSTM cells into the network architecture leads to impressive results as shown by~\cite{OpenAI2019}. One downside to using recurrent architecture is the increased training complexity. Other methods like observation stacking or explicit physical parameter estimation using supervised learning are far easier to implement and train.
 \begin{itemize}
 \item ~\cite{OpenAI2019} claim that memory augmented models exhibit 'meta-learning' behavior at test time, meaning that the policy trials the environment to adapt parameters before starting to work on the desired task itself. Investigate these claims in an environment inspired by a physical system.
-\item Investigate how LSTM cells, observation stacking and explicit parameter estimation perform in the same partially observable physics simulation when domain simple randomization is employed. SOme task that require precise knowledge of the domain parameterization are particularly interesting
+\item Investigate how LSTM cells, observation stacking and explicit parameter estimation perform in the same partially observable physics simulation when simple domain randomization is employed. Some task that require precise knowledge of the domain parameterization are particularly interesting
 \end{itemize}
 
 \subsubsection{Generalized Hindsight for Reinforcement Learning}
