@@ -12,7 +12,7 @@ For each team we will provide at least $1000 credits in the Google Compute Engin
 
 The deliverables are:
 @itemlist[
- @item{@bold{Project proposal}: one page; @bold{14 May 2020}}
+ @item{@bold{Project proposal}: one page; @bold{15 May 2020}, 24:00}
  @item{@bold{Milestone report & presentation}: one page & 10min talk; @bold{early June}}
  @item{@bold{Final report & presentation}: three pages & poster session; @bold{end of course}}]
 
@@ -32,15 +32,15 @@ The project will give 50% of your final grade, the other 50% are from the exam a
 
  Attachment: draft-proposal.pdf} 
  
-Send this email by @bold{10 May 2020, 24:00} the latest, including a first draft version of your project proposal.
+Send this email by @bold{8 May 2020}, 24:00 the latest, including a first draft version of your project proposal.
 
 @bold{Tutoring} After registration, we will assign a project-id and a tutor to your team. Before writing the final project proposal, you will have a meeting with your tutor to discuss your topic and resolve potential conflicts/overlapp with the projects of other teams (the better your draft proposal is the higher is the chance that your team "wins" the topic).
 
 The biweekly meetings of a team with its tutor are done via Zoom video meetings. In addition, each team gets a private group in Piazza for offline communication with their tutor.
 
-@bold{Submission} All submissions are done via the team's private Piazza group. The proposal, the reports as well as the presentations have to be sent as pdf files where the filename starts with your project-id, e.g., @tt{07-proposal.pdf}.
+@bold{Submission} All submissions are done via the team's private Piazza group. The proposal, the reports as well as the presentations have to be sent as pdf files where the filename ends with your project-id, e.g., @tt{proposal-07.pdf}.
 
-In addition, each team has to create a GitHub repository for their project where all source code is stored. The name of this repository has to be @tt{adlr-<project-id>}, e.g., @tt{adlr-12}. You have to invite your tutor (and the course lecturerer) to this repository.
+In addition, each team has to create a GitHub repository for their project where all source code is stored. The name of this repository has to be @tt{adlr-<project-id>}, e.g., @tt{adlr-12}. You have to invite your tutor (and the lecturerer) to this repository.
 
 
 @section[#:style 'unnumbered]{Choosing a project}
@@ -71,7 +71,7 @@ The project proposal should be a @bold{one page + references} single-spaced exte
 @item{@bold{Related Work} 1/4 page. Briefly review the most relevant prior work, and highlight where those works fall short of meeting the objectives described above.}
 @item{@bold{Technical Outline} 1/2 page. Explain your approach at a high-level, making clear the novel technical contribution.}]
 
-For the team registraion you have to provide a first draft version of your proposal. This draft should at least desribe in a few bullet points the topic and main idea of your project and reference the most relevant paper(s) you want to base your project on.
+For the team registraion, you have to provide a first @bold{draft proposal}. This draft should at least include a title, desribe in a few bullet points the topic and main idea of your project, and reference the most relevant paper(s) you want to base your project on (a similar format as we used in the @(hyperlink "./project-ideas.pdf" "list of ideas")).
 
 
 @section[#:style 'unnumbered]{Milestone Report and Presentation}

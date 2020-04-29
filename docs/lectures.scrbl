@@ -4,7 +4,7 @@
 
 @itemlist[#:style 'ordered
           @item{Introduction & Recap of Deep Learning}
-          @item{Advanced Network Architectures & Recursive Neural Networks (LSTMs)}
+          @item{Advanced Network Architectures}
           @item{Hyperparameter & Architecture Search}
           @item{Adversarial Samples & Adversarial Training}
           @item{Bayesian Deep Learning}
