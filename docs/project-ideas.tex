@@ -22,8 +22,31 @@ Here you can find a number of ideas for projects we collected. Take this as an i
 \item Investigate how stochastic policies (SAC, PPO) perform in novel environments when compared to deterministic algorithms like DDPG. SAC and PPO claim to be far more robust.
 \item Investigate the influence of different distributions used for SAC (first SAC paper used GMMs) on the performance in novel environments.
 \item Investigate the methods for a quadruped with a more complex powertrain dynamics than the one used in the SAC paper. This can be combined with the Combinable with 3, 4b
-
 \end{itemize}
+
+\subsubsection{Comparing the different methods for uncertainty estimation}
+Interesting methods include (but are limited to) MC-Dropoout \cite{Gal2016} and Normalizing Flows \cite{louizos2017multiplicative}. Thsese methods could be compared in vastly different settings.
+\begin{itemize}
+    \item Investigate how the uncertainty estimation changes during the training process (relevant to RL since we generally don’t update the networks until convergence before collecting more data).
+    \item Investigate which methods are best suited for active learning in the framework proposed by \cite{gal2017active}.
+    \item Investigate which methods perform best for DQNs in simple environments similar to the work by \cite{touati2018randomized}.
+    \item Come up with your own ideas.
+\end{itemize}
+
+\subsubsection{Curiosity-Driven Learning}
+A good starting point for projects in this area is the paper by \textit{Large-Scale Study of Curiosity-Driven Learning} \cite{burda2018largescale}. Individual projects could first reporduce some of the experiments and then:
+\begin{itemize}
+    \item Compare with other curiosity "measures" (count based, predict next state, predict past action, random network distillation, reachability, goal based, and/or your own ideas).
+    \item Extend the authors comparison to other sets of environments. One key question is whether or not there are certain characteristics that a task needs to fulfill in order to profit from curiosity-driven learning.
+\end{itemize}
+
+\subsubsection{Geometric Representations in Reinforcement Learning}
+Note: Requires previous experience with GNNs \cite{kipf2016semisupervised}.
+\begin{itemize}
+    \item Modify PyBullet environments (Hopper, Walker, HalfCheetah, Ant) such that the observations contain a graph representing the robot. Use message passing network(s) in addition or instead of the MLP for value/Q function and policy in standard algorithms like PPO \cite{Schulman2017} or SAC \cite{Haarnoja2018a}.
+\end{itemize}
+
+
 \bibliographystyle{apalike}
 \bibliography{minimal-research}
 
