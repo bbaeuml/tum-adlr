@@ -14,7 +14,7 @@ In~\cite{Chebotar2018} an efficient method for solving the sim2real problem by i
 \item Change the experimental setup to a sim2sim setting because no real robot is available (i.e., try to adapt one simulation to a given one with unknown parameters).
 \item Investigate the convergence of estimated parameters.
 \item Investigate the influence of a broader starting distribution on the final performance.
-\item Investigate how re-using learned policies from previous iterations for initialization of the new network shortens training time and restrains the final performance. 
+\item Investigate how re-using learned policies from previous iterations for initialization of the new network shortens training time and restrains the final performance.
 \end{itemize}
 
 \subsubsection{Comparing Robustness of Learned (Quadruped Walking) Policies from Different Learning Algorithms}
@@ -39,7 +39,7 @@ Generalized Hindsight for Reinforcement Learning presented by~\cite{Li2020} comb
 \end{itemize}
 
 \subsubsection{Comparing different methods for uncertainty estimation}
-Interesting methods include (but are limited to) MC-Dropoout \cite{Gal2016} and Normalizing Flows \cite{louizos2017multiplicative}. Thsese methods could be compared in vastly different settings.
+Interesting methods include (but are not limited to) MC-Dropoout \cite{Gal2016} and Normalizing Flows \cite{louizos2017multiplicative}. Thsese methods could be compared in vastly different settings.
 \begin{itemize}
     \item Investigate how the uncertainty estimation changes during the training process (relevant to RL since we generally don’t update the networks until convergence before collecting more data).
     \item Investigate which methods are best suited for active learning in the framework proposed by \cite{gal2017active}.
