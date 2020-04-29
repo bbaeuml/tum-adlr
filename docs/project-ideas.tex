@@ -9,19 +9,33 @@
 Here you can find a number of ideas for projects we collected. Take this as an inspiration for your own project. Some of the ideas are rather "big", meaning they could result in more than one project. After you have registered your team (including a draft proposal) you will discuss the extent of your final proposal with your assigned tutor.
 
 \subsubsection{Closing the Sim-to-Real Loop: Adapting Simulation Randomization with Real World Experience}
+In~\cite{Chebotar2018} an efficient method for solving the sim2real problem by iteratively adapting the simulation parameters to the real system is proposed.
 \begin{itemize}
-\item In~\cite{Chebotar2018} an efficient method for solving the sim2real by iteratively adapting the simulation parameters to the real system is proposed.
 \item Change the experimental setup to a sim2sim setting because no real robot is available (i.e., try to adapt one simulation to a given one with unknown parameters).
 \item Investigate the convergence of estimated parameters.
 \item Investigate the influence of a broader starting distribution on the final performance.
-\item Investigate the influence of fully training the policy in every iteration vs. iterative training (the paper only covers full retraining).
+\item Investigate how re-using learned policies from previous iterations for initialization of the new network shortens training time and restrains the final performance. 
 \end{itemize}
 
-\subsubsection{Comparing robustness of learned (quadruped walking) policies from different learning algorithms}
+\subsubsection{Comparing Robustness of Learned (Quadruped Walking) Policies from Different Learning Algorithms}
+\cite{Haarnoja2018b} claim that RL algorithms with stochastic policies such as SAC are able to express a much more diverse behavior compared to deterministic algorithms like DDPG. As a consequence, stochastic policies should be far more robust when deployed in a perturbed environment.
 \begin{itemize}
-\item Investigate how stochastic policies (SAC, PPO) perform in novel environments when compared to deterministic algorithms like DDPG. SAC and PPO claim to be far more robust.
-\item Investigate the influence of different distributions used for SAC (first SAC paper used GMMs) on the performance in novel environments.
-\item Investigate the methods for a quadruped with a more complex powertrain dynamics than the one used in the SAC paper. This can be combined with the Combinable with 3, 4b
+\item Investigate how stochastic policies (SAC, PPO) perform in novel environments when compared to deterministic algorithms like DDPG.
+\item Investigate the influence of different distributions used for SAC on the performance in novel environments. Early version of SAC employ GMMs which are discarded in favor of a single Gaussian in later papers.
+\item Investigate the methods for a quadruped with more complex powertrain dynamics than the one used by~\cite{Haarnoja2018b}.
+\end{itemize}
+
+\subsubsection{Investigate the Transferability of Policies to Altered Parameters using Multiple Approaches}
+In recent years, different methods to tackle the sim2real problem in robotics have emerged. Especially for POMDPs or complex tasks that employ domain randomization for the sim2real transfer, the incorporation of LSTM cells into the network architecture leads to impressive results as shown by~\cite{OpenAI2019}. One downside to using recurrent architecture is the increased training complexity. Other methods like observation stacking or explicit physical parameter estimation using supervised learning are far easier to implement and train.
+\begin{itemize}
+\item ~\cite{OpenAI2019} claim that memory augmented models exhibit 'meta-learning' behavior at test time, meaning that the policy trials the environment to adapt parameters before starting to work on the desired task itself. Investigate these claims in an environment inspired by a physical system.
+\item Investigate how LSTM cells, observation stacking and explicit parameter estimation perform in the same partially observable physics simulation when domain simple randomization is employed. SOme task that require precise knowledge of the domain parameterization are particularly interesting
+\end{itemize}
+
+\subsubsection{Generalized Hindsight for Reinforcement Learning}
+Generalized Hindsight for Reinforcement Learning presented by~\cite{Li2020} combines Multi-Task Deep Reinforcement Learning with Sample-Efficient Learning.
+\begin{itemize}
+\item Design a physically inspired and meaningful task that can be used for Multi-Task learning, e.g. a more complex version of the ant environment used by~\cite{Li2020}. This simulation can be used to learn different gaits, pronking as well as yawrate control at different speeds.
 \end{itemize}
 
 \subsubsection{Comparing different methods for uncertainty estimation}
