@@ -10,8 +10,9 @@ For each team we will provide at least $1000 credits in the Google Compute Engin
 @section[#:style 'unnumbered]{Deliverables and Grading}
 
 
-The deliverables are:
+The deliverables & deadlines are:
 @itemlist[
+ @item{@bold{Team registration}:  @bold{8 May 2020}, 24:00}
  @item{@bold{Project proposal}: one page; @bold{15 May 2020}, 24:00}
  @item{@bold{Milestone report & presentation}: one page & 10min talk; @bold{early June}}
  @item{@bold{Final report & presentation}: three pages & poster session; @bold{end of course}}]
