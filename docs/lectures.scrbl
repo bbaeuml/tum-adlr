@@ -3,7 +3,7 @@
 @title[#:tag "lectures"  #:style 'unnumbered]{Lectures}
 
 @itemlist[#:style 'ordered
-          @item{Introduction (to come), @(hyperlink "./adlr-1-recap-ml-dl.pdf" "Recap ML & DL")
+          @item{Introduction (to come), @(hyperlink "./adlr-1-organization.pdf" "Organization"), @(hyperlink "./adlr-1-recap-ml-dl.pdf" "Recap ML & DL")
           @(linebreak)
           (videos: to come)}        
           @item{@(hyperlink "./adlr-2-advanced-networks.pdf" "Advanced Network Architectures")
