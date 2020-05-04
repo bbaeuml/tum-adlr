@@ -1,7 +1,7 @@
 #lang scribble/manual
 
  
-@title[#:style 'unnumbered]{General}
+@title[#:tag "general" #:style 'unnumbered]{General}
 
 
 @itemlist[         

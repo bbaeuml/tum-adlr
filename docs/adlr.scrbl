@@ -11,6 +11,12 @@ This website is the main source of information for the course. Please check the 
 @(colorize (hline 650 5) "blue")
  @; date "+%A, %B %dth, %Y %T"
 
+
+@bold{Monday, May 04th, 2020 20:50:159}
+@(linebreak)
+
+The slides for the first two lectures and the orgnaizaition class Zoom meething are now online at @secref["lectures"]. (All pdf files are protected with a password that is provided in the lecture.)
+
 @bold{Thursday, April 30th, 2020 15:57:29}
 @(linebreak)
 

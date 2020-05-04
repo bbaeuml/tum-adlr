@@ -1,10 +1,14 @@
 #lang scribble/manual
  
-@title[#:style 'unnumbered]{Lectures}
+@title[#:tag "lectures"  #:style 'unnumbered]{Lectures}
 
 @itemlist[#:style 'ordered
-          @item{Introduction & Recap of Deep Learning}
-          @item{Advanced Network Architectures}
+          @item{Introduction (to come), @(hyperlink "./adlr-1-recap-ml-dl.pdf" "Recap ML & DL")
+          @(linebreak)
+          (videos: to come)}        
+          @item{@(hyperlink "./adlr-2-advanced-networks.pdf" "Advanced Network Architectures")
+           @(linebreak)
+           (videos: to come)}
           @item{Hyperparameter & Architecture Search}
           @item{Adversarial Samples & Adversarial Training}
           @item{Bayesian Deep Learning}
