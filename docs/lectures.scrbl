@@ -22,6 +22,10 @@
 
 The @bold{password} for the slides is communicated in the lecture.
 
+@section[#:style 'unnumbered]{References}
+
+@(hyperlink "./literature.pdf" "References cited in the slides.")
+
 @section[#:style 'unnumbered]{Materials}
 
 @itemlist[
