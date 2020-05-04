@@ -2,6 +2,8 @@
 
  
 @title[#:style 'unnumbered]{General}
+
+
 @itemlist[         
           @item{Lecturer: Berthold Bäuml}
           @item{ECTS: 6}

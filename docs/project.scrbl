@@ -1,6 +1,6 @@
 #lang scribble/manual
  
-@title[#:style 'unnumbered]{Project}
+@title[#:tag "project" #:style 'unnumbered]{Project}
 
 
 The semester long project in this course requires implementing, evaluating, and documenting a new, research-style idea in the field of deep learning and robotics. Each project is done in a team of two students. The teams must form themselves and come up with a proposal for their project. Based on the proposal, a tutor will be assigned and will meet with each team individually on a biweekly basis to discuss the results and the next steps of the project. 
