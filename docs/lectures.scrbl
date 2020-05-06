@@ -5,7 +5,7 @@
 @itemlist[#:style 'ordered
           @item{Introduction (to come), @(hyperlink "./adlr-1-organization.pdf" "Organization"), @(hyperlink "./adlr-1-recap-ml-dl.pdf" "Recap ML & DL")
           @(linebreak)
-          (videos: to come)}        
+          (videos: Introduction (to come),  @(hyperlink "https://youtu.be/XFQHpI8KohI" "Recap ML & DL")}
           @item{@(hyperlink "./adlr-2-advanced-networks.pdf" "Advanced Network Architectures")
            @(linebreak)
            (videos: to come)}
