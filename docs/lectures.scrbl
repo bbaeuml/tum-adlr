@@ -4,11 +4,10 @@
 
 @itemlist[#:style 'ordered
           @item{Introduction (to come), @(hyperlink "./adlr-1-organization.pdf" "Organization"), @(hyperlink "./adlr-1-recap-ml-dl.pdf" "Recap ML & DL")
-          @(linebreak)
-          (videos: Introduction (to come),  @(hyperlink "https://youtu.be/XFQHpI8KohI" "Recap ML & DL")}
+           (@(hyperlink "https://youtu.be/XFQHpI8KohI" "video"))}
           @item{@(hyperlink "./adlr-2-advanced-networks.pdf" "Advanced Network Architectures")
-           @(linebreak)
-           (videos: to come)}
+           @;@(linebreak)
+           (@(hyperlink "https://youtu.be/QBbNA27zaGg" "video"))}
           @item{Hyperparameter & Architecture Search}
           @item{Adversarial Samples & Adversarial Training}
           @item{Bayesian Deep Learning}
