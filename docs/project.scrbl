@@ -41,7 +41,7 @@ The biweekly meetings of a team with its tutor are done via Zoom video meetings.
 
 @bold{Submission} All submissions are done via the team's private Piazza group. The proposal, the reports as well as the presentations have to be sent as pdf files where the filename ends with your project-id, e.g., @tt{proposal-07.pdf}.
 
-In addition, each team has to create a GitHub repository for their project where all source code is stored. The name of this repository has to be @tt{adlr-<project-id>}, e.g., @tt{adlr-12}. You have to invite your tutor (and the lecturerer) to this repository.
+In addition, each team has to create a GitHub repository for their project where all source code is stored. The name of this repository has to be @tt{tum-adlr-ss20-<project-id>}, e.g., @tt{tum-adlr-ss20-12}. You have to invite your tutor (and the lecturer) to this repository.
 
 
 @section[#:style 'unnumbered]{Choosing a project}
