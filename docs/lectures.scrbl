@@ -1,14 +1,13 @@
 #lang scribble/manual
  
 @title[#:tag "lectures"  #:style 'unnumbered]{Lectures}
-
+Hallo
 @itemlist[#:style 'ordered
           @item{Introduction (to come), @(hyperlink "./adlr-1-organization.pdf" "Organization"), @(hyperlink "./adlr-1-recap-ml-dl.pdf" "Recap ML & DL")
            (@(hyperlink "https://youtu.be/XFQHpI8KohI" "video"))}
           @item{@(hyperlink "./adlr-2-advanced-networks.pdf" "Advanced Network Architectures")
-           @;@(linebreak)
            (@(hyperlink "https://youtu.be/QBbNA27zaGg" "video"))}
-          @item{Hyperparameter & Architecture Search}
+          @item{@(hyperlink "./adlr-3-hyper-nas.pdf" "Hyperparameter & Architecture Search")}
           @item{Adversarial Samples & Adversarial Training}
           @item{Bayesian Deep Learning}
           @item{Generative Models: VAEs & GANs}
