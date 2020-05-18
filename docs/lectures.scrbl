@@ -7,7 +7,8 @@ Hallo
            (@(hyperlink "https://youtu.be/XFQHpI8KohI" "video"))}
           @item{@(hyperlink "./adlr-2-advanced-networks.pdf" "Advanced Network Architectures")
            (@(hyperlink "https://youtu.be/QBbNA27zaGg" "video"))}
-          @item{@(hyperlink "./adlr-3-hyper-nas.pdf" "Hyperparameter & Architecture Search")}
+          @item{@(hyperlink "./adlr-3-hyper-nas.pdf" "Hyperparameter & Architecture Search")
+          (@(hyperlink "https://youtu.be/T5W6IQ3aP8M" "video"))}
           @item{Adversarial Samples & Adversarial Training}
           @item{Bayesian Deep Learning}
           @item{Generative Models: VAEs & GANs}
