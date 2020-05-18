@@ -1,7 +1,7 @@
 #lang scribble/manual
  
 @title[#:tag "lectures"  #:style 'unnumbered]{Lectures}
-Hallo
+
 @itemlist[#:style 'ordered
           @item{Introduction (to come), @(hyperlink "./adlr-1-organization.pdf" "Organization"), @(hyperlink "./adlr-1-recap-ml-dl.pdf" "Recap ML & DL")
            (@(hyperlink "https://youtu.be/XFQHpI8KohI" "video"))}
