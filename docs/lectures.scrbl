@@ -8,7 +8,7 @@
           @item{@(hyperlink "./adlr-2-advanced-networks.pdf" "Advanced Network Architectures")
            (@(hyperlink "https://youtu.be/QBbNA27zaGg" "video"))}
           @item{@(hyperlink "./adlr-3-hyper-nas.pdf" "Hyperparameter & Architecture Search")
-          (@(hyperlink "https://youtu.be/T5W6IQ3aP8M" "video"))}
+          (@(hyperlink "https://youtu.be/fZxo6Cahexc" "video"))}
           @item{Adversarial Samples & Adversarial Training}
           @item{Bayesian Deep Learning}
           @item{Generative Models: VAEs & GANs}
