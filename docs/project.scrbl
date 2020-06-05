@@ -83,9 +83,9 @@ Your milestone report should be @bold{one page} and answer the following questio
 
 The milestone report must report on at least one experiment that you have done since the proposal. This experiment does not need to be successful, but you should have attempted something. If it did not work as expected, you should briefly discuss why. You are encouraged to include a plot or figure. 
 
-In addition, you have to do a milestone presentation (10min talk + 5min Q&A) in a Zoom meeting, presenting your project idea and the first results to the whole class.
+In addition, you have to do a milestone presentation (8min talk +3min Q&A) in a Zoom meeting, presenting your project idea and the first results to the whole class.
 
-One report and presentation is required per team (each team member should do about 5min of the presentation).
+One report and presentation is required per team (each team member should do about half of the presentation).
 
 @section[#:style 'unnumbered]{Final Report and Presentation}
 The final report should be in the style of a short research paper of about three pages (one page text) and should describe and motivate the method, and discuss the results, including any relevant figures or plots.
