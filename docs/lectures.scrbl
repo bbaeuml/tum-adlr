@@ -10,7 +10,8 @@
           @item{@(hyperlink "./adlr-3-hyper-nas.pdf" "Hyperparameter & Architecture Search")
           (@(hyperlink "https://youtu.be/fZxo6Cahexc" "video"))}
           @item{@(hyperlink "./adlr-4-adversarial.pdf" "Adversarial Examples & Adversarial Training")
-         (@(hyperlink "https://youtu.be/PjfXHbjnYNM" "video"))}         
+         (@(hyperlink "https://youtu.be/PjfXHbjnYNM" "video"))}
+          @item{@(hyperlink "./adlr-5-bayesian.pdf" "Bayesian Deep Learning")}
           @item{Bayesian Deep Learning}
           @item{Generative Models: VAEs & GANs}
           @item{Data Efficient Learning: Transfer & Semi-Supervised Learning}
