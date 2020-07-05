@@ -12,7 +12,7 @@
           @item{@(hyperlink "./adlr-4-adversarial.pdf" "Adversarial Examples & Adversarial Training")
          (@(hyperlink "https://youtu.be/PjfXHbjnYNM" "video"))}
           @item{@(hyperlink "./adlr-5-bayesian.pdf" "Bayesian Deep Learning")}
-          @item{Generative Models: VAEs & GANs}
+          @item{@(hyperlink "./adlr-6-generative.pdf" "Generative Models: VAEs & GANs")}
           @item{Data Efficient Learning: Transfer & Semi-Supervised Learning}
           @item{Deep Reinforcement Learning I}
           @item{Deep Reinforcement Learning II}
