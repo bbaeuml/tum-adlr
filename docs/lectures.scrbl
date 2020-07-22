@@ -17,8 +17,8 @@
           (@(hyperlink "https://youtu.be/pX0lXN3vUOc" "video"))}
           @item{@(hyperlink "./adlr-8-drl-i.pdf" "Deep Reinforcement Learning I")
           (@(hyperlink "https://youtu.be/eVrW2ElNeQ0" "video"))}
-          @item{@(hyperlink "./adlr-9-drl-ii.pdf" "Deep Reinforcement Learning II")}
-          @; (@(hyperlink "https://youtu.be/eVrW2ElNeQ0" "video"))}          
+          @item{@(hyperlink "./adlr-9-drl-ii.pdf" "Deep Reinforcement Learning II")
+         (@(hyperlink "https://youtu.be/w9AuKuBCtJU" "video"))}          
           @item{Deep Reinforcement Learning III}
           @; @item{Deep Reinforcement Learning IV}
           @item{Guest Lecture from DeepMind}]
