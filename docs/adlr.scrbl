@@ -13,7 +13,7 @@ This website is the main source of information for the course. Please check the 
 @bold{Saturday, July 11th, 2020 22:41:32}
 @(linebreak)
 
-The @(hyperlink "./adlr-qanda-2.pdf" "slides of the 2nd Q&A session") including the time schedule for the rest of the course as well as some hints regarding what to expect in the exam are now uploaded. In addition, we also provide an  @(hyperlink "./introduction-exam,pdf" " example of an exam") of a previous introductory course (same style of questions but different content than for this advanced course!).
+The @(hyperlink "./adlr-qanda-2.pdf" "slides of the 2nd Q&A session") including the time schedule for the rest of the course as well as some hints regarding what to expect in the exam are now uploaded. In addition, we also provide an  @(hyperlink "./introduction-exam.pdf" " example of an exam") of a previous introductory course (same style of questions but different content than for this advanced course!).
 
 
 @bold{Thursday, June 25th, 2020 10:41:54}
