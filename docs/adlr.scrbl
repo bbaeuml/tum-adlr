@@ -10,6 +10,12 @@ This website is the main source of information for the course. Please check the 
 
 @(colorize (hline 650 5) "blue")
  @; date "+%A, %B %dth, %Y %T"
+@bold{Monday, August 31th, 2020 00:23:29}
+@(linebreak)
+
+The final reports and the slides from the presentations are now online. You can download the password-protected (same password as for the lecture slides) @(hyperlink "./final.zip" " zip file here"). A list of all the projects can be found in the @(hyperlink "./final-schedule.pdf" "schedule of the presentation day").
+
+
 @bold{Saturday, July 11th, 2020 22:41:32}
 @(linebreak)
 
