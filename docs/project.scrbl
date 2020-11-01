@@ -12,10 +12,10 @@ For each team we will provide at least $1000 credits in the Google Compute Engin
 
 The deliverables & deadlines are:
 @itemlist[
- @item{@bold{Team registration}:  @bold{8 May 2020}, 24:00}
- @item{@bold{Project proposal}: one page; @bold{15 May 2020}, 24:00}
- @item{@bold{Milestone report & presentation}: one page & 10min talk; @bold{early June}}
- @item{@bold{Final report & presentation}: three pages & poster session; @bold{end of course}}]
+ @item{@bold{Team registration}:  @bold{8 November 2020}, 24:00}
+ @item{@bold{Project proposal}: one page; @bold{15 November 2020}, 24:00}
+ @item{@bold{Milestone report & presentation}: one page & 10min talk; @bold{midth of January}}
+ @item{@bold{Final report & presentation}: three pages & poster session; @bold{early March}}]
 
 In addition, you will have to provide the code of the project via sharing the GitHub repository with your tutor.
 
@@ -33,7 +33,7 @@ The project will give 50% of your final grade, the other 50% are from the exam a
 
  Attachment: draft-proposal.pdf} 
  
-Send this email by @bold{8 May 2020}, 24:00 the latest, including a first draft version of your project proposal.
+Send this email by @bold{8 November 2020}, 24:00 the latest, including a first draft version of your project proposal.
 
 @bold{Tutoring} After registration, we will assign a project-id and a tutor to your team. Before writing the final project proposal, you will have a meeting with your tutor to discuss your topic and resolve potential conflicts/overlapp with the projects of other teams (the better your draft proposal is the higher is the chance that your team "wins" the topic).
 
@@ -41,7 +41,7 @@ The biweekly meetings of a team with its tutor are done via Zoom video meetings.
 
 @bold{Submission} All submissions are done via the team's private Piazza group. The proposal, the reports as well as the presentations have to be sent as pdf files where the filename ends with your project-id, e.g., @tt{proposal-07.pdf}.
 
-In addition, each team has to create a GitHub repository for their project where all source code is stored. The name of this repository has to be @tt{tum-adlr-ss20-<project-id>}, e.g., @tt{tum-adlr-ss20-12}. You have to invite your tutor (and the lecturer) to this repository.
+In addition, each team has to create a GitHub repository for their project where all source code is stored. The name of this repository has to be @tt{tum-adlr-ws20-<project-id>}, e.g., @tt{tum-adlr-ws20-12}. You have to invite your tutor (and the lecturer) to this repository.
 
 
 @section[#:style 'unnumbered]{Choosing a project}
