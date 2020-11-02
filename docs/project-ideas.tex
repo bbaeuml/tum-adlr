@@ -17,25 +17,26 @@ In~\cite{Chebotar2018} an efficient method for solving the sim2real problem by i
 \item Investigate how re-using learned policies from previous iterations for initialization of the new network shortens training time and restrains the final performance.
 \end{itemize}
 
-\subsubsection{Comparing Robustness of Learned (Quadruped Walking) Policies from Different Learning Algorithms}
-\cite{Haarnoja2018b} claim that RL algorithms with stochastic policies such as SAC are able to express a much more diverse behavior compared to deterministic algorithms like DDPG. As a consequence, stochastic policies should be far more robust when deployed in a perturbed environment.
+\subsubsection{Solving Complex Sparse Reinforcement Learning Tasks}
+When defining Reinforcement Learning Tasks for robots, it is often desirable to stick to sparse rewards in order to avoid reward shaping. Not only does is it ease the setup since a task can be solely defined by its final desired outcome, but the optimal policy can be found "outside of the box" without a human prior given thru the reward function. Unfortunately, in big state spaces random exploration is not able to find these sparse success signals. Therefore, \cite{riedmiller2018} introduce SAC-X.
 \begin{itemize}
-\item Investigate how stochastic policies (SAC, PPO) perform in novel environments when compared to deterministic algorithms like DDPG.
-\item Investigate the influence of different distributions used for SAC on the performance in novel environments. Early version of SAC employ GMMs which are discarded in favor of a single Gaussian in later papers.
-\item Investigate the methods for a quadruped with more complex powertrain dynamics than the one used by~\cite{Haarnoja2018b}.
+\item Implement the algorithm
+\item Investigate how the presented method can be used for finer and more dexterous object manipulation e.g. with a hand.
 \end{itemize}
 
-\subsubsection{Investigate Reinforcement Learning with Augmented Networks}
-In recent years, different methods to tackle problems in robotics have emerged. Especially for POMDPs or complex tasks that employ domain randomization for the sim2real transfer, the incorporation of LSTM cells into the network architecture leads to impressive results as shown by~\cite{OpenAI2019}. One downside to using recurrent architecture is the increased training complexity. Other methods like observation stacking or explicit physical parameter estimation using supervised learning are far easier to implement and train.
+\subsubsection{Accelerating Online Reinforcement Learning with Offline Datasets}
+The Reinforcement Learning paradigm gives rise to previously unreached control performance on more and more complex tasks that can not be solved using classic system theory. A trade-off to be accepted is a quite long training time for these kind of algorithms, with some dexterous manipulation tasks learning up to two weeks on almost 30,000 cores. Recent work by \cite{nair2020} introduces an algorithm to leverage offline data in order to accelerate the training process.
 \begin{itemize}
-\item ~\cite{OpenAI2019} claim that memory augmented models exhibit 'meta-learning' behavior at test time, meaning that the policy trials the environment to adapt parameters before starting to work on the desired task itself. Investigate these claims in an environment inspired by a physical system.
-\item Investigate how LSTM cells, observation stacking and explicit parameter estimation perform in the same partially observable physics simulation when simple domain randomization is employed. Some task that require precise knowledge of the domain parameterization are particularly interesting
+\item Investigate the compatibility of offline data with new tasks. Consider a task where standard exploration can only solve a simplified version of the task, which may lack some constraints or requirements. Investigate whether rollouts from this trained simple agent benefit the more complex training. Benchmark this compared to simply fine-tuning this first network on the new task.
 \end{itemize}
 
-\subsubsection{Generalized Hindsight for Reinforcement Learning}
-Generalized Hindsight for Reinforcement Learning presented by~\cite{Li2020} combines Multi-Task Deep Reinforcement Learning with Sample-Efficient Learning.
+\subsubsection{Evaluating the Robustness of End-To-End as well as Hybrid Control approaches for Fixed Wing UAVs}
+In recent years, Fixed Wing Unmanned Aerial Vehicles gained more and more popularity in industrial applications over Multicopter Drones due to their far longer flight endurance. However, controlling such an Aircraft, especially in the presence of disturbances like gusts poses a significant harder challenge. Work by \cite{Bohn2019} and \cite{kaufmann2020} shows that Reinforcement Learning approaches promise a superior performance compared to classical controller design.\\
+Note: For this project prior knowledge of system- or flight dynamics and control design is expected.
 \begin{itemize}
-\item Design a physically inspired and meaningful task that can be used for Multi-Task learning, e.g. a more complex version of the ant environment used by~\cite{Li2020}. This simulation can be used to learn different gaits, pronking as well as yawrate control at different speeds.
+\item Consider a trajectory tracking problem where the UAV should follow a given path and velocity. Develop an end-to-end RL controller for this task and compare the result to a hybrid approach comprised of a classic low-level attitude controller and a high-level RL controller.
+\item Investigate how these controllers can cope with seen as well as unseen white as well as biased disturbances like wind or parameter uncertainty.
+\item Develop a Deep Learning model which is able to identify these disturbances at runtime. Evaluate how this information can be used in both feedback controllers.
 \end{itemize}
 
 \subsubsection{Comparing different methods for uncertainty estimation}
