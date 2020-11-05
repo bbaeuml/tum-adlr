@@ -12,8 +12,8 @@ For each team we will provide at least $1000 credits in the Google Compute Engin
 
 The deliverables & deadlines are:
 @itemlist[
- @item{@bold{Team registration}:  @bold{8 November 2020}, 24:00}
- @item{@bold{Project proposal}: one page; @bold{15 November 2020}, 24:00}
+ @item{@bold{Team registration}:  @bold{10 November 2020}, 24:00}
+ @item{@bold{Project proposal}: one page; @bold{19 November 2020}, 24:00}
  @item{@bold{Milestone report & presentation}: one page & 10min talk; @bold{midth of January}}
  @item{@bold{Final report & presentation}: three pages & poster session; @bold{early March}}]
 
