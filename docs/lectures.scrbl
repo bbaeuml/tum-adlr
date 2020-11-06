@@ -21,7 +21,7 @@
           @item{@(hyperlink "./adlr-9-drl-ii.pdf" "Deep Reinforcement Learning II")
          (@(hyperlink "https://youtu.be/w9AuKuBCtJU" "video"))}          
           @item{Deep Reinforcement Learning III}
-          @; @item{Deep Reinforcement Learning IV}
+          @item{Deep Reinforcement Learning IV}
           @item{@(hyperlink "./adlr-10-deepmind.pdf" "Guest Lecture from DeepMind")}]
 
 The @bold{password} for the slides is communicated in the lecture.
