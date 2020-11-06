@@ -33,7 +33,7 @@ The project will give 50% of your final grade, the other 50% are from the exam a
 
  Attachment: draft-proposal.pdf} 
  
-Send this email by @bold{8 November 2020}, 24:00 the latest, including a first draft version of your project proposal.
+Send this email by @bold{10 November 2020}, 24:00 the latest, including a first draft version of your project proposal.
 
 @bold{Tutoring} After registration, we will assign a project-id and a tutor to your team. Before writing the final project proposal, you will have a meeting with your tutor to discuss your topic and resolve potential conflicts/overlapp with the projects of other teams (the better your draft proposal is the higher is the chance that your team "wins" the topic).
 
