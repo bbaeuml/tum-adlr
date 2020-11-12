@@ -41,6 +41,10 @@ The biweekly meetings of a team with its tutor are done via Zoom video meetings.
 
 @bold{Submission} All submissions are done via the team's private Piazza group. The proposal, the reports as well as the presentations have to be sent as pdf files where the filename ends with your project-id, e.g., @tt{proposal-07.pdf}.
 
+The format for the milestone and final report has to be the standard IEEE conference format: @(hyperlink "https://www.ieee.org/conferences/publishing/templates.html" "https://www.ieee.org/conferences/publishing/templates.html")
+@elem[(linebreak)](It is recommended to use this format for the  proposal as well.)
+
+
 In addition, each team has to create a GitHub repository for their project where all source code is stored. The name of this repository has to be @tt{tum-adlr-ws20-<project-id>}, e.g., @tt{tum-adlr-ws20-12}. You have to invite your tutor (and the lecturer) to this repository.
 
 
