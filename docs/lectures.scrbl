@@ -4,11 +4,11 @@
 @title[#:tag "lectures"  #:style 'unnumbered]{Lectures}
 
 @itemlist[#:style 'ordered
-          @item{ @(hyperlink "./adlr-1-organization.pdf" "Organization" ) @bold{(new)} , @(hyperlink "./adlr-1-recap-ml-dl.pdf" "Recap ML & DL")
+          @item{ @(hyperlink "./adlr-1-organization.pdf" "Organization" ) @bold{(new)} , @(hyperlink "./adlr-1-recap-ml-dl.pdf" "Recap ML & DL") @bold{(new)}
            (@(hyperlink "https://youtu.be/XFQHpI8KohI" "video"))}
-          @item{@(hyperlink "./adlr-2-advanced-networks.pdf" "Advanced Network Architectures")
+          @item{@(hyperlink "./adlr-2-advanced-networks.pdf" "Advanced Network Architectures") @bold{(new)}
            (@(hyperlink "https://youtu.be/QBbNA27zaGg" "video"))}
-          @item{@(hyperlink "./adlr-3-hyper-nas.pdf" "Hyperparameter & Architecture Search")
+          @item{@(hyperlink "./adlr-3-hyper-nas.pdf" "Hyperparameter & Architecture Search") @bold{(new)}
           (@(hyperlink "https://youtu.be/fZxo6Cahexc" "video"))}
           @item{@(hyperlink "./adlr-4-adversarial.pdf" "Adversarial Examples & Adversarial Training")
          (@(hyperlink "https://youtu.be/PjfXHbjnYNM" "video"))}
