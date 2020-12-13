@@ -10,11 +10,12 @@
            (@(hyperlink "https://youtu.be/QBbNA27zaGg" "video"))}
           @item{@(hyperlink "./adlr-3-hyper-nas.pdf" "Hyperparameter & Architecture Search") @bold{(new)}
           (@(hyperlink "https://youtu.be/fZxo6Cahexc" "video"))}
-          @item{@(hyperlink "./adlr-4-adversarial.pdf" "Adversarial Examples & Adversarial Training")
+          @item{@(hyperlink "./adlr-4-adversarial.pdf" "Adversarial Examples & Adversarial Training") @bold{(new)}
          (@(hyperlink "https://youtu.be/PjfXHbjnYNM" "video"))}
-          @item{@(hyperlink "./adlr-5-bayesian.pdf" "Bayesian Deep Learning") (@(hyperlink "https://youtu.be/63YPb2AGy7E" "video"))}         
+          @item{@(hyperlink "./adlr-5-bayesian.pdf" "Bayesian Deep Learning") @bold{(new)}
+             (@(hyperlink "https://youtu.be/63YPb2AGy7E" "video"))}         
           @;@item{Data Efficient Learning: Transfer & Semi-Supervised Learning}
-           @item{@(hyperlink "./adlr-6-generative.pdf" "Generative Models: VAEs & GANs")
+           @item{@(hyperlink "./adlr-6-generative.pdf" "Generative Models: VAEs & GANs") @bold{(new)}
           (@(hyperlink "https://youtu.be/pX0lXN3vUOc" "video"))}
           @item{@(hyperlink "./adlr-8-drl-i.pdf" "Deep Reinforcement Learning I")
           (@(hyperlink "https://youtu.be/eVrW2ElNeQ0" "video"))}
