@@ -38,3 +38,6 @@ The @bold{password} for the slides is communicated in the lecture.
  @item{Christopher M. Bishop. Pattern Recognition and Machine Learning. Springer, 2006.}
  @item{Kevin Murphy. “Machine Learning: A Probabilistic Perspective”, MIT Press 2012 }
  @item{(R. Sutton and A. Barton. Reinforcement Learning: An Introduction, MIT Press 2018)}]
+
+@section[#:style 'unnumbered]{Exercise Questions}
+@(hyperlink "./questions.pdf" "Questions similar to those you will be asked in the exam.")
