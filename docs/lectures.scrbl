@@ -40,4 +40,4 @@ The @bold{password} for the slides is communicated in the lecture.
  @item{(R. Sutton and A. Barton. Reinforcement Learning: An Introduction, MIT Press 2018)}]
 
 @section[#:style 'unnumbered]{Exercise Questions}
-@(hyperlink "./questions.pdf" "Questions similar to those you will be asked in the exam.")
+@(hyperlink "./questions.pdf" "Questions") similar to those you will be asked in the exam. And the @(hyperlink "./solutions.pdf" "samples solutions").
