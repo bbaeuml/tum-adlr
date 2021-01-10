@@ -22,10 +22,10 @@ This website is the main source of information for the course. Please check the 
 @;The @(hyperlink "./adlr-qanda-2.pdf" "slides of the 2nd Q&A session") including the time schedule for the rest of the course as well as some hints regarding what to expect in the exam are now uploaded. In addition, we also provide an  @(hyperlink "./introduction-exam.pdf" " example of an exam") of a previous introductory course (same style of questions but different content than for this advanced course!).
 
 
-@;@bold{Thursday, June 25th, 2020 10:41:54}
+@;@bold{Sunday, January 10th, 2021 23:53:35}
 @;@(linebreak)
+@;@(hyperlink "./milestone-schedule.pdf" "The schedule of the presentation day") on January 14th is now online.
 
-@;The milestone reports and the slides from the presentations are now online. You can download the password-protected (same password as for the lecture slides) @(hyperlink "./milestone.zip" " zip file here"). A list of all the projects can be found in the @(hyperlink "./milestone-schedule.pdf" "schedule of the presentation day").
 
 @;@bold{Monday, May 04th, 2020 20:50:159}
 @;@(linebreak)
