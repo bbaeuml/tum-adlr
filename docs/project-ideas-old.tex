@@ -1,0 +1,106 @@
+\documentclass[a4paper]{article}
+
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+
+\title{IN2349 ADLR: Project Ideas}
+\begin{document}
+\maketitle
+
+Here you can find a number of ideas for projects we collected. Take this as an inspiration for your own project. Some of the ideas are rather "big", meaning they could result in more than one project. After you have registered your team (including a draft proposal) you will discuss the extent of your final proposal with your assigned tutor.
+
+\subsubsection{Closing the Sim-to-Real Loop: Adapting Simulation Randomization with Real World Experience}
+In~\cite{Chebotar2018} an efficient method for solving the sim2real problem by iteratively adapting the simulation parameters to the real system is proposed.
+\begin{itemize}
+\item Change the experimental setup to a sim2sim setting because no real robot is available (i.e., try to adapt one simulation to a given one with unknown parameters).
+\item Investigate the convergence of estimated parameters.
+\item Investigate the influence of a broader starting distribution on the final performance.
+\item Investigate how re-using learned policies from previous iterations for initialization of the new network shortens training time and restrains the final performance.
+\end{itemize}
+
+\subsubsection{Solving Complex Sparse Reinforcement Learning Tasks}
+When defining Reinforcement Learning Tasks for robots, it is often desirable to stick to sparse rewards in order to avoid reward shaping. Not only does is it ease the setup since a task can be solely defined by its final desired outcome, but the optimal policy can be found "outside of the box" without a human prior given thru the reward function. Unfortunately, in big state spaces random exploration is not able to find these sparse success signals. Therefore, \cite{riedmiller2018} introduce SAC-X.
+\begin{itemize}
+\item Implement the algorithm
+\item Investigate how the presented method can be used for finer and more dexterous object manipulation e.g. with a hand.
+\end{itemize}
+
+\subsubsection{Accelerating Online Reinforcement Learning with Offline Datasets}
+The Reinforcement Learning paradigm gives rise to previously unreached control performance on more and more complex tasks that can not be solved using classic system theory. A trade-off to be accepted is a quite long training time for these kind of algorithms, with some dexterous manipulation tasks learning up to two weeks on almost 30,000 cores. Recent work by \cite{nair2020} introduces an algorithm to leverage offline data in order to accelerate the training process.
+\begin{itemize}
+\item Investigate the compatibility of offline data with new tasks. Consider a task where standard exploration can only solve a simplified version of the task, which may lack some constraints or requirements. Investigate whether rollouts from this trained simple agent benefit the more complex training. Benchmark this compared to simply fine-tuning this first network on the new task.
+\end{itemize}
+
+\subsubsection{Evaluating the Robustness of End-To-End as well as Hybrid Control approaches for Fixed Wing UAVs}
+In recent years, Fixed Wing Unmanned Aerial Vehicles gained more and more popularity in industrial applications over Multicopter Drones due to their far longer flight endurance. However, controlling such an aircraft, especially in the presence of disturbances like gusts poses a significant harder challenge. Work by \cite{Bohn2019} and \cite{kaufmann2020} shows that Reinforcement Learning approaches promise a superior performance compared to classical controller design.\\
+Note: For this project prior knowledge of system- or flight dynamics and control design is expected.
+\begin{itemize}
+\item Consider a trajectory tracking problem where the UAV should follow a given path and velocity. Develop an end-to-end RL controller for this task and compare the result to a hybrid approach comprised of a classic low-level attitude controller and a high-level RL controller.
+\item Investigate how these controllers can cope with seen as well as unseen white as well as biased disturbances like wind or parameter uncertainty.
+\item Develop a Deep Learning model which is able to identify these disturbances at runtime. Evaluate how this information can be used in both feedback controllers.
+\end{itemize}
+
+\subsubsection{Comparing different methods for uncertainty estimation}
+\label{sec:uncertainty-estimation}
+Interesting methods include (but are not limited to) MC-Dropoout \cite{Gal2016} and Normalizing Flows \cite{louizos2017multiplicative}. Thsese methods could be compared in vastly different settings.
+\begin{itemize}
+    \item Investigate how the uncertainty estimation changes during the training process (relevant to RL since we generally don’t update the networks until convergence before collecting more data).
+    \item Investigate which methods are best suited for active learning in the framework proposed by \cite{gal2017active}.
+    \item Investigate which methods perform best for DQNs in simple environments similar to the work by \cite{touati2018randomized}.
+    \item Come up with your own ideas.
+\end{itemize}
+
+\subsubsection{Curiosity-Driven Learning}
+A good starting point for projects in this area is the paper by \textit{Large-Scale Study of Curiosity-Driven Learning} \cite{burda2018largescale}. Individual projects could first reporduce some of the experiments and then:
+\begin{itemize}
+    \item Compare with other curiosity "measures" (count based, predict next state, predict past action, random network distillation, reachability, goal based, and/or your own ideas).
+    \item Extend the authors comparison to other sets of environments. One key question is whether or not there are certain characteristics that a task needs to fulfill in order to profit from curiosity-driven learning.
+\end{itemize}
+
+\subsubsection{Geometric Representations in Reinforcement Learning}
+Note: Requires previous experience with GNNs \cite{kipf2016semisupervised}.
+\begin{itemize}
+    \item Similar to \cite{Wang2018nervenet}. Modify PyBullet environments (Hopper, Walker, HalfCheetah, Ant) such that the observations contain a graph representing the robot. Use message passing network(s) in addition or instead of the MLP for value/Q function and policy in standard algorithms like PPO \cite{Schulman2017} or SAC \cite{Haarnoja2018a}.
+\end{itemize}
+
+\subsubsection{AlphaZero Implementation \& Tweaks}
+Deep dive into the AlphaGo/AlphaZero algorithm~\cite{Silver2016, Silver2017, Silver2017a}. Pick a very small game for feasible computational \& time cost and quick experimentation. Either implement from scratch or maybe get very familiar with an existing implementation. Then try variations or possible algorithm improvements.
+
+Modification ideas:
+\begin{itemize}
+  \item Refined handling of explore/exploit tradeoff in MCTS by adding Uncertainty Estimation (see section~\ref{sec:uncertainty-estimation}) in value \& prior networks for better upper confidence bounds in PUCT. Can this speed up discovery of good strategies?
+  \item Comparison to model-free RL: Does AlphaZero learn better/worse? Does this depend on environment (game) characteristics? What metrics should be compared here?
+\end{itemize}
+
+\subsubsection{Learning the Inverse Kinematic}
+Look at the possibilities for representing inverse problems with neural networks.
+\textit{Analyzing Inverse Problems with Invertible Neural Networks}~\cite{Ardizzone2018}
+compare different flavors of GANs, VAEs and INN(theirs) for inverse problems in general. Extend their simple robotic example of a planner arm to 3D / more DoFs / multiple TCPs.
+\begin{itemize}
+  \item What is the best approach to represent the high dimensional nullspaces for complex robot geometries?
+  \item Predict not only the position of the TCP but also the rotation. Connection to continuous rotation representation ~\cite{Zhou2018}.
+  \item How to measure the performance if the real nullspace is not known?
+\end{itemize}
+
+\subsubsection{Harnessing Reinforcement Learning for Neural Motion Planning}
+Motion planning for a planar robotic arm from a start configuration to a cartesian goal position. Comparison between DDPG, DDPG+HER, and DDPG-MP(theirs) ~\cite{Jurgenson2019}.
+They use RRT* to generate expert knowledge in difficult cases, where random exploration does not find a feasible solution.
+\begin{itemize}
+    \item Modify the code and try it for different robots and environments.
+    \item They state that supervised learning is inferior to RL for this problem because of the insufficient data on the boundary of the obstacles. Is it possible to achieve similar results by tweaking the distribution of the supervised examples?
+\end{itemize}
+
+
+\subsubsection{Learning to Optimize Motion Planning}
+Explore the ideas proposed by "Learning to Optimize" ~\cite{LiM16b} in the context of optimization based motion planning \cite{Zucker2013}. Can RL guide an optimzer to speed up robotic path planning?
+
+\begin{itemize}
+    \item Set up an optimizer for a simple robot (with help from the tutor)
+    \item Test ideas to guide the optimizer with RL
+    \item What are advantages of this hybrid approach over using RL directly on motion planning
+    \end{itemize}
+
+
+\bibliographystyle{apalike}
+\bibliography{minimal-research}
+
+\end{document}
