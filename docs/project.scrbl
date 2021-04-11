@@ -12,10 +12,10 @@ For each team we will provide at least $1000 credits in the Google Compute Engin
 
 The deliverables & deadlines are:
 @itemlist[
- @item{@bold{Team registration}:  @bold{10 November 2020}, 24:00}
- @item{@bold{Project proposal}: one page; @bold{19 November 2020}, 24:00}
- @item{@bold{Milestone report & presentation}: one page & 10min talk; @bold{midth of January}}
- @item{@bold{Final report & presentation}: three pages & poster session; @bold{early March}}]
+ @item{@bold{Team registration}:  @bold{20th April 2021}, 24:00}
+ @item{@bold{Project proposal}: one page; @bold{29th April 2021}, 24:00}
+ @item{@bold{Milestone report & presentation}: one page & 10min talk; @bold{early June}}
+ @item{@bold{Final report & presentation}: three pages & poster session; @bold{late July}}]
 
 In addition, you will have to provide the code of the project via sharing the GitHub repository with your tutor.
 
@@ -33,7 +33,7 @@ The project will give 50% of your final grade, the other 50% are from the exam a
 
  Attachment: draft-proposal.pdf} 
  
-Send this email by @bold{10 November 2020}, 24:00 the latest, including a first draft version of your project proposal.
+Send this email by @bold{20th April 2021}, 24:00 the latest, including a first draft version of your project proposal.
 
 @bold{Tutoring} After registration, we will assign a project-id and a tutor to your team. Before writing the final project proposal, you will have a meeting with your tutor to discuss your topic and resolve potential conflicts/overlapp with the projects of other teams (the better your draft proposal is the higher is the chance that your team "wins" the topic).
 

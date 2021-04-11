@@ -2,7 +2,7 @@
 @(require pict)
  
 @title{Advanced Deep Learning for Robotics}
-WS2020    ADLR    IN2349
+SS2021    ADLR    IN2349
 
 This is the advanced deep learning lecture with a specific focus on  Robotics and deep reinforcement learning (including a guest lecture from DeepMind).
 
