@@ -78,6 +78,25 @@ Note: Requires previous experience with GNNs \cite{kipf2016semisupervised}.
   \item Use message passing network(s) in addition or instead of the MLP for value/Q function and policy in standard algorithms like PPO \cite{Schulman2017} or SAC \cite{Haarnoja2018a}.
 \end{itemize}
 
+\subsubsection{Closing the Sim-to-Real Loop: Adapting Simulation Randomization with Real World Experience}
+In~\cite{Chebotar2018} an efficient method for solving the sim2real problem by iteratively adapting the simulation parameters to the real system is proposed.
+\begin{itemize}
+\item Change the experimental setup to a sim2sim setting because no real robot is available (i.e., try to adapt one simulation to a given one with unknown parameters).
+\item Investigate the convergence of estimated parameters.
+\item Investigate the influence of a broader starting distribution on the final performance.
+\item Investigate how re-using learned policies from previous iterations for initialization of the new network shortens training time and restrains the final performance.
+\end{itemize}
+
+%\subsubsection{Meta Reinforcement Learning for Sim-to-real Domain Adaptation}
+%\cite{Arndt19} show that the sim2real problem can be tackled by applying Meta RL to low dimensional action representations.
+
+\subsubsection{Solving Complex Sparse Reinforcement Learning Tasks}
+When defining Reinforcement Learning Tasks for robots, it is often desirable to stick to sparse rewards in order to avoid reward shaping. Not only does is it ease the setup since a task can be solely defined by its final desired outcome, but the optimal policy can be found "outside of the box" without a human prior given thru the reward function. Unfortunately, in big state spaces random exploration is not able to find these sparse success signals. Therefore, \cite{riedmiller2018} introduce SAC-X.
+\begin{itemize}
+\item Implement the algorithm
+\item Investigate how the presented method can be used for finer and more dexterous object manipulation e.g. with a hand.
+\end{itemize}
+
 
 \bibliographystyle{apalike}
 \bibliography{minimal-research}
