@@ -10,50 +10,6 @@
 Here you can find a number of ideas for projects we collected. Take this as an inspiration for your own project. Some of the ideas are rather "big", meaning they could result in more than one project. After you have registered your team (including a draft proposal) you will discuss the extent of your final proposal with your assigned tutor.
 
 
-\subsubsection{Learning the Inverse Kinematic}
-Look at the possibilities for representing inverse problems with neural networks.
-\textit{Analyzing Inverse Problems with Invertible Neural Networks}~\cite{Ardizzone2018}
-compare different flavors of GANs, VAEs and INN(theirs) for inverse problems in general. Extend their simple robotic example of a planner arm to 3D / more DoFs / multiple TCPs.
-\begin{itemize}
-  \item What is the best approach to represent the high dimensional nullspaces for complex robot geometries?
-  \item Predict not only the position of the TCP but also the rotation. Connection to continuous rotation representation ~\cite{Zhou2018}.
-  \item How to measure the performance if the real nullspace is not known?
-\end{itemize}
-
-\subsubsection{Harnessing Reinforcement Learning for Neural Motion Planning}
-Motion planning for a planar robotic arm from a start configuration to a cartesian goal position. Comparison between DDPG, DDPG+HER, and DDPG-MP(theirs) ~\cite{Jurgenson2019}.
-They use RRT* to generate expert knowledge in difficult cases, where random exploration does not find a feasible solution.
-\begin{itemize}
-  \item Modify the code and try it for different robots and environments.
-  \item They state that supervised learning is inferior to RL for this problem because of the insufficient data on the boundary of the obstacles. Is it possible to achieve similar results by tweaking the distribution of the supervised examples?
-\end{itemize}
-
-
-\subsubsection{Learning to Optimize Motion Planning}
-Explore the ideas proposed by "Learning to Optimize" ~\cite{LiM16b} in the context of optimization based motion planning \cite{Zucker2013}. Can RL guide an optimzer to speed up robotic path planning?
-\begin{itemize}
-  \item Set up an optimizer for a simple robot (with help from the tutor)
-  \item Test ideas to guide the optimizer with RL
-  \item What are advantages of this hybrid approach over using RL directly on motion planning
-\end{itemize}
-
-\subsubsection{Exploring Munchausen Reinforcement Learning}
-Recently, \cite{vieillard2020munchausen} proposed an appealingly simple, yet surprisingly effective extension to DQN; using the policy for bootstrapping. Exploring the implications of this idea, projects could for example address a (sub) set of the following problems:
-\begin{itemize}
-	\item Extend the idea to continuous action spaces (e.g. by augmenting SAC).
-	\item Apply Munchausen RL to robotic tasks and see what it brings to the table. Does it improve the baselines? If yes, under what circumstances? If no, investigate the causes.
-	\item Come up with adaptive strategies to deal with the additional hyperparameters introduced by \cite{vieillard2020munchausen}.
-\end{itemize}
-
-\subsubsection{Constraint Curricula for Robotic Manipulation Tasks}
-Consider the setting in which a robotic manipulator is tasked to achieve a goal (e.g. move end effector to a certain position in the workspace), subject to external or internal constraints (like avoiding certain configurations). In RL, this can be formulated as a constrained optimization problem \cite{Achiam2019BenchmarkingSE}. While converging to a constraint-satisfying policy is often hard enough, ensuring constraints \textit{throughout training} is even more challenging. For a given set of tasks, one approach could be to build an adaptive task curriculum by successively increasing the complexity of tasks and/or constraints during training.
-\begin{itemize}
-	\item Come up with a robotic setting with one or multiple constraints. Implement the environment from scratch or modify existing environments to suit your needs.
-	\item Implement or modify a safety-aware RL algorithm for your setup.
-	\item Experiment with ways of adaptively building curricula of increasingly difficult tasks/constraints to minimize constraint-violation during and/or after training.
-\end{itemize}
-
-
 \subsubsection{Comparing Methods for Uncertainty Estimation}
 Interesting methods include (but are not limited to) MC-Dropoout \cite{Gal2016}, Bootstrapping \cite{Osband2018}, and Normalizing Flows \cite{louizos2017multiplicative}. Thsese methods could be compared in vastly different settings.
 \begin{itemize}
@@ -101,6 +57,50 @@ When defining Reinforcement Learning Tasks for robots, it is often desirable to 
 \item Implement the algorithm
 \item Investigate how the presented method can be used for finer and more dexterous object manipulation e.g. with a hand.
 \end{itemize}
+
+\subsubsection{Learning the Inverse Kinematic}
+Look at the possibilities for representing inverse problems with neural networks.
+\textit{Analyzing Inverse Problems with Invertible Neural Networks}~\cite{Ardizzone2018}
+compare different flavors of GANs, VAEs and INN(theirs) for inverse problems in general. Extend their simple robotic example of a planner arm to 3D / more DoFs / multiple TCPs.
+\begin{itemize}
+  \item What is the best approach to represent the high dimensional nullspaces for complex robot geometries?
+  \item Predict not only the position of the TCP but also the rotation. Connection to continuous rotation representation ~\cite{Zhou2018}.
+  \item How to measure the performance if the real nullspace is not known?
+\end{itemize}
+
+\subsubsection{Harnessing Reinforcement Learning for Neural Motion Planning}
+Motion planning for a planar robotic arm from a start configuration to a cartesian goal position. Comparison between DDPG, DDPG+HER, and DDPG-MP(theirs) ~\cite{Jurgenson2019}.
+They use RRT* to generate expert knowledge in difficult cases, where random exploration does not find a feasible solution.
+\begin{itemize}
+  \item Modify the code and try it for different robots and environments.
+  \item They state that supervised learning is inferior to RL for this problem because of the insufficient data on the boundary of the obstacles. Is it possible to achieve similar results by tweaking the distribution of the supervised examples?
+\end{itemize}
+
+
+\subsubsection{Learning to Optimize Motion Planning}
+Explore the ideas proposed by "Learning to Optimize" ~\cite{LiM16b} in the context of optimization based motion planning \cite{Zucker2013}. Can RL guide an optimzer to speed up robotic path planning?
+\begin{itemize}
+  \item Set up an optimizer for a simple robot (with help from the tutor)
+  \item Test ideas to guide the optimizer with RL
+  \item What are advantages of this hybrid approach over using RL directly on motion planning
+\end{itemize}
+
+\subsubsection{Exploring Munchausen Reinforcement Learning}
+Recently, \cite{vieillard2020munchausen} proposed an appealingly simple, yet surprisingly effective extension to DQN; using the policy for bootstrapping. Exploring the implications of this idea, projects could for example address a (sub) set of the following problems:
+\begin{itemize}
+	\item Extend the idea to continuous action spaces (e.g. by augmenting SAC).
+	\item Apply Munchausen RL to robotic tasks and see what it brings to the table. Does it improve the baselines? If yes, under what circumstances? If no, investigate the causes.
+	\item Come up with adaptive strategies to deal with the additional hyperparameters introduced by \cite{vieillard2020munchausen}.
+\end{itemize}
+
+\subsubsection{Constraint Curricula for Robotic Manipulation Tasks}
+Consider the setting in which a robotic manipulator is tasked to achieve a goal (e.g. move end effector to a certain position in the workspace), subject to external or internal constraints (like avoiding certain configurations). In RL, this can be formulated as a constrained optimization problem \cite{Achiam2019BenchmarkingSE}. While converging to a constraint-satisfying policy is often hard enough, ensuring constraints \textit{throughout training} is even more challenging. For a given set of tasks, one approach could be to build an adaptive task curriculum by successively increasing the complexity of tasks and/or constraints during training.
+\begin{itemize}
+	\item Come up with a robotic setting with one or multiple constraints. Implement the environment from scratch or modify existing environments to suit your needs.
+	\item Implement or modify a safety-aware RL algorithm for your setup.
+	\item Experiment with ways of adaptively building curricula of increasingly difficult tasks/constraints to minimize constraint-violation during and/or after training.
+\end{itemize}
+
 
 
 \bibliographystyle{apalike}
