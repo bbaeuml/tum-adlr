@@ -10,8 +10,9 @@ This website is the main source of information for the course. Please check the 
 
 @(colorize (hline 650 5) "blue")
  @; date "+%A, %B %dth, %Y %T"
-@;@bold{Monday, August 31th, 2020 00:23:29}
+@bold{Wednesday, April 28th, 2021 10:24:57}
 @(linebreak)
+The slides from last week's first Q&A session are now  @(hyperlink "./adlr-qanda-1.pdf" "online").
 
 @;The final reports and the slides from the presentations are now online. You can download the password-protected (same password as for the lecture slides) @(hyperlink "./final.zip" " zip file here"). A list of all the projects can be found in the @(hyperlink "./final-schedule.pdf" "schedule of the presentation day").
 
