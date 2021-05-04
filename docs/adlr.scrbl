@@ -14,6 +14,10 @@ This website is the main source of information for the course. Please check the 
 @(linebreak)
 The slides from last week's first Q&A session are now  @(hyperlink "./adlr-qanda-1.pdf" "online").
 
+@bold{Wednesday,Tuesday, May 04th, 2021 09:15:45}
+@(linebreak)
+The slides the second  Q&A session are now  @(hyperlink "./adlr-qanda-2.pdf" "online").
+
 @;The final reports and the slides from the presentations are now online. You can download the password-protected (same password as for the lecture slides) @(hyperlink "./final.zip" " zip file here"). A list of all the projects can be found in the @(hyperlink "./final-schedule.pdf" "schedule of the presentation day").
 
 
