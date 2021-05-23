@@ -14,8 +14,8 @@ The deliverables & deadlines are:
 @itemlist[
  @item{@bold{Team registration}:  @bold{20 April 2021}, 24:00}
  @item{@bold{Project proposal}: one page; @bold{2 May 2021}, 24:00}
- @item{@bold{Milestone report & presentation}: one page & 10min talk; @bold{early June}}
- @item{@bold{Final report & presentation}: three pages & poster session; @bold{late July}}]
+ @item{@bold{Milestone report & presentation}: one page & 10min talk; @bold{10 June 2021}}
+ @item{@bold{Final report & presentation}: three pages & poster session; @bold{ 22 July 2021 and 05 August 2021}}]
 
 In addition, you will have to provide the code of the project via sharing the GitHub repository with your tutor.
 
