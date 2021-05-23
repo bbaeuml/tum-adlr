@@ -10,13 +10,24 @@ This website is the main source of information for the course. Please check the 
 
 @(colorize (hline 650 5) "blue")
  @; date "+%A, %B %dth, %Y %T"
+@bold{Sunday, May 23th, 2021 21:36:21}
+@(linebreak)
+The slides the fourth  Q&A session are now  @(hyperlink "./adlr-qanda-4.pdf" "online"). Dates for the projeect milestone and final presentations are set.
+
+
+@bold{Sunday, May 23th, 2021 21:36:21}
+@(linebreak)
+The slides the secthirdond  Q&A session are now  @(hyperlink "./adlr-qanda-3.pdf" "online").
+
+
+@bold{Tuesday, May 04th, 2021 09:15:45}
+@(linebreak)
+The slides the second  Q&A session are now  @(hyperlink "./adlr-qanda-2.pdf" "online").
+
 @bold{Wednesday, April 28th, 2021 10:24:57}
 @(linebreak)
 The slides from last week's first Q&A session are now  @(hyperlink "./adlr-qanda-1.pdf" "online").
 
-@bold{Wednesday,Tuesday, May 04th, 2021 09:15:45}
-@(linebreak)
-The slides the second  Q&A session are now  @(hyperlink "./adlr-qanda-2.pdf" "online").
 
 @;The final reports and the slides from the presentations are now online. You can download the password-protected (same password as for the lecture slides) @(hyperlink "./final.zip" " zip file here"). A list of all the projects can be found in the @(hyperlink "./final-schedule.pdf" "schedule of the presentation day").
 
