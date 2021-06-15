@@ -10,6 +10,9 @@ This website is the main source of information for the course. Please check the 
 
 @(colorize (hline 650 5) "blue")
  @; date "+%A, %B %dth, %Y %T"
+@bold{Tuesday, June 15th, 2021 15:27:41}
+The milestone  slides from the presentations are now online. You can download the password-protected (same password as for the lecture slides) @(hyperlink "./milestone.zip" " zip file here"). A list of all the projects can be found in the @(hyperlink "./milestone-schedule.pdf" "schedule of the presentation day").
+
 @bold{Sunday, May 23th, 2021 21:36:21}
 @(linebreak)
 The slides the fourth  Q&A session are now  @(hyperlink "./adlr-qanda-4.pdf" "online"). Dates for the projeect milestone and final presentations are set.
