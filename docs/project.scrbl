@@ -15,7 +15,7 @@ The deliverables & deadlines are:
  @item{@bold{Team registration}:  @bold{20 April 2021}, 24:00}
  @item{@bold{Project proposal}: one page; @bold{2 May 2021}, 24:00}
  @item{@bold{Milestone report & presentation}: one page & 10min talk; @bold{10 June 2021}}
- @item{@bold{Final report & presentation}: three pages & poster session; @bold{ 22 July 2021 and 05 August 2021}}]
+ @item{@bold{Final report & presentation}: three pages & 10min talk; @bold{ 22 July 2021 and 05 August 2021}}]
 
 In addition, you will have to provide the code of the project via sharing the GitHub repository with your tutor.
 
@@ -94,5 +94,5 @@ One report and presentation is required per team (each team member should do abo
 @section[#:style 'unnumbered]{Final Report and Presentation}
 The final report should be in the style of a short research paper of about three pages (one page text) and should describe and motivate the method, and discuss the results, including any relevant figures or plots.
 
-In addition, each team has to present their results in a poster session (or a Zoom meeting if even at the end of the semester no face-to-face events are allowed).
+In addition, each team has to present their results in a Zoom meeting.
 
