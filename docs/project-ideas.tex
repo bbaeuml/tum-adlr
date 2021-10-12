@@ -15,48 +15,48 @@ Interesting methods include (but are not limited to) MC-Dropoout \cite{Gal2016},
 \begin{itemize}
   \item Investigate how the uncertainty estimation changes during the training process (relevant to RL since we generally don’t update the networks until convergence before collecting more data).
   \item Investigate which methods are best suited for active learning in the framework proposed by \cite{gal2017active}.
-  \item Investigate which methods perform best for DQNs in simple environments similar to the work by \cite{touati2018randomized}.
+  \item Investigate which methods perform best for DQNs in simple environments similar (\cite{BSuit2020}, \cite{touati2018randomized}).
   \item Come up with your own ideas.
 \end{itemize}
 
 \subsubsection{Offline Datasets for Reinforcement Learning}
-Offline (or Batch) RL has recently gained more and more attention (cf. \url{https://bair.berkeley.edu/blog/2019/12/05/bear}, \cite{Agarwal2019}, \cite{nair2020}).
+Offline (or Batch) RL has recently gained more and more attention, \cite{Agarwal2019}, \cite{nair2020} (cf. \url{https://bair.berkeley.edu/blog/2019/12/05/bear}).
 \begin{itemize}
   \item Compare differnt Batch RL algorithms.
   \item Test new environments.
   \item Benchmark against online algorithms.
 \end{itemize}
 
-\subsubsection{Geometric Representations in Reinforcement Learning}
-Note: Requires previous experience with GNNs \cite{kipf2016semisupervised}.
-\begin{itemize}
-  \item Similar to \cite{Wang2018nervenet}. Modify PyBullet environments (Hopper, Walker, HalfCheetah, Ant) such that the observations contain a graph representing the robot.
-  \item Use message passing network(s) in addition or instead of the MLP for value/Q function and policy in standard algorithms like PPO \cite{Schulman2017} or SAC \cite{Haarnoja2018a}.
-\end{itemize}
+% \subsubsection{Geometric Representations in Reinforcement Learning}
+% Note: Requires previous experience with GNNs \cite{kipf2016semisupervised}.
+% \begin{itemize}
+%   \item Similar to \cite{Wang2018nervenet}. Modify PyBullet environments (Hopper, Walker, HalfCheetah, Ant) such that the observations contain a graph representing the robot.
+%   \item Use message passing network(s) in addition or instead of the MLP for value/Q function and policy in standard algorithms like PPO \cite{Schulman2017} or SAC \cite{Haarnoja2018a}.
+% \end{itemize}
 
 \subsubsection{Closing the Sim-to-Real Loop: Adapting Simulation Randomization with Real World Experience}
 In~\cite{Chebotar2018} an efficient method for solving the sim2real problem by iteratively adapting the simulation parameters to the real system is proposed.
 \begin{itemize}
-\item Change the experimental setup to a sim2sim setting because no real robot is available (i.e., try to adapt one simulation to a given one with unknown parameters).
-\item Investigate the convergence of estimated parameters.
-\item Investigate the influence of a broader starting distribution on the final performance.
-\item Investigate how re-using learned policies from previous iterations for initialization of the new network shortens training time and restrains the final performance.
+  \item Change the experimental setup to a sim2sim setting because no real robot is available (i.e., try to adapt one simulation to a given one with unknown parameters).
+  \item Investigate the convergence of estimated parameters.
+  \item Investigate the influence of a broader starting distribution on the final performance.
+  \item Investigate how re-using learned policies from previous iterations for initialization of the new network shortens training time and restrains the final performance.
 \end{itemize}
 
 \subsubsection{Meta Reinforcement Learning for Sim-to-real Domain Adaptation}
 \cite{Arndt19} show that the sim2real problem can be tackled by applying Meta RL to learned low dimensional projections of the action space.
 \begin{itemize}
-\item Implement the algorithm 
-\item Change the experimental setup to a sim2sim setting because no real robot is available (i.e., try to adapt one simulation to a given one with unknown parameters).
-\item Investigate how this framework can be applied or extended to classic closed-loop robot control
+  \item Implement the algorithm
+  \item Change the experimental setup to a sim2sim setting because no real robot is available (i.e., try to adapt one simulation to a given one with unknown parameters).
+  \item Investigate how this framework can be applied or extended to classic closed-loop robot control
 \end{itemize}
 
-\subsubsection{Solving Complex Sparse Reinforcement Learning Tasks}
-When defining Reinforcement Learning Tasks for robots, it is often desirable to stick to sparse rewards in order to avoid reward shaping. Not only does is it ease the setup since a task can be solely defined by its final desired outcome, but the optimal policy can be found "outside of the box" without a human prior given thru the reward function. Unfortunately, in big state spaces random exploration is not able to find these sparse success signals. Therefore, \cite{riedmiller2018} introduce SAC-X.
-\begin{itemize}
-\item Implement the algorithm
-\item Investigate how the presented method can be used for finer and more dexterous object manipulation e.g. with a hand.
-\end{itemize}
+% \subsubsection{Solving Complex Sparse Reinforcement Learning Tasks}
+% When defining Reinforcement Learning Tasks for robots, it is often desirable to stick to sparse rewards in order to avoid reward shaping. Not only does is it ease the setup since a task can be solely defined by its final desired outcome, but the optimal policy can be found "outside of the box" without a human prior given through the reward function. Unfortunately, in big state spaces random exploration is not able to find these sparse success signals. Therefore, \cite{riedmiller2018} introduce SAC-X.
+% \begin{itemize}
+%   \item Implement the algorithm
+%   \item Investigate how the presented method can be used for finer and more dexterous object manipulation e.g. with a hand.
+% \end{itemize}
 
 \subsubsection{Learning the Inverse Kinematic}
 Look at the possibilities for representing inverse problems with neural networks.
@@ -88,20 +88,25 @@ Explore the ideas proposed by "Learning to Optimize" ~\cite{LiM16b} in the conte
 \subsubsection{Exploring Munchausen Reinforcement Learning}
 Recently, \cite{vieillard2020munchausen} proposed an appealingly simple, yet surprisingly effective extension to DQN; using the policy for bootstrapping. Exploring the implications of this idea, projects could for example address a (sub) set of the following problems:
 \begin{itemize}
-	\item Extend the idea to continuous action spaces (e.g. by augmenting SAC).
-	\item Apply Munchausen RL to robotic tasks and see what it brings to the table. Does it improve the baselines? If yes, under what circumstances? If no, investigate the causes.
-	\item Come up with adaptive strategies to deal with the additional hyperparameters introduced by \cite{vieillard2020munchausen}.
+  \item Extend the idea to continuous action spaces (e.g. by augmenting SAC).
+  \item Apply Munchausen RL to robotic tasks and see what it brings to the table. Does it improve the baselines? If yes, under what circumstances? If no, investigate the causes.
+  \item Come up with adaptive strategies to deal with the additional hyperparameters introduced by \cite{vieillard2020munchausen}.
 \end{itemize}
 
 \subsubsection{Constraint Curricula for Robotic Manipulation Tasks}
 Consider the setting in which a robotic manipulator is tasked to achieve a goal (e.g. move end effector to a certain position in the workspace), subject to external or internal constraints (like avoiding certain configurations). In RL, this can be formulated as a constrained optimization problem \cite{Achiam2019BenchmarkingSE}. While converging to a constraint-satisfying policy is often hard enough, ensuring constraints \textit{throughout training} is even more challenging. For a given set of tasks, one approach could be to build an adaptive task curriculum by successively increasing the complexity of tasks and/or constraints during training.
 \begin{itemize}
-	\item Come up with a robotic setting with one or multiple constraints. Implement the environment from scratch or modify existing environments to suit your needs.
-	\item Implement or modify a safety-aware RL algorithm for your setup.
-	\item Experiment with ways of adaptively building curricula of increasingly difficult tasks/constraints to minimize constraint-violation during and/or after training.
+  \item Come up with a robotic setting with one or multiple constraints. Implement the environment from scratch or modify existing environments to suit your needs.
+  \item Implement or modify a safety-aware RL algorithm for your setup.
+  \item Experiment with ways of adaptively building curricula of increasingly difficult tasks/constraints to minimize constraint-violation during and/or after training.
 \end{itemize}
 
-
+\subsubsection{Unsupervised Skill Discovery / Curiosity}
+Pretraining neural networks in an unsupervised setting showed to be extremely effective for language models. Similarly, RL agents can be pretrained in an environment with different goals in mind. Projects in this direction could (reimplement/) validate one of the papers below in the PyBullet physics simulator, and extent their work with interesting ablation studies or algorithmic modifications.
+\begin{itemize}
+  \item \cite{Plan2Explore2020}
+  \item \cite{DADS2020}
+\end{itemize}
 
 \bibliographystyle{apalike}
 \bibliography{minimal-research}
