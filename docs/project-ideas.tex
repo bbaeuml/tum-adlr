@@ -87,34 +87,34 @@ Explore the ideas proposed by "Learning to Optimize" ~\cite{LiM16b} in the conte
 
 \subsubsection{Recurrent Off-Policy Reinforcement Learning in POMDPs}
 In partially observable Markov decision processes (POMDPs), a RL agent has to be equipped with some sort of memory in order to be able to act optimally. A well known method addressing this issue is to encode the history of observations by Recurrent Neural Networks (RNNs).
-For the class of Off-Policy methods, \cite{heess2015memory} combine RNNs with the DDPG algorithm and \cite{kapturowski2018recurrent} study the interplay of DQN-based algorithms with recurrent experience replay. 
-Based on these works: 
+For the class of Off-Policy methods, \cite{heess2015memory} combine RNNs with the DDPG algorithm and \cite{kapturowski2018recurrent} study the interplay of DQN-based algorithms with recurrent experience replay.
+Based on these works:
 \begin{itemize}
-  \item Implement POMDP environments that require the use of memory to be solved optimally. 
+  \item Implement POMDP environments that require the use of memory to be solved optimally.
   \item Implement a recurrent version of the SAC algorithm (\cite{Haarnoja2018a}).
   \item Assess the effect of different design choices and hyperparameters (e.g. hidden state initialization strategy in the experience replay buffer, truncated BPTT, ...)
 \end{itemize}
 
 \subsubsection{Differentiable Bayesian Filters}
-Differentiable filters are a promising approach for combining the algorithmic structure of bayesian filter techniques with the power of learning-based methods (for an overview over existing methods, see e.g. \cite{kloss2021train}). Importantly, differentiable filters offer a systematic way of dealing with aleatoric uncertainty in state estimation problems. 
+Differentiable filters are a promising approach for combining the algorithmic structure of bayesian filter techniques with the power of learning-based methods (for an overview over existing methods, see e.g. \cite{kloss2021train}). Importantly, differentiable filters offer a systematic way of dealing with aleatoric uncertainty in state estimation problems.
 \begin{itemize}
-	\item Implement a differentiable Filter of your choice, for example EKF, UKF or Particle Filter. 
-	\item Consider the simple tracking experiment VI from \cite{kloss2021train}. Implement interesting modification to the experiment. For example: 
-	\begin{itemize}
-		\item use the distance to beacons instead of images as measurements
-		\item implement collisions
-		\item additionally estimate parameters from the system dynamics on-the-fly
-	\end{itemize}
-	\item Compare your filter to recurrent neural networks and discuss the benefits.
+  \item Implement a differentiable Filter of your choice, for example EKF, UKF or Particle Filter.
+  \item Consider the simple tracking experiment VI from \cite{kloss2021train}. Implement interesting modification to the experiment. For example:
+        \begin{itemize}
+          \item use the distance to beacons instead of images as measurements
+          \item implement collisions
+          \item additionally estimate parameters from the system dynamics on-the-fly
+        \end{itemize}
+  \item Compare your filter to recurrent neural networks and discuss the benefits.
 \end{itemize}
 
 \subsubsection{Exploring Munchausen Reinforcement Learning}
 Recently, \cite{vieillard2020munchausen} proposed an appealingly simple, yet surprisingly effective extension to DQN; using the policy for bootstrapping. Exploring the implications of this idea, projects could for example address a (sub) set of the following problems:
 
 \begin{itemize}
-	\item Extend the idea to continuous action spaces (e.g. by augmenting SAC).
-	\item Apply Munchausen RL to robotic tasks and see what it brings to the table. Does it improve the baselines? If yes, under what circumstances? If no, investigate the causes.
-	\item Come up with adaptive strategies to deal with the additional hyperparameters introduced by \cite{vieillard2020munchausen}.
+  \item Extend the idea to continuous action spaces (e.g. by augmenting SAC).
+  \item Apply Munchausen RL to robotic tasks and see what it brings to the table. Does it improve the baselines? If yes, under what circumstances? If no, investigate the causes.
+  \item Come up with adaptive strategies to deal with the additional hyperparameters introduced by \cite{vieillard2020munchausen}.
 \end{itemize}
 
 
