@@ -117,14 +117,20 @@ Recently, \cite{vieillard2020munchausen} proposed an appealingly simple, yet sur
   \item Come up with adaptive strategies to deal with the additional hyperparameters introduced by \cite{vieillard2020munchausen}.
 \end{itemize}
 
-
-
 \subsubsection{Unsupervised Skill Discovery / Curiosity}
 Pretraining neural networks in an unsupervised setting showed to be extremely effective for language models. Similarly, RL agents can be pretrained in an environment with different goals in mind. Projects in this direction could (reimplement/) validate one of the papers below in the PyBullet physics simulator, and extent their work with interesting ablation studies or algorithmic modifications.
 \begin{itemize}
   \item \cite{Plan2Explore2020}
   \item \cite{DADS2020}
 \end{itemize}
+
+\subsubsection{Policy Adaptation during Deployment}
+Training RL agents in simulation can accelerate learning substantially, and may sometimes be the only viable option due to hardware constraints. However, it is difficult to model the system in simulation accuratly enough such that trained policies also work in the real world. \cite{Hansen2021} propse to close this sim2real gap using self-supervision during delpoyment.
+\begin{itemize}
+  \item Validate the proposed algorithm in a sim2sim setting.
+  \item If everything works correctly we can also run real world experiments with Justin's DLR Hand II.
+\end{itemize}
+
 
 \bibliographystyle{apalike}
 \bibliography{minimal-research}
