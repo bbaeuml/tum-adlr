@@ -11,7 +11,7 @@ Here you can find a number of ideas for projects we collected. Take this as an i
 
 
 \subsubsection{Comparing Methods for Uncertainty Estimation}
-Interesting methods include (but are not limited to) MC-Dropoout \cite{Gal2016}, Bootstrapping \cite{Osband2018}, and Normalizing Flows \cite{louizos2017multiplicative}. Thsese methods could be compared in vastly different settings.
+Interesting methods include MC-Dropoout \cite{Gal2016}, Bootstrapping \cite{Osband2018}, and Normalizing Flows \cite{louizos2017multiplicative}. These methods could be compared in vastly different settings.
 \begin{itemize}
   \item Investigate how the uncertainty estimation changes during the training process (relevant to RL since we generally don’t update the networks until convergence before collecting more data).
   \item Investigate which methods are best suited for active learning in the framework proposed by \cite{gal2017active}.
@@ -20,7 +20,7 @@ Interesting methods include (but are not limited to) MC-Dropoout \cite{Gal2016},
 \end{itemize}
 
 \subsubsection{Offline Datasets for Reinforcement Learning}
-Offline (or Batch) RL has recently gained more and more attention, \cite{Agarwal2019}, \cite{nair2020} (cf. \url{https://bair.berkeley.edu/blog/2019/12/05/bear}).
+Offline (Batch) RL has recently gained more attention, e.g. \cite{Agarwal2019}, \cite{nair2020} (cf. \url{https://bair.berkeley.edu/blog/2019/12/05/bear}).
 \begin{itemize}
   \item Compare differnt Batch RL algorithms.
   \item Test new environments.
@@ -59,30 +59,42 @@ In~\cite{Chebotar2018} an efficient method for solving the sim2real problem by i
 % \end{itemize}
 
 \subsubsection{Learning the Inverse Kinematic}
-Look at the possibilities for representing inverse problems with neural networks.
+Look at the possibilities for representing inverse problems with neural networks. 
 \textit{Analyzing Inverse Problems with Invertible Neural Networks}~\cite{Ardizzone2018}
-compare different flavors of GANs, VAEs and INN(theirs) for inverse problems in general. Extend their simple robotic example of a planner arm to 3D / more DoFs / multiple TCPs.
+compare different flavors of GANs, VAEs and INN(theirs) for inverse problems in general. 
+Extend their simple robotic example of a planner arm to 3D / more DoFs / multiple TCPs.
+Unlike in computer vision, for the robot kinematic we have solid metrics to describe how well the generation task was performed.
+How can we use this knowledge to our advantage?
+
 \begin{itemize}
   \item What is the best approach to represent the high dimensional nullspaces for complex robot geometries?
+  \item ~\cite{Lembono2021} use an ensemble of GANs to reduce the impact of mode collapse. 
+  What other options do we have to improve the generative model?
   \item Predict not only the position of the TCP but also the rotation. Connection to continuous rotation representation ~\cite{Zhou2018}.
   \item How to measure the performance if the real nullspace is not known?
 \end{itemize}
 
 \subsubsection{Harnessing Reinforcement Learning for Neural Motion Planning}
-Motion planning for a planar robotic arm from a start configuration to a cartesian goal position. Comparison between DDPG, DDPG+HER, and DDPG-MP(theirs) ~\cite{Jurgenson2019}.
+Motion planning for a planar robotic arm from a start configuration to a cartesian goal position. 
+Comparison between DDPG, DDPG+HER, and DDPG-MP(theirs) ~\cite{Jurgenson2019}.
 They use RRT* to generate expert knowledge in difficult cases, where random exploration does not find a feasible solution.
 \begin{itemize}
   \item Modify the code and try it for different robots and environments.
+  \item look at modern approaches to represent the environment in which the robot moves (ie. Basis Points Set ~\cite{Prokudin2019}, Example of PointNet for Motion Planning ~\cite{Strudel2020})
   \item They state that supervised learning is inferior to RL for this problem because of the insufficient data on the boundary of the obstacles. Is it possible to achieve similar results by tweaking the distribution of the supervised examples?
 \end{itemize}
 
 
 \subsubsection{Learning to Optimize Motion Planning}
-Explore the ideas proposed by "Learning to Optimize" ~\cite{LiM16b} in the context of optimization based motion planning \cite{Zucker2013}. Can RL guide an optimzer to speed up robotic path planning?
+Explore the ideas proposed by "Learning to Optimize" ~\cite{LiM16b} in the context of optimization based motion planning \cite{Zucker2013}. 
+Can Reinforcement Learning guide an optimzer to speed up robotic path planning?
+How does it relate to the approach of "Unsupervised Path Regression Networks" ~\cite{Pandy2020}.
+Can we combine those ideas?
+
 \begin{itemize}
   \item Set up an optimizer for a simple robot (with help from the tutor)
-  \item Test ideas to guide the optimizer with RL
-  \item What are advantages of this hybrid approach over using RL directly on motion planning
+  \item Test ideas to guide the optimization problem of motion planning
+  \item What are advantages of this hybrid approach over using RL directly on motion planning?
 \end{itemize}
 
 \subsubsection{Recurrent Off-Policy Reinforcement Learning in POMDPs}
@@ -133,7 +145,7 @@ Training RL agents in simulation can accelerate learning substantially, and may 
 \end{itemize}
 
 \subsubsection{NeRF based Robotcalibration}
-  Neuronal radiance fields are quite popular these days in the computer vision community. While they are often used for noval view sythesis, to create impossible camera effects with real world footage, they also provide a new way to calibrate camera extrinsics and intrinsics \citep{lin2021barf, Sucar:etal:ICCV2021, wang2021nerfmm, SCNeRF2021}.
+  Neuronal radiance fields are quite popular these days in the computer vision community. While they are often used for noval view sythesis, to create impossible camera effects with real world footage, they also provide a new way to calibrate camera extrinsics and intrinsics \cite{lin2021barf, Sucar:etal:ICCV2021, wang2021nerfmm, SCNeRF2021}.
   This is possible because the extrinsics and intrinsics can be trained together with the model.
 
   In Robtocis we still require tracking of visual markers to calibrate the kinemetic (see the work of \cite{Birbach2014} as an example). However, implicit neuronal scene representations might enable us to learn the robot's kinematic end-to-end.
@@ -151,7 +163,7 @@ Training RL agents in simulation can accelerate learning substantially, and may 
 % Need to have GPU.
 
 
-\bibliographystyle{apalike}
+\bibliographystyle{apalike2}
 \bibliography{minimal-research}
 
 \end{document}
