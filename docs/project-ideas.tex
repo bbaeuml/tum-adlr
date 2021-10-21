@@ -131,6 +131,17 @@ Training RL agents in simulation can accelerate learning substantially, and may 
   \item If everything works correctly we can also run real world experiments with Justin's DLR Hand II.
 \end{itemize}
 
+\subsubsection{NeRF based Robotcalibration}
+  Neuronal radiance fields are quite popular these days in the computer vision community. While they are often used for noval view sythesis, to create impossible camera effects with real world footage, they also provide a new way to calibrate camera extrinsics and intrinsics \citep{lin2021barf, Sucar:etal:ICCV2021, wang2021nerfmm, SCNeRF2021}.
+  This is possible because the extrinsics and intrinsics can be trained together with the model.
+
+\begin{itemize}
+  \item Try to find a way to combine the work of \cite{Birbach2014} and the above mentioned works.
+  \item The calibration can run offline (Since NeRFs are still computational expensive) but you can use real world data from Justin.  
+\end{itemize}
+  
+  
+
 % \subsubsection{Compare Bullet/MuJoCo/Isaac by implementing DLR Hand II Environment}
 % Need to have GPU.
 
