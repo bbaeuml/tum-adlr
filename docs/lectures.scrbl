@@ -4,7 +4,7 @@
 @title[#:tag "lectures"  #:style 'unnumbered]{Lectures}
 
 @itemlist[#:style 'ordered
-          @item{ @(hyperlink "./adlr-1-organization.pdf" "Organization" ), @(hyperlink "./adlr-1-recap-ml-dl.pdf" "Recap ML & DL")  
+          @item{ @(hyperlink "./adlr-1-organization.pdf" "Organization" ) @bold{(new)}, @(hyperlink "./adlr-1-recap-ml-dl.pdf" "Recap ML & DL") @bold{(new)}  
            (@(hyperlink "https://youtu.be/XFQHpI8KohI" "video"))}
           @item{@(hyperlink "./adlr-2-advanced-networks.pdf" "Advanced Network Architectures")  
            (@(hyperlink "https://youtu.be/QBbNA27zaGg" "video"))}
