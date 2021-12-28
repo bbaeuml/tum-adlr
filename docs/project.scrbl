@@ -2,7 +2,6 @@
  
 @title[#:tag "project" #:style 'unnumbered]{Project}
 
-
 The semester long project in this course requires implementing, evaluating, and documenting a new, research-style idea in the field of deep learning and robotics. Each project is done in a team of two students. The teams must form themselves and come up with a proposal for their project. Based on the proposal, a tutor will be assigned and will meet with each team individually on a biweekly basis to discuss the results and the next steps of the project. 
 
 For each team we will provide at least $1000 credits in the Google Compute Engine.
@@ -39,10 +38,13 @@ Send this email by @bold{28 October 2021}, 24:00 the latest, including a first d
 
 The biweekly meetings of a team with its tutor are done via Zoom video meetings. In addition, each team gets a private group in Piazza for offline communication with their tutor.
 
-@bold{Submission} All submissions are done via the team's private Piazza group. The proposal, the reports as well as the presentations have to be sent as pdf files where the filename ends with your project-id, e.g., @tt{proposal-07.pdf}.
+@bold{Submission} All submissions are done via the team's private Piazza group. The proposal, the reports as well as the slides of your presentations have to be sent as pdf files where the filename ends with your project-id, e.g.,@(linebreak)
+@tt{proposal-07.pdf},@(linebreak)
+@tt{milestone-report-07.pdf}, @tt{milestone-slidest-07.pdf},@(linebreak)
+@tt{final-report-07.pdf}, @tt{final-slidest-07.pdf}.
 
-The format for the milestone and final report has to be the standard IEEE conference format: @(hyperlink "https://www.ieee.org/conferences/publishing/templates.html" "https://www.ieee.org/conferences/publishing/templates.html")
-@elem[(linebreak)](It is recommended to use this format for the  proposal as well.)
+The format for the proposal, milestone and final report has to be the standard IEEE conference format: @(hyperlink "https://www.ieee.org/conferences/publishing/templates.html" "https://www.ieee.org/conferences/publishing/templates.html")
+
 
 
 In addition, each team has to create a GitHub repository for their project where all source code is stored. The name of this repository has to be @tt{tum-adlr-ws21-<project-id>}, e.g., @tt{tum-adlr-ws21-12}. You have to invite your tutor (and the lecturer) to this repository.
