@@ -40,8 +40,8 @@ The biweekly meetings of a team with its tutor are done via Zoom video meetings.
 
 @bold{Submission} All submissions are done via the team's private Piazza group. The proposal, the reports as well as the slides of your presentations have to be sent as pdf files where the filename ends with your project-id, e.g.,@(linebreak)
 @tt{proposal-07.pdf},@(linebreak)
-@tt{milestone-report-07.pdf}, @tt{milestone-slidest-07.pdf},@(linebreak)
-@tt{final-report-07.pdf}, @tt{final-slidest-07.pdf}.
+@tt{milestone-report-07.pdf}, @tt{milestone-slides-07.pdf},@(linebreak)
+@tt{final-report-07.pdf}, @tt{final-slides-07.pdf}.
 
 The format for the proposal, milestone and final report has to be the standard IEEE conference format: @(hyperlink "https://www.ieee.org/conferences/publishing/templates.html" "https://www.ieee.org/conferences/publishing/templates.html")
 
