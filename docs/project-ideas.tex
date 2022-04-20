@@ -10,21 +10,29 @@
 Here you can find a number of ideas for projects we collected. Take this as an inspiration for your own project. Some of the ideas are rather "big", meaning they could result in more than one project. After you have registered your team (including a draft proposal) you will discuss the extent of your final proposal with your assigned tutor.
 
 
-\subsubsection{Comparing Methods for Uncertainty Estimation}
-Interesting methods include MC-Dropoout \cite{Gal2016}, Bootstrapping \cite{Osband2018}, and Normalizing Flows \cite{louizos2017multiplicative}. These methods could be compared in vastly different settings.
-\begin{itemize}
-  \item Investigate how the uncertainty estimation changes during the training process (relevant to RL since we generally don’t update the networks until convergence before collecting more data).
-  \item Investigate which methods are best suited for active learning in the framework proposed by \cite{gal2017active}.
-  \item Investigate which methods perform best for DQNs in simple environments similar (\cite{BSuit2020}, \cite{touati2018randomized}).
-  \item Come up with your own ideas.
-\end{itemize}
+% \subsubsection{Comparing Methods for Uncertainty Estimation}
+% Interesting methods include MC-Dropoout \cite{Gal2016}, Bootstrapping \cite{Osband2018}, and Normalizing Flows \cite{louizos2017multiplicative}. These methods could be compared in vastly different settings.
+% \begin{itemize}
+%   \item Investigate how the uncertainty estimation changes during the training process (relevant to RL since we generally don’t update the networks until convergence before collecting more data).
+%   \item Investigate which methods are best suited for active learning in the framework proposed by \cite{gal2017active}.
+%   \item Investigate which methods perform best for DQNs in simple environments similar (\cite{BSuit2020}, \cite{touati2018randomized}).
+%   \item Come up with your own ideas.
+% \end{itemize}
 
 \subsubsection{Offline Datasets for Reinforcement Learning}
-Offline (Batch) RL has recently gained more attention, e.g. \cite{Agarwal2019}, \cite{nair2020} (cf. \url{https://bair.berkeley.edu/blog/2019/12/05/bear}).
+Offline (Batch) RL has recently gained more attention, e.g. \cite{Agarwal2019}, \cite{nair2020}, \cite{AWOpt2021} (cf. \url{github.com/rail-berkeley/d4rl}, \url{github.com/deepmind/deepmind-research/tree/master/rl_unplugged}).
 \begin{itemize}
   \item Compare differnt Batch RL algorithms.
   \item Test new environments.
   \item Benchmark against online algorithms.
+\end{itemize}
+
+\subsubsection{Decision Transformer}
+The Transformer arcitecture is extremely effective for language models, and has shown to promising results on computer vision tasks. Therefore, researches are exploring the application of those models for Reinforcement Learning (in particular, on offline datasets) \cite{DecisionTransformer2021}, \cite{OneBigSequence2021}. In your project you could, for example:
+\begin{itemize}
+  \item Train a Decision Transformer in the cloud.
+  \item Analyze evaluation performance in detail, improve through different planning approaches.
+  \item Adjust intermediate training signals to improve performance.
 \end{itemize}
 
 % \subsubsection{Geometric Representations in Reinforcement Learning}
@@ -59,23 +67,23 @@ In~\cite{Chebotar2018} an efficient method for solving the sim2real problem by i
 % \end{itemize}
 
 \subsubsection{Learning the Inverse Kinematic}
-Look at the possibilities for representing inverse problems with neural networks. 
+Look at the possibilities for representing inverse problems with neural networks.
 \textit{Analyzing Inverse Problems with Invertible Neural Networks}~\cite{Ardizzone2018}
-compare different flavors of GANs, VAEs and INN(theirs) for inverse problems in general. 
+compare different flavors of GANs, VAEs and INN(theirs) for inverse problems in general.
 Extend their simple robotic example of a planner arm to 3D / more DoFs / multiple TCPs.
 Unlike in computer vision, for the robot kinematic we have solid metrics to describe how well the generation task was performed.
 How can we use this knowledge to our advantage?
 
 \begin{itemize}
   \item What is the best approach to represent the high dimensional nullspaces for complex robot geometries?
-  \item ~\cite{Lembono2021} use an ensemble of GANs to reduce the impact of mode collapse. 
-  What other options do we have to improve the generative model?
+  \item ~\cite{Lembono2021} use an ensemble of GANs to reduce the impact of mode collapse.
+        What other options do we have to improve the generative model?
   \item Predict not only the position of the TCP but also the rotation. Connection to continuous rotation representation ~\cite{Zhou2018}.
   \item How to measure the performance if the real nullspace is not known?
 \end{itemize}
 
 \subsubsection{Harnessing Reinforcement Learning for Neural Motion Planning}
-Motion planning for a planar robotic arm from a start configuration to a cartesian goal position. 
+Motion planning for a planar robotic arm from a start configuration to a cartesian goal position.
 Comparison between DDPG, DDPG+HER, and DDPG-MP(theirs) ~\cite{Jurgenson2019}.
 They use RRT* to generate expert knowledge in difficult cases, where random exploration does not find a feasible solution.
 \begin{itemize}
@@ -86,7 +94,7 @@ They use RRT* to generate expert knowledge in difficult cases, where random expl
 
 
 \subsubsection{Learning to Optimize Motion Planning}
-Explore the ideas proposed by "Learning to Optimize" ~\cite{LiM16b} in the context of optimization based motion planning \cite{Zucker2013}. 
+Explore the ideas proposed by "Learning to Optimize" ~\cite{LiM16b} in the context of optimization based motion planning \cite{Zucker2013}.
 Can Reinforcement Learning guide an optimzer to speed up robotic path planning?
 How does it relate to the approach of "Unsupervised Path Regression Networks" ~\cite{Pandy2020}.
 Can we combine those ideas?
@@ -145,10 +153,10 @@ Training RL agents in simulation can accelerate learning substantially, and may 
 \end{itemize}
 
 \subsubsection{NeRF based Robotcalibration}
-  Neuronal radiance fields are quite popular these days in the computer vision community. While they are often used for noval view sythesis, to create impossible camera effects with real world footage, they also provide a new way to calibrate camera extrinsics and intrinsics \cite{lin2021barf, Sucar:etal:ICCV2021, wang2021nerfmm, SCNeRF2021}.
-  This is possible because the extrinsics and intrinsics can be trained together with the model.
+Neuronal radiance fields are quite popular these days in the computer vision community. While they are often used for noval view sythesis, to create impossible camera effects with real world footage, they also provide a new way to calibrate camera extrinsics and intrinsics \cite{lin2021barf, Sucar:etal:ICCV2021, wang2021nerfmm, SCNeRF2021}.
+This is possible because the extrinsics and intrinsics can be trained together with the model.
 
-  In Robtocis we still require tracking of visual markers to calibrate the kinemetic (see the work of \cite{Birbach2014} as an example). However, implicit neuronal scene representations might enable us to learn the robot's kinematic end-to-end.
+In Robtocis we still require tracking of visual markers to calibrate the kinemetic (see the work of \cite{Birbach2014} as an example). However, implicit neuronal scene representations might enable us to learn the robot's kinematic end-to-end.
 
 \begin{itemize}
   \item Try to utilize a sim-setup (pybullet) with a simple sythetic pinhole camera and a robot arm that holds the camera.
@@ -156,11 +164,15 @@ Training RL agents in simulation can accelerate learning substantially, and may 
   \item The calibration can run offline, since NeRFs are still computational expensive.
   \item If the idea seems promissing and reveals good results with the synthetic dataset we might use real world camera data from Justin to calibrate its upper body (without arms).
 \end{itemize}
-  
-  
+
+
 
 % \subsubsection{Compare Bullet/MuJoCo/Isaac by implementing DLR Hand II Environment}
 % Need to have GPU.
+
+
+\subsubsection{Procgen Benchmark}
+Implement and experiment with different agents on this procedurally-generated benchmark \cite{procgen2020}. You can compare your results with other submissions on the leaderboard (\url{github.com/openai/procgen}).
 
 
 \bibliographystyle{apalike2}
