@@ -178,17 +178,18 @@ Pretraining neural networks in an unsupervised setting showed to be extremely ef
 %  \item If everything works correctly we can also run real world experiments with Justin's DLR Hand II.
 %\end{itemize}
 
-\subsubsection{NeRF based Robotcalibration}
-Neuronal radiance fields are quite popular these days in the computer vision community. While they are often used for novel view synthesis, to create impossible camera effects with real world footage, they also provide a new way to calibrate camera extrinsics and intrinsics \cite{lin2021barf, Sucar:etal:ICCV2021, wang2021nerfmm, SCNeRF2021}.
+\subsubsection{NeRF based Kinematic Calibration}
+Neuronal radiance fields are quite popular these days in the computer vision community. While they are often used for noval view synthesis, to create impossible camera effects with real world footage, they also provide a new way to calibrate camera extrinsics and intrinsics \cite{lin2021barf, Sucar:etal:ICCV2021, wang2021nerfmm, SCNeRF2021}.
 This is possible because the extrinsics and intrinsics can be trained together with the model.
 
-In Robtocis we still require tracking of visual markers to calibrate the kinemetic (see the work of \cite{Birbach2014} as an example). However, implicit neuronal scene representations might enable us to learn the robot's kinematic end-to-end.
+We still require tracking of visual markers to calibrate the kinematic of a robot (see the work of \cite{Birbach2014} as an example). 
+However, implicit neuronal scene representations might enable us to learn the robot's kinematic end-to-end.
 
 \begin{itemize}
   \item Try to utilize a sim-setup (pybullet) with a simple synthetic pinhole camera and a robot arm that holds the camera.
   \item The work of \cite{SCNeRF2021} should provide a starting point for a NeRF implementation in pytorch.
   \item The calibration can run offline, since NeRFs are still computational expensive.
-  \item If the idea seems promising and reveals good results with the synthetic dataset we might use real world camera data from Justin to calibrate its upper body (without arms).
+  \item Try to incorporate the vector decomposition 'trick' of \cite{TensoRF} to reduce training/calibration time.
 \end{itemize}
 
 
