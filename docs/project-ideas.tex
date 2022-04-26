@@ -67,22 +67,22 @@ Therefore, researches are exploring the application of those models for Reinforc
 %   \item Use message passing network(s) in addition or instead of the MLP for value/Q function and policy in standard algorithms like PPO \cite{Schulman2017} or SAC \cite{Haarnoja2018a}.
 % \end{itemize}
 
-\subsubsection{Closing the Sim-to-Real Loop: Adapting Simulation Randomization with Real World Experience}
-In~\cite{Chebotar2018} an efficient method for solving the sim2real problem by iteratively adapting the simulation parameters to the real system is proposed.
-\begin{itemize}
-  \item Change the experimental setup to a sim2sim setting because no real robot is available (i.e., try to adapt one simulation to a given one with unknown parameters).
-  \item Investigate the convergence of estimated parameters.
-  \item Investigate the influence of a broader starting distribution on the final performance.
-  \item Investigate how re-using learned policies from previous iterations for initialization of the new network shortens training time and restrains the final performance.
-\end{itemize}
+%\subsubsection{Closing the Sim-to-Real Loop: Adapting Simulation Randomization with Real World Experience}
+%In~\cite{Chebotar2018} an efficient method for solving the sim2real problem by iteratively adapting the simulation parameters to the real system is proposed.
+%\begin{itemize}
+%  \item Change the experimental setup to a sim2sim setting because no real robot is available (i.e., try to adapt one simulation to a given one with unknown parameters).
+%  \item Investigate the convergence of estimated parameters.
+%  \item Investigate the influence of a broader starting distribution on the final performance.
+%  \item Investigate how re-using learned policies from previous iterations for initialization of the new network shortens training time and restrains the final performance.
+%\end{itemize}
 
-\subsubsection{Meta Reinforcement Learning for Sim-to-real Domain Adaptation}
-\cite{Arndt19} show that the sim2real problem can be tackled by applying Meta RL to learned low dimensional projections of the action space.
-\begin{itemize}
-  \item Implement the algorithm
-  \item Change the experimental setup to a sim2sim setting because no real robot is available (i.e., try to adapt one simulation to a given one with unknown parameters).
-  \item Investigate how this framework can be applied or extended to classic closed-loop robot control
-\end{itemize}
+%\subsubsection{Meta Reinforcement Learning for Sim-to-real Domain Adaptation}
+%\cite{Arndt19} show that the sim2real problem can be tackled by applying Meta RL to learned low dimensional projections of the action space.
+%\begin{itemize}
+%  \item Implement the algorithm
+%  \item Change the experimental setup to a sim2sim setting because no real robot is available (i.e., try to adapt one simulation to a given one with unknown parameters).
+%  \item Investigate how this framework can be applied or extended to classic closed-loop robot control
+%\end{itemize}
 
 % \subsubsection{Solving Complex Sparse Reinforcement Learning Tasks}
 % When defining Reinforcement Learning Tasks for robots, it is often desirable to stick to sparse rewards in order to avoid reward shaping. Not only does is it ease the setup since a task can be solely defined by its final desired outcome, but the optimal policy can be found "outside of the box" without a human prior given through the reward function. Unfortunately, in big state spaces random exploration is not able to find these sparse success signals. Therefore, \cite{riedmiller2018} introduce SAC-X.
@@ -172,12 +172,12 @@ Pretraining neural networks in an unsupervised setting showed to be extremely ef
   \item \cite{DADS2020}
 \end{itemize}
 
-\subsubsection{Policy Adaptation during Deployment}
-Training RL agents in simulation can accelerate learning substantially, and may sometimes be the only viable option due to hardware constraints. However, it is difficult to model the system in simulation accurately enough such that trained policies also work in the real world. \cite{Hansen2021} propose to close this sim2real gap using self-supervision during deployment.
-\begin{itemize}
-  \item Validate the proposed algorithm in a sim2sim setting.
-  \item If everything works correctly we can also run real world experiments with Justin's DLR Hand II.
-\end{itemize}
+%\subsubsection{Policy Adaptation during Deployment}
+%Training RL agents in simulation can accelerate learning substantially, and may sometimes be the only viable option due to hardware constraints. However, it is difficult to model the system in simulation accurately enough such that trained policies also work in the real world. \cite{Hansen2021} propose to close this sim2real gap using self-supervision during deployment.
+%\begin{itemize}
+%  \item Validate the proposed algorithm in a sim2sim setting.
+%  \item If everything works correctly we can also run real world experiments with Justin's DLR Hand II.
+%\end{itemize}
 
 \subsubsection{NeRF based Robotcalibration}
 Neuronal radiance fields are quite popular these days in the computer vision community. While they are often used for novel view synthesis, to create impossible camera effects with real world footage, they also provide a new way to calibrate camera extrinsics and intrinsics \cite{lin2021barf, Sucar:etal:ICCV2021, wang2021nerfmm, SCNeRF2021}.
@@ -189,7 +189,7 @@ In Robtocis we still require tracking of visual markers to calibrate the kinemet
   \item Try to utilize a sim-setup (pybullet) with a simple synthetic pinhole camera and a robot arm that holds the camera.
   \item The work of \cite{SCNeRF2021} should provide a starting point for a NeRF implementation in pytorch.
   \item The calibration can run offline, since NeRFs are still computational expensive.
-  \item If the idea seems promissing and reveals good results with the synthetic dataset we might use real world camera data from Justin to calibrate its upper body (without arms).
+  \item If the idea seems promising and reveals good results with the synthetic dataset we might use real world camera data from Justin to calibrate its upper body (without arms).
 \end{itemize}
 
 
@@ -202,6 +202,12 @@ In Robtocis we still require tracking of visual markers to calibrate the kinemet
 Implement and experiment with different agents on this procedurally-generated benchmark \cite{procgen2020}. 
 You can compare your results with other submissions on the leaderboard (\url{github.com/openai/procgen}).
 
+\subsubsection{Comparing Different Methods to Handle POMDPs in the Form of Randomized Environments}
+\textit{LSTM vs Stacking fuer Domain Noise}
+
+\subsubsection{Casting Sim2Real as Meta-Reinforcement Learning}
+The PEARL algorithm introduced by \cite{rakelly2019} promises sample-efficient Meta-Reinforcement Learning.
+\textit{PEARL fuer Sim2Real aber dieses mal ohne Aufwand fuer die Env betreiben zu muessen und direkt from scratch implementiert.}
 
 \bibliographystyle{apalike2}
 \bibliography{minimal-research}
