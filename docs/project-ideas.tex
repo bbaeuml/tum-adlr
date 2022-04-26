@@ -26,7 +26,7 @@ After you have registered your team (including a draft proposal) you will discus
 \subsubsection{Offline Datasets for Reinforcement Learning}
 Offline (Batch) RL has recently gained more attention, e.g. \cite{Agarwal2019}, \cite{nair2020}, \cite{AWOpt2021} (cf. \url{github.com/rail-berkeley/d4rl}, \url{github.com/deepmind/deepmind-research/tree/master/rl_unplugged}).
 \begin{itemize}
-  \item Compare differnt Batch RL algorithms.
+  \item Compare different Batch RL algorithms.
   \item Test new environments.
   \item Benchmark against online algorithms.
 \end{itemize}
@@ -52,7 +52,7 @@ Offline (Batch) RL has recently gained more attention, e.g. \cite{Agarwal2019}, 
 
 
 \subsubsection{Decision Transformer}
-The Transformer arcitecture is extremely effective for language models, and has shown to promising results on computer vision tasks. 
+The Transformer architecture is extremely effective for language models, and has shown to promising results on computer vision tasks.
 Therefore, researches are exploring the application of those models for Reinforcement Learning (in particular, on offline datasets) \cite{DecisionTransformer2021}, \cite{OneBigSequence2021}. In your project you could, for example:
 \begin{itemize}
   \item Train a Decision Transformer in the cloud.
@@ -173,20 +173,20 @@ Pretraining neural networks in an unsupervised setting showed to be extremely ef
 \end{itemize}
 
 \subsubsection{Policy Adaptation during Deployment}
-Training RL agents in simulation can accelerate learning substantially, and may sometimes be the only viable option due to hardware constraints. However, it is difficult to model the system in simulation accuratly enough such that trained policies also work in the real world. \cite{Hansen2021} propse to close this sim2real gap using self-supervision during delpoyment.
+Training RL agents in simulation can accelerate learning substantially, and may sometimes be the only viable option due to hardware constraints. However, it is difficult to model the system in simulation accurately enough such that trained policies also work in the real world. \cite{Hansen2021} propose to close this sim2real gap using self-supervision during deployment.
 \begin{itemize}
   \item Validate the proposed algorithm in a sim2sim setting.
   \item If everything works correctly we can also run real world experiments with Justin's DLR Hand II.
 \end{itemize}
 
 \subsubsection{NeRF based Robotcalibration}
-Neuronal radiance fields are quite popular these days in the computer vision community. While they are often used for noval view sythesis, to create impossible camera effects with real world footage, they also provide a new way to calibrate camera extrinsics and intrinsics \cite{lin2021barf, Sucar:etal:ICCV2021, wang2021nerfmm, SCNeRF2021}.
+Neuronal radiance fields are quite popular these days in the computer vision community. While they are often used for novel view synthesis, to create impossible camera effects with real world footage, they also provide a new way to calibrate camera extrinsics and intrinsics \cite{lin2021barf, Sucar:etal:ICCV2021, wang2021nerfmm, SCNeRF2021}.
 This is possible because the extrinsics and intrinsics can be trained together with the model.
 
 In Robtocis we still require tracking of visual markers to calibrate the kinemetic (see the work of \cite{Birbach2014} as an example). However, implicit neuronal scene representations might enable us to learn the robot's kinematic end-to-end.
 
 \begin{itemize}
-  \item Try to utilize a sim-setup (pybullet) with a simple sythetic pinhole camera and a robot arm that holds the camera.
+  \item Try to utilize a sim-setup (pybullet) with a simple synthetic pinhole camera and a robot arm that holds the camera.
   \item The work of \cite{SCNeRF2021} should provide a starting point for a NeRF implementation in pytorch.
   \item The calibration can run offline, since NeRFs are still computational expensive.
   \item If the idea seems promissing and reveals good results with the synthetic dataset we might use real world camera data from Justin to calibrate its upper body (without arms).
