@@ -8,9 +8,9 @@
 \begin{document}
 \maketitle
 
-Here you can find a number of ideas for projects we collected. 
-Take this as an inspiration for your own project. 
-Some of the ideas are rather "big", meaning they could result in more than one project. 
+Here you can find a number of ideas for projects we collected.
+Take this as an inspiration for your own project.
+Some of the ideas are rather "big", meaning they could result in more than one project.
 After you have registered your team (including a draft proposal) you will discuss the extent of your final proposal with your assigned tutor.
 
 
@@ -35,10 +35,10 @@ Offline (Batch) RL has recently gained more attention, e.g. \cite{Agarwal2019}, 
 \subsubsection{Learning to Fly}
 Fixed-wing VTOL (Vertical Take-Off and Landing) drones are highly efficient in long-range flight, but difficult to control during gusty landing phases. Xu et al., \cite{LearningToFly} presented an error convolution input enabling the learned controller to adapt for different airframes.
 \begin{itemize}
-  \item Test the approach on VTOL drones with less propeller actuation but control flaps. 
+  \item Test the approach on VTOL drones with less propeller actuation but control flaps.
   \item Expand the idea to continuous action spaces.
   \item Investigate what sensor readings could be added to the state space to increase stability in gusty conditions.
-  \item Utilize our drone model \cite{BionicVTOL} implemented in Julia as the high-efficient, flexible and dynamic programming language of the future. 
+  \item Utilize our drone model \cite{BionicVTOL} implemented in Julia as the high-efficient, flexible and dynamic programming language of the future.
 \end{itemize}
 
 
@@ -94,8 +94,8 @@ How can we use this knowledge to our advantage?
   \item What is the best approach to represent the high dimensional nullspaces for complex robot geometries?
   \item ~\cite{Lembono2021} use an ensemble of GANs to reduce the impact of mode collapse.
         What other options do we have to improve the generative model?
-  \item Predict not only the position of the TCP but also its rotation. 
-  How can one best represent the $SO(3)$ ~\cite{Zhou2018}.
+  \item Predict not only the position of the TCP but also its rotation.
+        How can one best represent the $SO(3)$ ~\cite{Zhou2018}.
   \item How to measure the performance if the real nullspace is not known?
 \end{itemize}
 
@@ -185,7 +185,7 @@ Pretraining neural networks in an unsupervised setting showed to be extremely ef
 Neuronal radiance fields are quite popular these days in the computer vision community. While they are often used for noval view synthesis, to create impossible camera effects with real world footage, they also provide a new way to calibrate camera extrinsics and intrinsics \cite{lin2021barf, Sucar:etal:ICCV2021, wang2021nerfmm, SCNeRF2021}.
 This is possible because the extrinsics and intrinsics can be trained together with the model.
 
-We still require tracking of visual markers to calibrate the kinematic of a robot (see the work of \cite{Birbach2014} as an example). 
+We still require tracking of visual markers to calibrate the kinematic of a robot (see the work of \cite{Birbach2014} as an example).
 However, implicit neuronal scene representations might enable us to learn the robot's kinematic end-to-end.
 
 \begin{itemize}
@@ -202,7 +202,7 @@ However, implicit neuronal scene representations might enable us to learn the ro
 
 
 \subsubsection{Procgen Benchmark}
-Implement and experiment with different agents on this procedurally-generated benchmark \cite{procgen2020}. 
+Implement and experiment with different agents on this procedurally-generated benchmark \cite{procgen2020}.
 You can compare your results with other submissions on the leaderboard (\url{github.com/openai/procgen}).
 
 \subsubsection{Comparing Different Methods to Handle POMDPs in the Form of Randomized Environments}
