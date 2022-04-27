@@ -86,8 +86,7 @@ Therefore, researches are exploring the application of those models for Reinforc
 
 \subsubsection{Learning the Inverse Kinematics}
 Look at the possibilities for representing inverse problems with neural networks.
-\textit{Analyzing Inverse Problems with Invertible Neural Networks}~\cite{Ardizzone2018}
-compare different flavors of GANs, VAEs and INN(theirs) for inverse problems in general.
+~\cite{Ardizzone2018} compare different flavors of GANs, VAEs and INN(theirs) for inverse problems in general.
 Extend their simple robotic example of a planner arm to 3D / more DoFs / multiple TCPs.
 Unlike in computer vision, for the robot kinematic we have solid metrics to describe how well the generation task was performed.
 How can we use this knowledge to our advantage?
@@ -96,20 +95,23 @@ How can we use this knowledge to our advantage?
   \item What is the best approach to represent the high dimensional nullspaces for complex robot geometries?
   \item ~\cite{Lembono2021} use an ensemble of GANs to reduce the impact of mode collapse.
         What other options do we have to improve the generative model?
-  \item Predict not only the position of the TCP but also its rotation.
-        How can one best represent the $SO(3)$ ~\cite{Zhou2018}.
   \item How to measure the performance if the real nullspace is not known?
+  \item Predict not only the position of the TCP but also its rotation.
+        How can one best represent the $SO(3)$ ~\cite{Zhou2018}?
 \end{itemize}
 
 \subsubsection{Harnessing Reinforcement Learning for Neural Motion Planning}
-Motion planning for a planar robotic arm from a start configuration to a cartesian goal position.
-Comparison between DDPG, DDPG+HER, and DDPG-MP(theirs) ~\cite{Jurgenson2019}.
-They use RRT* to generate expert knowledge in difficult cases, where random exploration does not find a feasible solution.
+Tackle motion planning with RL for a planar robotic arm in an unknown environment ~\cite{Jurgenson2019}.
+Random exploration does not always find a feasible solution for difficult cases. 
+By using RRT* to generate expert knowledge they can guide the exploration more efficiently.
+A comparison between pure DDPG, DDPG+HER, and DDPG-MP(theirs) shows the potential of this approach.
+
+% Motion planning for a planar robotic arm from a start configuration to a carte- sian goal position. Comparison between DDPG, DDPG+HER, and DDPG- MP(theirs) Jurgenson2019. They use RRT* to generate expert knowledge in difficult cases, where random exploration does not find a feasible solution.
+
 \begin{itemize}
   \item Modify the code and try it for different robots and environments.
   \item Is this expert knowledge necessary or can this also be achieved with a well designed curriculum?
-  \item look at modern approaches to represent the environment in which the robot moves (ie. Basis Points Set ~\cite{Prokudin2019}, Example of PointNet for Motion Planning ~\cite{Strudel2020})
-  \item They state that supervised learning is inferior to RL for this problem because of the insufficient data on the boundary of the obstacles. Is it possible to achieve similar results by tweaking the distribution of the supervised examples?
+  \item Look at modern approaches to represent the environment in which the robot moves (ie. Basis Points Set ~\cite{Prokudin2019}; PointNet for Motion Planning ~\cite{Strudel2020})
 \end{itemize}
 
 
@@ -120,19 +122,23 @@ How does it relate to the approach of "Unsupervised Path Regression Networks" ~\
 Can we combine those ideas?
 
 \begin{itemize}
-  \item Set up an optimizer for a simple robot (with help from the tutor)
-  \item Test ideas to guide the optimization problem of motion planning
+  \item Set up an optimizer for a simple robot (with help from the tutor).
+  \item Test ideas to guide the optimization problem of motion planning.
   \item What are advantages of this hybrid approach over using RL directly on motion planning?
 \end{itemize}
 
-\subsubsection{Trajectory planning with moving obstacles}
+\subsubsection{Trajectory Planning with Moving Obstacles}
 Drones not only have to plan flight paths through static environments, but also avoid collisions with dynamic objects.
+To learn such trajectories, a suitable encoding of the changing environment is crucial.
+Start with the Basis Points Set ~\cite{Prokudin2019} and extend it to dynamic environments.
+Use this representation for neural motion planning ~\cite{Qureshi2019}.
+
 \begin{itemize}
+  \item Come up with a state representation for dynamic environments.
   \item Set up a simple 2D environment in which an agent can navigate through moving obstacles.
-  \item Come up with a state representation that reflects the motion of the obstacles and allows for a changing number of objects.
-  \item Apply neural motion planning to the problem and provide a possible trajectory in a time-efficient process.
+  \item Use RL to plan optimal trajectories in this environment. 
   \item Optional: Extend the method to fixed-wing drones in three-dimensional space and test your approach in our own simulator \cite{BionicVTOL} or in the DodgeDrone challenge \cite{DodgeDroneChallenge}.
-  \item Optional: Experiment with additional uncertainties in the motion prediction of the collision objects.
+  %\item Optional: Experiment with additional uncertainties in the motion prediction of the collision objects.
 \end{itemize}
 
 
