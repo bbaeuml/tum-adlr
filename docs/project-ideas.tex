@@ -207,12 +207,19 @@ However, implicit neuronal scene representations might enable us to learn the ro
 Implement and experiment with different agents on this procedurally-generated benchmark \cite{procgen2020}.
 You can compare your results with other submissions on the leaderboard (\url{github.com/openai/procgen}).
 
-\subsubsection{Comparing Different Methods to Handle POMDPs in the Form of Randomized Environments}
-\textit{LSTM vs Stacking fuer Domain Noise}
-
 \subsubsection{Casting Sim2Real as Meta-Reinforcement Learning}
-The PEARL algorithm introduced by \cite{rakelly2019} promises sample-efficient Meta-Reinforcement Learning.
-\textit{PEARL fuer Sim2Real aber dieses mal ohne Aufwand fuer die Env betreiben zu muessen und direkt from scratch implementiert.}
+The PEARL algorithm introduced by \cite{rakelly2019} promises sample-efficient Meta-Reinforcement Learning, meaning that it can quickly adapt to new unseen tasks. We want to use its capabilities to handle heavily randomized environments occurring in simulations that are designed to allow a real-world transfer of the policy \cite{sievers2021}.
+\begin{itemize}
+	\item Find a suitable benchmark environment
+	\item Implement the PEARL algorithm
+	\item Extend it to allow for a continuous task distribution during training
+\end{itemize}
+
+
+
+\subsubsection{Generalization in Environments with Continuous Action Spaces}
+\cite{igl2019} highlighted improvements to boost generalization performance of RL algorithms in maze-like environments. Investigate how these tweaks can be applied to more physics-inspired tasks including domain randomization and continuous action spaces.
+
 
 \bibliographystyle{apalike2}
 \bibliography{minimal-research}
