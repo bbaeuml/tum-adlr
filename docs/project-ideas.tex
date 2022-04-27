@@ -144,19 +144,19 @@ Based on these works:
   \item Assess the effect of different design choices and hyperparameters (e.g. hidden state initialization strategy in the experience replay buffer, truncated BPTT, ...)
 \end{itemize}
 
-\subsubsection{Differentiable Bayesian Filters}
-\textit{*Prior knowledge of bayesian filters highly recommended*}\\
-Differentiable filters are a promising approach for combining the algorithmic structure of bayesian filter techniques with the power of learning-based methods (for an overview over existing methods, see e.g. \cite{kloss2021train}). Importantly, differentiable filters offer a systematic way of dealing with aleatoric uncertainty in state estimation problems.
-\begin{itemize}
-  \item Implement a \textit{differentiable} filter of your choice, for example EKF, UKF or Particle Filter.
-  \item Consider the simple tracking experiment VI from \cite{kloss2021train}. Implement interesting modification to the experiment. For example:
-        \begin{itemize}
-          \item use the distance to beacons instead of images as measurements
-          \item implement collisions
-          \item additionally estimate parameters from the system dynamics on-the-fly
-        \end{itemize}
-  \item Compare your filter to recurrent neural networks and discuss the benefits.
-\end{itemize}
+%\subsubsection{Differentiable Bayesian Filters}
+%\textit{*Prior knowledge of bayesian filters highly recommended*}\\
+%Differentiable filters are a promising approach for combining the algorithmic structure of bayesian filter techniques with the power of learning-based methods (for an overview over existing methods, see e.g. \cite{kloss2021train}). Importantly, differentiable filters offer a systematic way of dealing with aleatoric uncertainty in state estimation problems.
+%\begin{itemize}
+%  \item Implement a \textit{differentiable} filter of your choice, for example EKF, UKF or Particle Filter.
+%  \item Consider the simple tracking experiment VI from \cite{kloss2021train}. Implement interesting modification to the experiment. For example:
+%        \begin{itemize}
+%          \item use the distance to beacons instead of images as measurements
+%          \item implement collisions
+%          \item additionally estimate parameters from the system dynamics on-the-fly
+%        \end{itemize}
+%  \item Compare your filter to recurrent neural networks and discuss the benefits.
+%\end{itemize}
 
 \subsubsection{Exploring Munchausen Reinforcement Learning}
 Recently, \cite{vieillard2020munchausen} proposed an appealingly simple, yet surprisingly effective extension to DQN; using the policy for bootstrapping. Exploring the implications of this idea, projects could for example address a (sub) set of the following problems:
