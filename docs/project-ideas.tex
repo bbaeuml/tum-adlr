@@ -34,15 +34,6 @@ Available datasets: \url{github.com/rail-berkeley/d4rl}, \url{github.com/deepmin
 % \cite{Agarwal2019},
 
 
-\subsubsection{Learning to Fly}
-Fixed-wing VTOL (Vertical Take-Off and Landing) drones are highly efficient in long-range flight, but difficult to control during gusty landing phases. Xu et al., \cite{LearningToFly} presented an error convolution input enabling the learned controller to adapt for different airframes.
-\begin{itemize}
-  \item Test the approach on VTOL drones with less propeller actuation but control flaps.
-  \item Expand the idea to continuous action spaces.
-  \item Investigate what sensor readings could be added to the state space to increase stability in gusty conditions.
-  \item Utilize our drone model \cite{BionicVTOL} implemented in Julia as the high-efficient, flexible and dynamic programming language of the future.
-\end{itemize}
-
 
 \subsubsection{Decision Transformer}
 The Transformer architecture is extremely effective for language models, and has shown to promising results on computer vision tasks.
@@ -115,17 +106,17 @@ A comparison between pure DDPG, DDPG+HER, and DDPG-MP(theirs) shows the potentia
 \end{itemize}
 
 
-\subsubsection{Learning to Optimize Motion Planning}
-Explore the ideas proposed by "Learning to Optimize" ~\cite{LiM16b} in the context of optimization based motion planning \cite{Zucker2013}.
-Can Reinforcement Learning guide an optimizer to speed up robotic path planning?
-How does it relate to the approach of "Unsupervised Path Regression Networks" ~\cite{Pandy2020}.
-Can we combine those ideas?
-
-\begin{itemize}
-  \item Set up an optimizer for a simple robot (with help from the tutor).
-  \item Test ideas to guide the optimization problem of motion planning.
-  \item What are advantages of this hybrid approach over using RL directly on motion planning?
-\end{itemize}
+%\subsubsection{Learning to Optimize Motion Planning}
+%Explore the ideas proposed by "Learning to Optimize" ~\cite{LiM16b} in the context of optimization based motion planning \cite{Zucker2013}.
+%Can Reinforcement Learning guide an optimizer to speed up robotic path planning?
+%How does it relate to the approach of "Unsupervised Path Regression Networks" ~\cite{Pandy2020}.
+%Can we combine those ideas?
+%
+%\begin{itemize}
+%  \item Set up an optimizer for a simple robot (with help from the tutor).
+%  \item Test ideas to guide the optimization problem of motion planning.
+%  \item What are advantages of this hybrid approach over using RL directly on motion planning?
+%\end{itemize}
 
 \subsubsection{Trajectory Planning with Moving Obstacles}
 Drones not only have to plan flight paths through static environments, but also avoid collisions with dynamic objects.
@@ -135,10 +126,19 @@ Use this representation for neural motion planning ~\cite{Qureshi2019}.
 
 \begin{itemize}
   \item Come up with a state representation for dynamic environments.
-  \item Set up a simple 2D environment in which an agent can navigate through moving obstacles.
+  \item Set up a simple 2D (and later 3D) environment in which an agent can navigate through moving obstacles.
   \item Use RL to plan optimal trajectories in this environment. 
-  \item Optional: Extend the method to fixed-wing drones in three-dimensional space and test your approach in our own simulator \cite{BionicVTOL} or in the DodgeDrone challenge \cite{DodgeDroneChallenge}.
-  %\item Optional: Experiment with additional uncertainties in the motion prediction of the collision objects.
+%  \item Optional: Extend the method to fixed-wing drones in three-dimensional space and test your approach in our own simulator \cite{BionicVTOL} or in the DodgeDrone challenge \cite{DodgeDroneChallenge}.
+  \item Optional: Extend the method to work with uncertainties in the motion prediction of the collision objects.
+\end{itemize}
+
+\subsubsection{Learning to Fly}
+Fixed-wing VTOL (Vertical Take-Off and Landing) drones are highly efficient in long-range flight, but difficult to control during gusty landing phases. Xu et al., \cite{LearningToFly} presented an error convolution input enabling the learned controller to adapt for different airframes.
+\begin{itemize}
+  \item Test the approach on VTOL drones with less propeller actuation but control flaps.
+  \item Expand the idea to continuous action spaces.
+  \item Investigate what sensor readings could be added to the state space to increase stability in gusty conditions.
+  \item Utilize our drone model \cite{BionicVTOL} implemented in Julia as the high-efficient, flexible and dynamic programming language of the future.
 \end{itemize}
 
 
@@ -214,7 +214,7 @@ Implement and experiment with different agents on this procedurally-generated be
 You can compare your results with other submissions on the leaderboard (\url{github.com/openai/procgen}).
 
 \subsubsection{Casting Sim2Real as Meta-Reinforcement Learning}
-The PEARL algorithm introduced by \cite{rakelly2019} promises sample-efficient Meta-Reinforcement Learning, meaning that it can quickly adapt to new unseen tasks. We want to use its capabilities to handle heavily randomized environments occurring in simulations that are designed to allow a real-world transfer of the policy \cite{sievers2021}.
+The PEARL algorithm introduced by \cite{rakelly2019} promises sample-efficient Meta-Reinforcement Learning, meaning that it can quickly adapt to new unseen tasks. We want to use its capabilities to handle heavily randomized environments occurring in simulations that are designed to allow a real-world transfer of the policy (like in our own work on in-hand manipulation \cite{sievers2021}).
 \begin{itemize}
 	\item Find a suitable benchmark environment
 	\item Implement the PEARL algorithm
