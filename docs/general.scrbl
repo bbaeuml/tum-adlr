@@ -9,10 +9,9 @@
           @item{ECTS: 6}
           @item{2V + 2P}]
 
-This year's course will be given completely online.
 @itemlist[         
- @item{Each week a lecture video and the slides will be provided on this web page.}
- @item{(Bi-)weekly we will in addition have a Q&A round via a Zoom video conference (we will send you a link and password).}]
+ @item{All videos and slides of all lectures are provided from the beginning on this website.}
+ @item{(Bi-)weekly we will have a Q&A session.}]
 
 
 @section[#:style 'unnumbered]{Practical}
