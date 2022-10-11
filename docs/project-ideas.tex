@@ -133,13 +133,16 @@ Use this representation for neural motion planning ~\cite{Qureshi2019}.
 \end{itemize}
 
 \subsubsection{Learning to Fly}
-Fixed-wing VTOL (Vertical Take-Off and Landing) drones are highly efficient in long-range flight, but difficult to control during gusty landing phases. Xu et al., \cite{LearningToFly} presented an error convolution input enabling the learned controller to adapt for different airframes.
+Fixed-wing VTOL (Vertical Take-Off and Landing) drones are highly efficient in long-range flight, but difficult to control during gusty landing phases. 
+Grant Holmes et al., \cite{ModelAgnosticVTOL} presented an deep learning based model-agnostic VTOL controller. With a similar goal Xu et al., \cite{LearningToFly} introduced an error convolution input enabling the learned controller to adapt for different airframes.
 \begin{itemize}
-  \item Test the approach on VTOL drones with less propeller actuation but control flaps.
-  \item Expand the idea to continuous action spaces.
+  \item Transfer one of the approaches to VTOL drones with only two propellers and control surfaces  \cite{ElectraVTOL}.
+  \item Expand the learning to continuous action spaces.
   \item Investigate what sensor readings could be added to the state space to increase stability in gusty conditions.
-  \item Utilize our drone model \cite{BionicVTOL} implemented in Julia as the high-efficient, flexible and dynamic programming language of the future.
+  \item Utilize our provided drone model implemented in Julia as the high-efficient, flexible and dynamic programming language of the future.
 \end{itemize}
+You will be provided with two Julia examples demonstrating RL in the environment, allowing a instant start even without prior Julia experience.
+With promising results during the midterm presentation, there is the option to attempt a sim-to-real transfer with a real UAV.
 
 
 \subsubsection{Recurrent Off-Policy Reinforcement Learning in POMDPs}
