@@ -244,6 +244,19 @@ The PEARL algorithm introduced by \cite{rakelly2019} promises sample-efficient M
 \cite{igl2019} highlighted improvements to boost generalization performance of RL algorithms in maze-like environments. Investigate how these tweaks can be applied to more physics-inspired tasks including domain randomization and continuous action spaces.
 
 
+\subsubsection{Tactile exploration of objects}
+
+When interacting with objects, often a full 3D model of the given object is required. 
+Using Perception, we are able to infer the surface of the visible part of the object, however also the surface of occluded parts is usually necessary to e.g. grasp the object.
+With tactile exploration (i.e. slowly moving the robotic hand until the object is touched), it is possible to observe even occluded parts of the object.
+This tactile information is usually very sparse, therefore a learning-based approach is necessary to infer the full shape.
+
+\begin{itemize}
+  \item Train a neural network to complete the shape of a given object only based on tactile information.
+  \item Develop a strategy which determines the best object area for the next tactile exploration (Maybe via RL?)
+  \item Combine tactile and depth information to infer the objects shape
+\end{itemize}
+
 \bibliographystyle{apalike2}
 \bibliography{minimal-research}
 
