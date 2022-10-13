@@ -82,7 +82,7 @@ When defining Reinforcement Learning Tasks for robots, it is often desirable to 
 \subsubsection{Non-sequential Reinforcement Learning for Hard Exploration Problems}
 Another way of dealing with sparse reward signals is to utilize ``expert demonstrations'' in promising regions of the state space. In the absence of experts, \cite{blau2021learning} propose to first generate successful trajectories by RRT-based planning algorithms and then initialize a policy using that data. Based on this idea, you could experiment with:
 \begin{itemize}
-   \item Implementing different heuristics for choosing states to explore from (see e.g. \cite{ecoffet2019go}) or implementing an interely different planning algorithm.
+   \item Implementing different heuristics for choosing states to explore from (see e.g. \cite{ecoffet2019go}) or implementing an entirely different planning algorithm.
   \item Coupling the policy learning with the RRT-based data collection e.g. by sampling starting states according to RRT and executing actions according to the current policy
 \end{itemize}
 
