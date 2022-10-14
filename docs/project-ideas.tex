@@ -204,21 +204,21 @@ Pretraining neural networks in an unsupervised setting showed to be extremely ef
 %  \item If everything works correctly we can also run real world experiments with Justin's DLR Hand II.
 %\end{itemize}
 
-\subsubsection{NeRF based Kinematic Calibration}
-Neuronal radiance fields are quite popular these days in the computer vision community.
-While they are often used for novel view synthesis, to create impossible camera effects with real world footage, they also provide a new way to calibrate camera extrinsics and intrinsics \cite{lin2021barf, Sucar:etal:ICCV2021, wang2021nerfmm, SCNeRF2021}.
-This is possible because the extrinsics and intrinsics can be trained together with the model.
+% \subsubsection{NeRF based Kinematic Calibration}
+% Neuronal radiance fields are quite popular these days in the computer vision community. 
+% While they are often used for novel view synthesis, to create impossible camera effects with real world footage, they also provide a new way to calibrate camera extrinsics and intrinsics \cite{lin2021barf, Sucar:etal:ICCV2021, wang2021nerfmm, SCNeRF2021}.
+% This is possible because the extrinsics and intrinsics can be trained together with the model.
 
-We still require tracking of visual markers to calibrate the kinematic of a robot (see the work of \cite{Birbach2014} as an example).
-However, implicit neuronal scene representations might enable us to learn the robot's kinematic end-to-end.
+% We still require tracking of visual markers to calibrate the kinematic of a robot (see the work of \cite{Birbach2014} as an example).
+% However, implicit neuronal scene representations might enable us to learn the robot's kinematic end-to-end.
 
-\begin{itemize}
-  \item Try to utilize a sim-setup (pybullet) with a simple synthetic pinhole camera and a robot arm that holds the camera. (Perfect rendering is not required!)
-  \item Use the work of \cite{TensoRF} as a fast converging baseline implementation of NeRF and implement your own differentiable camera and kinematic model.
-        The work of \cite{SCNeRF2021} should provide a starting point how the differentiable camera model can be implemented successfully.
-  \item Investigate the pros and cons of such a differentiable calibration using NeRFs.
-  \item How can we integrate the notion of uncertainty into the gradient descent based optimization of the kinematic model?
-\end{itemize}
+% \begin{itemize}
+%   \item Try to utilize a sim-setup (pybullet) with a simple synthetic pinhole camera and a robot arm that holds the camera. (Perfect rendering is not required!)
+%   \item Use the work of \cite{TensoRF} as a fast converging baseline implementation of NeRF and implement your own differentiable camera and kinematic model.
+%   The work of \cite{SCNeRF2021} should provide a starting point how the differentiable camera model can be implemented successfully.
+%   \item Investigate the pros and cons of such a differentiable calibration using NeRFs. 
+%   \item How can we integrate the notion of uncertainty into the gradient descent based optimization of the kinematic model?
+% \end{itemize}
 
 
 
