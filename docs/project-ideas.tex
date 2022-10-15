@@ -246,18 +246,35 @@ The PEARL algorithm introduced by \cite{rakelly2019} promises sample-efficient M
 
 \subsubsection{Tactile exploration of objects}
 
-When interacting with objects, often a full 3D model of the given object is required. 
-Using Perception, we are able to infer the surface of the visible part of the object, however also the surface of occluded parts is usually necessary to e.g. grasp the object.
+When robot interact with objects, often a full 3D model of the given object is required. 
+Using perception, we are able to infer the surface of the visible part of the object, however also the surface of occluded parts is usually necessary to e.g. grasp the object.
 With tactile exploration (i.e. slowly moving the robotic hand until the object is touched), it is possible to observe even occluded parts of the object.
 This tactile information is usually very sparse, therefore a learning-based approach is necessary to infer the full shape.
 
 \begin{itemize}
-  \item Train a neural network to complete the shape of a given object only based on tactile information.
-  \item Develop a strategy which determines the best object area for the next tactile exploration (Maybe via RL?)
+  \item Start in 2D: Train a neural network to complete a 2D shape based on a few given points \cite{watkins2019multi}
+  \item Develop a strategy which determines the best way for the next tactile exploration based on previous points (this can be done using reinforcement learning)
+  \item Bring it into 3D: Complete 3D shapes in the same way as done for 2D
   \item Combine tactile and depth information to infer the objects shape
 \end{itemize}
 
-\bibliographystyle{apalike2}
+\subsubsection{Active learning for robot grasping}
+
+To train a neural network on the mapping from a given object to a set of stable grasps, usually a big annotated training dataset is necessary.
+The creation of such a dataset is computationally expensive, as finding stable grasps for a training object requires trying out a large number of grasps.
+Also, it is not completely clear how the training objects should be selected.
+Many objects have similar shapes and therefore produce probably redundant training data.
+Active learning can be used to determine which new training samples would bring the biggest benefit in further training a network.
+In this way the overall amount of required training data can be reduced.
+
+\begin{itemize}
+  \item Using a public grasping dataset (e.g. ACRONYM \cite{acronym2020}) train a basic neural network on grasp prediction \cite{sundermeyer2021contact}
+  \item Now reduce the training data to a small set and incrementally add training samples selected using active learning \cite{gal2017deep}
+  \item Examine, how much the amount of training data can be reduced while still achieving a high prediction accuracy
+\end{itemize}
+
+
+\bibliographystyle{apalike}
 \bibliography{minimal-research}
 
 \end{document}
