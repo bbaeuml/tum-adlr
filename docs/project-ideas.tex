@@ -207,8 +207,9 @@ Active learning can be used to determine which new training samples would bring 
 In this way the overall amount of required training data can be reduced.
 
 \begin{itemize}
-  \item Using a public grasping dataset (e.g. ACRONYM \cite{acronym2020}) train a basic neural network on grasp prediction \citet{sundermeyer2021contact}
-  \item Now reduce the training data to a small set and incrementally add training samples selected using active learning, e.g., using the method described in \citet{gal2017deep}
+  \item Apply the non-generative part of the grasping network described in \citet{winkelbauer2022} to the reduced problem of predicting grasps for a parallel jaw gripper (See \citet{liang2019pointnetgpd} for a detailed description of the problem definition)
+  \item For training, we make use of an existing public training dataset (e.g. \citet{liang2019pointnetgpd} or \citet{acronym2020})
+  \item Reduce the training data to a small set and incrementally add training samples selected using active learning, e.g., using the method described in \citet{gal2017deep}
   \item Examine, how much the amount of training data can be reduced while still achieving a high prediction accuracy
 \end{itemize}
 
