@@ -12,11 +12,9 @@ This website is the main source of information for the course. Please check the 
  @; date "+%A, %B %dth, %Y %T"
 
 
-@;@;bold{Sunday, May 23th, 2021 21:36:21}
-@;@(linebreak)
-@;The slides the fourth  Q&A session are now  @(hyperlink "./adlr-qanda-4.pdf" "online"). Dates for the projeect milestone and @;final presentations are set.
-
-
+@bold{Thursday, November 03th, 2022 10:48:55}
+@(linebreak)
+The slides of the @(hyperlink "./adlr-qanda-1.pdf" "first") and @(hyperlink "./adlr-qanda-2.pdf" "second") Q&A session are now online. 
 
 
 @include-section["general.scrbl"]
