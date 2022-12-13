@@ -14,7 +14,7 @@ The deliverables & deadlines are:
  @item{@bold{Team registration}:  @bold{27 October 2022}, 24:00}
  @item{@bold{Project proposal}: one page; @bold{06 November 2022}, 24:00}
  @item{@bold{Milestone report & presentation}: one page & 10min talk; @bold{15 December 2022}}
- @item{@bold{Final report & presentation}: three pages & 10min talk; @bold{mid February 2023}}]
+ @item{@bold{Final report & presentation}: three pages & 10min talk; @bold{09 and 23 February 2023}}]
 
 In addition, you will have to provide the code of the project via sharing the GitHub repository with your tutor.
 
