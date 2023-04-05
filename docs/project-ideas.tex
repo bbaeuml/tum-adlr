@@ -156,24 +156,24 @@ Fixed-wing VTOL (Vertical Take-Off and Landing) drones are highly efficient in l
   \item Utilize our provided drone model implemented in Julia~\cite{WebJulia} as the high-efficient, flexible and dynamic programming language of the future.
 \end{itemize}
 You will be provided with two Julia examples demonstrating RL in the environment, allowing a instant start even without prior Julia experience.
-%With promising results during the midterm presentation and superior motivation, there is the possibility to try the controller with a real VTOL. However, due to high model uncertainties regarding the control surfaces, the sim-to-real success is doubtful.
+With promising results during the midterm presentation, there is the possibility to try the controller with a real VTOL. %However, due to high model uncertainties regarding the control surfaces, the sim-to-real success is doubtful.
 
 
-\subsubsection{Flying in true aerodynamics}
-Learned flight controllers which directly output motor signals are often unstable due to insufficient models. Most approaches therefore continue using PID controllers as their last authority. With improved models, learned controllers could significantly outperform traditional PID controllers, especially at the motor level, as complicated aerodynamic effects can be learned and utilised.
-\citet{CrazyflieRL} presented a learned controller that can stabilise a quadcopter for an average of 4s (max. 18s).
-\begin{itemize}
-  \item Sim-to-real transfer, explore different methods of bridging the gap between the simulated model and reality.
-  \item Learning model parameters from real flight data.
-  \item Utilize our provided drone model implemented in Julia~\cite{WebJulia} as the high-efficient, flexible and dynamic programming language of the future.
-\end{itemize}
-You will receive an example code that works in simulation, so that you can get started immediately even without previous Julia experience. In addition, you will receive the necessary hardware (quadcopter), positioning systems and radio links.
-Attention: 
-\begin{itemize}
-  \item Real hardware causes more problems than simulators.
-  \item We can only provide the hardware. You must have a space to fly and to set up the lighthouse position system \citet{Lighthouse}, at least 2x2x2m.
-  \item It is advantageous if your team can meet in person at your flying arena.
-\end{itemize}
+%\subsubsection{Flying in true aerodynamics}
+%Learned flight controllers which directly output motor signals are often unstable due to insufficient models. Most approaches therefore continue using PID controllers as their last authority. With improved models, learned controllers could significantly outperform traditional PID controllers, especially at the motor level, as complicated aerodynamic effects can be learned and utilised.
+%\citet{CrazyflieRL} presented a learned controller that can stabilise a quadcopter for an average of 4s (max. 18s).
+%\begin{itemize}
+%  \item Sim-to-real transfer, explore different methods of bridging the gap between the simulated model and reality.
+%  \item Learning model parameters from real flight data.
+%  \item Utilize our provided drone model implemented in Julia~\cite{WebJulia} as the high-efficient, flexible and dynamic programming language of the future.
+%\end{itemize}
+%You will receive an example code that works in simulation, so that you can get started immediately even without previous Julia experience. In addition, you will receive the necessary hardware (quadcopter), positioning systems and radio links.
+%Attention: 
+%\begin{itemize}
+%  \item Real hardware causes more problems than simulators.
+%  \item We can only provide the hardware. You must have a space to fly and to set up the lighthouse position system \citet{Lighthouse}, at least 2x2x2m.
+%  \item It is advantageous if your team can meet in person at your flying arena.
+%\end{itemize}
 
 
 \subsubsection{Recurrent Off-Policy Reinforcement Learning in POMDPs}
