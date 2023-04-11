@@ -218,6 +218,7 @@ In this way the overall amount of required training data can be reduced.
 %   \item \citet{DADS2020}
 % \end{itemize}
 
+
 % \subsubsection{Comparing Methods for Uncertainty Estimation}
 % Interesting methods include MC-Dropoout \citet{Gal2016}, Bootstrapping \citet{Osband2018}, and Normalizing Flows \citet{louizos2017multiplicative}. These methods could be compared in vastly different settings.
 % \begin{itemize}
@@ -226,6 +227,7 @@ In this way the overall amount of required training data can be reduced.
 %   \item Investigate which methods perform best for DQNs in simple environments similar (\citet{BSuit2020}, \citet{touati2018randomized}).
 %   \item Come up with your own ideas.
 % \end{itemize}
+
 
 % \subsubsection{Offline Datasets for Reinforcement Learning}
 % Offline/Batch RL (learning without interacting with the environment) has recently gained more attention, e.g. \citet{nair2020}, \citet{AWOpt2021}. \\
@@ -237,6 +239,7 @@ In this way the overall amount of required training data can be reduced.
 % \end{itemize}
 % % \citet{Agarwal2019},
 
+
 % \subsubsection{Geometric Representations in Reinforcement Learning}
 % Note: Requires previous experience with GNNs \citet{kipf2016semisupervised}.
 % \begin{itemize}
@@ -244,33 +247,54 @@ In this way the overall amount of required training data can be reduced.
 %   \item Use message passing network(s) in addition or instead of the MLP for value/Q function and policy in standard algorithms like PPO \citet{Schulman2017} or SAC \citet{Haarnoja2018a}.
 % \end{itemize}
 
+
 \subsubsection{Decision Transformer}
-% The Transformer architecture is extremely effective for language models, and has shown to promising results on computer vision tasks.
-% Therefore, researches are exploring the application of those models for Reinforcement Learning (in particular, on offline datasets) \citet{DecisionTransformer2021}, \citet{OneBigSequence2021}. In your project you could, for example:
-% \begin{itemize}
-%   \item Train a Decision Transformer in the cloud.
-%   \item Analyze evaluation performance in detail, improve through different planning approaches.
-%   \item Adjust intermediate training signals to improve performance.
-% \end{itemize}
-
-\subsubsection{Information Bottleneck / Ignoring Noise}
-% \citet{Tang2020}
-
-
-\subsubsection{Stability of Policies with different Network Architecture under added Noise}
-When training an robotic agent in simulation and later deploying in the real world, there will always be sim2real gap.
-In this project you would investigate if some network architectures are less prone to fail due to that gap.
-Your focus could also be what types of noise need to be applied during training to obtain robust policies.
+The Transformer architecture is extremely effective for language models, and has shown to promising results on computer vision tasks.
+Therefore, researches are exploring the application of those models for Reinforcement Learning \citet{DecisionTransformer2021}, \citet{Kuang-Huei2022}. In your project you could, for example:
 \begin{itemize}
-  \item Train agents (PPO, SAC) with different network architectures (MLP, RNN) on simple environments.
-  \item Come up with noise models (gauss, OU, sticky actions...) that can be applied during training or evaluation (mimicking sim2real gap).
-  \item Evaluate whether some network architectures are more robust than others.
+  \item Train a Decision Transformer in the cloud.
+  \item Analyze evaluation performance in detail, improve through different planning approaches.
+  \item Adjust intermediate training signals to improve performance.
 \end{itemize}
 
 
-\subsubsection{Procgen Benchmark}
-Implement and experiment with different agents on this procedurally-generated benchmark \citet{procgen2020}.
-You can compare your results with other submissions on the leaderboard (\url{github.com/openai/procgen}).
+\subsubsection{Information Bottleneck / Ignoring Noise}
+The reinforcement learning framework allows us to specify arbitrary observation spaces.
+For robotic tasks in particular, often we have an intuitive understanding of what observations might be necessary to solve a given task.
+However, it is usually unclear what additional (easily available) information is beneficial for training times and real world performance.
+For practical purposes it would be convienent to pass all the available information to the agent.
+This raises the questions:
+\begin{itemize}
+  \item Can we pass too much information?
+  \item Is redundant information harmful or maybe beneficial (similar to over-parameterization)?
+  %  - x, e, x+e
+  \item Can the agant learn to ignore noise inputs?
+\end{itemize}
+\citet{Tang2020} show that for image inputs imposing self-attention bottlenecks increases parameter efficiency and generalization performance.
+Maybe similar architecture modifications can make the learning robust to "too much information."
+
+
+% \subsubsection{Taking away privilied information later during training}
+%  - auto encoder decrease dimension
+%  - increase noise
+
+
+\subsubsection{Stability of Policies under added Noise}
+When training an robotic agent in simulation and later deploying it in the real world there will always be sim2real gap.
+In this project you could investigate if some network architectures are less prone to fail due to such a gap than others.
+Your focus could also be what types of noise need to be applied during training to obtain robust policies (cf. \citet{Sinha2021}).
+\begin{itemize}
+  \item Train agents (PPO, SAC) with different network architectures (MLP, RNN) on simple environments.
+  \item Come up with noise models (gauss, OU, sticky actions...) that can be applied during training or evaluation.
+  \item Evaluate whether some network architectures are more robust than others.
+\end{itemize}
+% https://openreview.net/pdf?id=z2zmSDKONK
+% https://arxiv.org/pdf/2101.08452.pdf
+
+
+% \subsubsection{Procgen Benchmark}
+% Implement and experiment with different agents on this procedurally-generated benchmark \citet{procgen2020}.
+% You can compare your results with other submissions on the leaderboard (\url{github.com/openai/procgen}).
 
 % Johannes Pitz
 %%%%%%%%%%%%%%%%
