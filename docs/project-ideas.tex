@@ -38,13 +38,13 @@ Since the physics simulations like pybullet, MuJuCo or Isaac Gym provide no grad
 %  \item Investigate how this framework can be applied or extended to classic closed-loop robot control
 % \end{itemize}
 
-\subsubsection{Solving Complex Sparse Reinforcement Learning Tasks}
-When defining Reinforcement Learning Tasks for robots, it is often desirable to stick to sparse rewards in order to avoid reward shaping. Not only does is it ease the setup since a task can be solely defined by its final desired outcome, but the optimal policy can be found "outside of the box" without a human prior given through the reward function. Unfortunately, in big state spaces random exploration is not able to find these sparse success signals. Therefore, \citet{riedmiller2018} introduce SAC-X.
-\begin{itemize}
-  \item Implement the algorithm
-  \item Investigate how the presented method can be used for finer and more dexterous object manipulation e.g. with a hand.
-  \item Another option is, to apply the method to an path planning agent which often has to recover from dead-end-situations in static environments.
-\end{itemize}
+% \subsubsection{Solving Complex Sparse Reinforcement Learning Tasks}
+% When defining Reinforcement Learning Tasks for robots, it is often desirable to stick to sparse rewards in order to avoid reward shaping. Not only does is it ease the setup since a task can be solely defined by its final desired outcome, but the optimal policy can be found "outside of the box" without a human prior given through the reward function. Unfortunately, in big state spaces random exploration is not able to find these sparse success signals. Therefore, \citet{riedmiller2018} introduce SAC-X.
+% \begin{itemize}
+%   \item Implement the algorithm
+%   \item Investigate how the presented method can be used for finer and more dexterous object manipulation e.g. with a hand.
+%   \item Another option is, to apply the method to an path planning agent which often has to recover from dead-end-situations in static environments.
+% \end{itemize}
 
 \subsubsection{Non-sequential Reinforcement Learning for Hard Exploration Problems}
 Another way of dealing with sparse reward signals is to utilize ``expert demonstrations'' in promising regions of the state space. In the absence of experts, \citet{blau2021learning} propose to first generate successful trajectories by RRT-based planning algorithms and then initialize a policy using that data. Based on this idea, you could experiment with:
@@ -177,6 +177,26 @@ This tactile information is usually very sparse. The idea is to use a learning-b
   \item Develop a strategy which determines the best way for the next tactile exploration based on previous points (this can be done using reinforcement learning)
   \item Bring it into 3D: Complete 3D shapes in the same way as done for 2D
   \item Combine tactile and visual depth information to infer the objects shape
+\end{itemize}
+
+\subsubsection{Representations for Tactile Exploration}
+
+As described above it is often the case that your 3D information about the manipulated object is incomplete or super sparse.
+In order to collect more data the robot hand must explore the object.
+This can be done by utilizing (reinforcement) learning methods.
+However, the policy needs to have a memory of known as well as unknown area in order to find the next exploring action.
+Based on what representation can we encode this information best?  
+
+\begin{itemize}
+  \item Implement a simple 2D environment with a static object (box or multiple boxes 'glued' together) and a moveable probe (like a turtle bot)
+  \item Use a reinforcement learning algorithm of your choice (PPO, SAC etc.) to learn a strategy that can explore the shape as good as possible by using the following representations:
+  \begin{itemize}
+    \item Point clouds with a PointNet++ architecture (\citet{DBLPQiYSG17})
+    \item Sparse occupancy octree encoding with everything marked as occupied at first
+    \item Basis points from ~\citet{Prokudin2019}
+    \item Something else ...
+  \end{itemize}
+  \item In case there is time left you can explore the 3D case or think about the dynamic case when the explored object is not fixed...
 \end{itemize}
 
 \subsubsection{Active learning for robot grasping}
