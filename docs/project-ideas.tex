@@ -175,6 +175,7 @@ Differentiable filters are a promising approach for combining the algorithmic st
           \item implement collisions
           \item additionally, estimate parameters from the system dynamics on-the-fly
         \end{itemize}
+  \item Alternatively, filters can be used to estimate static parameters of a system, like mass or friction coefficients. You can investigate the performance of \textit{differentiable} filters in these use cases.
   \item Compare your filter to recurrent neural networks and discuss the pros and cons.
 \end{itemize}
 
@@ -312,15 +313,15 @@ Maybe similar architecture modifications can make the learning robust to "too mu
 %  - increase noise
 
 
-\subsubsection{Stability of Policies under added Noise}
-When training an robotic agent in simulation and later deploying it in the real world there will always be sim2real gap.
-In this project you could investigate if some network architectures are less prone to fail due to such a gap than others.
-Your focus could also be what types of noise need to be applied during training to obtain robust policies (cf. \citet{Sinha2021}).
-\begin{itemize}
-  \item Train agents (PPO, SAC) with different network architectures (MLP, RNN) on simple environments.
-  \item Come up with noise models (gauss, OU, sticky actions...) that can be applied during training or evaluation.
-  \item Evaluate whether some network architectures are more robust than others.
-\end{itemize}
+% \subsubsection{Stability of Policies under added Noise}
+% When a robotic agent trained in simulation gets deployed to the real world, there will always be a sim2real gap.
+% In this project you can investigate if some network architectures and modifications are less prone to failures due to such a gap than others.
+% Your focus could also be what types of noise for domain randomization need to be applied during training to obtain more robust policies (cf. \citet{Sinha2021}).
+% \begin{itemize}
+%   \item Train agents with different network architectures on simple environments.
+%   \item Come up with noise models (gauss, OU, sticky actions, ...) that can be applied during training or evaluation.
+%   \item Evaluate whether some network architectures are more robust than others.
+% \end{itemize}
 % https://openreview.net/pdf?id=z2zmSDKONK
 % https://arxiv.org/pdf/2101.08452.pdf
 
