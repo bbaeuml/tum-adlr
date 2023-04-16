@@ -361,11 +361,13 @@ Maybe similar architecture modifications can make the learning robust to "too mu
 % Need to have GPU.
 
 \subsubsection{Casting Sim2Real as Meta-Reinforcement Learning}
-The PEARL algorithm introduced by \citet{rakelly2019} promises sample-efficient Meta-Reinforcement Learning, meaning that it can quickly adapt to new unseen tasks. We want to use its capabilities to handle heavily randomized environments occurring in simulations that are designed to allow a real-world transfer of the policy (like in our own work on in-hand manipulation \citet{sievers2021}).
+The PEARL algorithm introduced by \citet{rakelly2019} promises sample-efficient Meta-Reinforcement Learning, meaning that it can quickly adapt to new unseen tasks. We would like use its capabilities to handle heavily randomized environments occurring in simulations that are designed to allow a real-world transfer of the policy (like in our own work on in-hand manipulation \cite{Sievers2022}\cite{Pitz2023}).
 \begin{itemize}
-  \item Find a suitable benchmark environment
-  \item Implement the PEARL algorithm
-  \item Extend it to allow for a continuous task distribution during training
+  \item Find (and wrap or implement if required) a suitable benchmark environment.
+  \item Implement the PEARL algorithm on top of an existing basic RL algorithm (e.g. SAC or PPO) and compare the settings.
+  \item Extend it to allow a continuous task distribution during training.
+  \item Examine the reward for constant as well as dynamically changing environments.
+  \item Try out different loss terms and evaluate the performance.
 \end{itemize}
 
 
