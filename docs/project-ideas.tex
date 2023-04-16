@@ -71,13 +71,13 @@ How can we use this knowledge to our advantage?
 \end{itemize}
 
 \subsubsection{Harnessing Reinforcement Learning for Neural Motion Planning}
-Tackle motion planning with RL for a planar robotic arm in an unknown environment ~\citet{Jurgenson2019}.
+ \citet{Jurgenson2019} tackle motion planning with RL.
 Random exploration does not always find a feasible solution for difficult cases.
 By using RRT* to generate expert knowledge they can guide the exploration more efficiently.
 A comparison between pure DDPG, DDPG+HER, and DDPG-MP(theirs) shows the potential of this approach.
 
 \begin{itemize}
-  \item Modify the code and try it for different robots and environments.
+  \item Modify their code  for a planar robotic arm it for different robots and environments.
   \item Is this expert knowledge necessary or can this also be achieved with a well designed curriculum?
   \item Look at modern approaches to represent the environment in which the robot moves (ie. Basis Points Set ~\citet{Prokudin2019}; PointNet for Motion Planning ~\citet{Strudel2020})
 \end{itemize}
