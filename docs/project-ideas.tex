@@ -187,7 +187,7 @@ This tactile information is usually very sparse. The idea is to use a learning-b
 
 \begin{itemize}
   \item Start in 2D: Train a neural network to complete a 2D shape based on a few given points similar to \citet{watkins2019multi} did in the more complex 3D case.
-  \item Develop a strategy which determines the best way for the next tactile exploration based on previous points (this can be done using reinforcement learning)
+  \item Develop a strategy which determines the best way for the next tactile exploration based on previous points using reinforcement learning.
   \item Bring it into 3D: Complete 3D shapes in the same way as done for 2D
   \item Combine tactile and visual depth information to infer the objects shape
 \end{itemize}
@@ -212,22 +212,20 @@ Based on what representation can we encode this information best?
   \item In case there is time left you can explore the 3D case or think about the dynamic case when the explored object is not fixed...
 \end{itemize}
 
-\subsubsection{Active learning for robot grasping}
+\subsubsection{Generative networks for robot grasping}
 
-To train a neural network on the mapping from a given object to a set of stable grasps, usually a big annotated training dataset is necessary.
-The creation of such a dataset is computationally expensive, as finding stable grasps for a training object requires trying out a large number of grasps.
-Also, it is not completely clear how the training objects should be selected.
-Many objects have similar shapes and therefore produce probably redundant training data.
-Active learning can be used to determine which new training samples would bring the biggest benefit in further training a network.
-In this way the overall amount of required training data can be reduced.
+Generative neural networks can be used to directly generate stable grasps for a given unkown object.
+For a parallel jaw gripper, the network learns a distribution over 6D end effector poses conditioned on the observed object.
+For this application, different architectures have been evaluated, including Variational Autoencoder, Generative Adversarial Networks and autoregressive architectures~\citet{winkelbauer2022}. 
+Recently, diffusion-based architectures~\cite{ho2020denoising} have shown exciting results in image generation.
+The goal of this project is to apply diffusion-based architectures to the problem of grasp generation.
 
 \begin{itemize}
-  \item Apply the non-generative part of the grasping network described in \citet{winkelbauer2022} to the reduced problem of predicting grasps for a parallel jaw gripper:
-        Here, first random grasps are sampled on the surface of the object, then the network predicts a score for each of them.
-        In the end the grasp with the highest predicted score is used.
-  \item For training, we make use of an existing public training dataset (e.g. \citet{acronym2020})
-  \item Reduce the training data to a small set and incrementally add training samples selected using active learning, e.g., using the method described in \citet{gal2017deep}
-  \item Examine, how much the amount of training data can be reduced while still achieving a high prediction accuracy
+  \item For training, we make use of the existing public training dataset Acronym~\cite{acronym2020}.
+  \item Preprocess the data and make it ready for our learning approach.
+  \item Adapt the diffusion architecture for robotic grasping.
+  \item Compare the results with an existing architecture.
+  \item Optional: Extend the approach to generating grasps constraint to lie on a specified part of the object~\cite{lundell2023constrained}.
 \end{itemize}
 
 
