@@ -52,22 +52,21 @@ Another way of dealing with sparse reward signals is to utilize ``expert demonst
   \item Coupling the policy learning with the RRT-based data collection e.g. by sampling starting states according to RRT and executing actions according to the current policy
 \end{itemize}
 
-%%%%%%%
+%%%$
 % Johannes Tenhumberg
 \subsubsection{Learning the Inverse Kinematics}
 Look at the possibilities for representing inverse problems with neural networks.
 ~\citet{Ardizzone2018} compare different flavors of GANs, VAEs and INN(theirs) for inverse problems in general.
-Extend their simple robotic example of a planner arm to 3D / more DoFs / multiple TCPs.
+Extend their simple robotic example of a planner arm to 3D, more DoFs, or multiple TCPs.
 Unlike in computer vision, for the robot kinematic we have solid metrics to describe how well the generation task was performed.
 How can we use this knowledge to our advantage?
-
 \begin{itemize}
   \item What is the best approach to represent the high dimensional nullspaces for complex robot geometries?
   \item ~\citet{Lembono2021} use an ensemble of GANs to reduce the mode collapse.
         What other options do we have to improve the generative model?
   \item How to measure the performance if the real nullspace is not known?
   \item Predict not only the position of the TCP but also its rotation.
-        How can one best represent the $SO(3)$ ~\citet{Zhou2018}?
+        How can one best represent the $SO(3)$?
 \end{itemize}
 
 \subsubsection{Harnessing Reinforcement Learning for Neural Motion Planning}
@@ -75,24 +74,23 @@ How can we use this knowledge to our advantage?
 Random exploration does not always find a feasible solution for difficult cases.
 By using RRT* to generate expert knowledge they can guide the exploration more efficiently.
 A comparison between pure DDPG, DDPG+HER, and DDPG-MP(theirs) shows the potential of this approach.
-
 \begin{itemize}
   \item Modify their code  for a planar robotic arm it for different robots and environments.
   \item Is this expert knowledge necessary or can this also be achieved with a well designed curriculum?
   \item Look at modern approaches to represent the environment in which the robot moves (ie. Basis Points Set ~\citet{Prokudin2019}; PointNet for Motion Planning ~\citet{Strudel2020})
 \end{itemize}
 
-
 \subsubsection{Motion Planning with Diffusion}
 Look into generative models for robotic motion planning based on the ideas work by \citet{Janner2022}.
 The core of their approach lies in a diffusion probabilistic model that plans by iteratively denoising trajectories.
-
 \begin{itemize}
   \item Use a simple 2D robot to get familiar with the diffusion approach in the robotic context.
   \item Include the changing environment as central part of the planning problem
   \item Extend the framework to more complex robots
 \end{itemize}
 
+
+% Back-ups
 %\subsubsection{Learning to Optimize Motion Planning}
 %Explore the ideas proposed by "Learning to Optimize" ~\citet{LiM16b} in the context of optimization based motion planning \citet{Zucker2013}.
 %Can Reinforcement Learning guide an optimizer to speed up robotic path planning?
@@ -105,9 +103,8 @@ The core of their approach lies in a diffusion probabilistic model that plans by
 %  \item What are advantages of this hybrid approach over using RL directly on motion planning?
 %\end{itemize}
 
-
 % Johannes Tenhumberg
-%%%%%%%
+%%%
 
 
 \subsubsection{Trajectory Planning with Moving Obstacles}
