@@ -13,6 +13,7 @@
 	howpublished = {\url{http://julialang.org}},
 	keywords = {programming},
 	lastchecked = {2022},
+    year = {2022},
 	title = {Julia }}
 
 @url{Lighthouse,
@@ -179,11 +180,6 @@
 	pages = {},
 	title = {Learning to Walk via Deep Reinforcement Learning}}
 
-@inproceedings{Jurgenson2019,
-	Author = {Tom Jurgenson and Aviv Tamar},
-	Booktitle = {Proc. Int. Conf. on Robotics: Science and Systems},
-	Title = {Harnessing Reinforcement Learning for Neural Motion Planning},
-	Year = {2019}}
 
 @article{Quillen2018,
 	Author = {Deirdre Quillen and Eric Jang and Ofir Nachum and Chelsea Finn and Julian Ibarz and Sergey Levine},
@@ -265,13 +261,15 @@
 
 @article{ModelAgnosticVTOL,
 	Author = {Holmes, Grant and Chowdhury, Mozammal and McKinnis, Aaron and Keshmiri, Shawn},
-	booktitle={2022 International Conference on Unmanned Aircraft Systems (ICUAS)},
+	journal={2022 International Conference on Unmanned Aircraft Systems (ICUAS)},
 	title={Deep Learning Model-Agnostic Controller for VTOL Class UAS},
 	year={2022},
 	volume={},
 	number={},
 	pages={1520-1529},
 	doi={10.1109/ICUAS54217.2022.9836118}}
+
+
 
 @article{usvCollisionAvoidance,
 	Author = {Yunsheng Fan and Zhe Sun and Guofeng Wang},
@@ -1130,11 +1128,7 @@ title = {Generalized Hindsight for Reinforcement Learning}
 	Title = {Raw Performance of Robotic Software Middleware: A Comparison and aRDx's New Realtime Communication Layer},
 	Year = {2013}}
 
-@mastersthesis{Tenhumberg2018,
-	Author = {Johannes Tenhumberg},
-	School = {TECHNISCHE UNIVERSIT{\"A}T M{\"U}NCHEN},
-	Title = {Deep Learning for Fast Robot Motion Planning on Voxel Models},
-	Year = {2018}}
+
 
 @inproceedings{Baishya2016corrected,
 	Author = {Shiv Baishya and Berthold B{\"a}uml},
@@ -6108,31 +6102,44 @@ title = {Generalized Hindsight for Reinforcement Learning}
 
 %%%
 % Tenhumberg
+@INPROCEEDINGS{Tenhumberg2022,
+  author={Tenhumberg, Johannes and Burschka, Darius and Bäuml, Berthold},
+  booktitle={2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
+  title={Speeding Up Optimization-based Motion Planning through Deep Learning}, 
+  year={2022},
+  pages={7182-7189},
+  doi={10.1109/IROS47612.2022.9981717}}
+
+@mastersthesis{Tenhumberg2018,
+	Author = {Johannes Tenhumberg},
+	School = {TECHNISCHE UNIVERSIT{\"A}T M{\"U}NCHEN},
+	Title = {Deep Learning for Fast Robot Motion Planning on Voxel Models},
+	Year = {2018}}
+
 @inproceedings{Strudel2020,
-archivePrefix = {arXiv},
-arxivId = {2008.11174},
-author = {Strudel, Robin and Garcia, Ricardo and Carpentier, Justin and Laumond, Jean-Paul and Laptev, Ivan and Schmid, Cordelia},
-booktitle = {Conference on Robot Learning (CoRL)},
-eprint = {2008.11174},
-file = {:Users/jote/Documents/Mendeley/2020{\_}Strudel et al.{\_}Learning Obstacle Representations for Neural Motion Planning.pdf:pdf},
-keywords = {neural motion planning,obstacle avoidance,representation learning},
-title = {{Learning Obstacle Representations for Neural Motion Planning}},
-url = {http://arxiv.org/abs/2008.11174},
-year = {2020}
+    archivePrefix = {arXiv},
+    arxivId = {2008.11174},
+    author = {Strudel, Robin and Garcia, Ricardo and Carpentier, Justin and Laumond, Jean-Paul and Laptev, Ivan and Schmid, Cordelia},
+    booktitle = {Conference on Robot Learning (CoRL)},
+    eprint = {2008.11174},
+    keywords = {neural motion planning,obstacle avoidance,representation learning},
+    title = {{Learning Obstacle Representations for Neural Motion Planning}},
+    url = {http://arxiv.org/abs/2008.11174},
+    year = {2020}
 }
 
 @inproceedings{Prokudin2019,
-archivePrefix = {arXiv},
-arxivId = {1908.09186},
-author = {Prokudin, Sergey and Lassner, Christoph and Romero, Javier},
-booktitle = {International Conference on Computer Vision (ICCV)},
-eprint = {1908.09186},
-file = {:Users/jote/Documents/Mendeley/2019{\_}Prokudin, Lassner, Romero{\_}Efficient Learning on Point Clouds with Basis Point Sets.pdf:pdf},
-month = {aug},
-pages = {4332--4341},
-title = {{Efficient Learning on Point Clouds with Basis Point Sets}},
-url = {http://arxiv.org/abs/1908.09186},
-year = {2019}
+    archivePrefix = {arXiv},
+    arxivId = {1908.09186},
+    author = {Prokudin, Sergey and Lassner, Christoph and Romero, Javier},
+    booktitle = {International Conference on Computer Vision (ICCV)},
+    eprint = {1908.09186},
+    file = {:Users/jote/Documents/Mendeley/2019{\_}Prokudin, Lassner, Romero{\_}Efficient Learning on Point Clouds with Basis Point Sets.pdf:pdf},
+    month = {aug},
+    pages = {4332--4341},
+    title = {{Efficient Learning on Point Clouds with Basis Point Sets}},
+    url = {http://arxiv.org/abs/1908.09186},
+    year = {2019}
 }
 
 
@@ -6152,45 +6159,35 @@ year = {2019}
 
 
 @article{Lembono2021,
-archivePrefix = {arXiv},
-arxivId = {2011.05717},
-author = {Lembono, Teguh Santoso and Pignat, Emmanuel and Jankowski, Julius and Calinon, Sylvain},
-doi = {10.1109/LRA.2021.3068671},
-eprint = {2011.05717},
-file = {:Users/jote/Documents/Mendeley/2021{\_}Lembono et al.{\_}Learning Constrained Distributions of Robot Configurations with Generative Adversarial Network.pdf:pdf},
-issn = {23773766},
-journal = {IEEE Robotics and Automation Letters},
-keywords = {Motion and path planning,deep learning methods,whole-body motion planning and control},
-number = {2},
-pages = {4233--4240},
-title = {{Learning Constrained Distributions of Robot Configurations with Generative Adversarial Network}},
-volume = {6},
-year = {2021}
+    archivePrefix = {arXiv},
+    arxivId = {2011.05717},
+    author = {Lembono, Teguh Santoso and Pignat, Emmanuel and Jankowski, Julius and Calinon, Sylvain},
+    doi = {10.1109/LRA.2021.3068671},
+    eprint = {2011.05717},
+    issn = {23773766},
+    journal = {IEEE Robotics and Automation Letters},
+    keywords = {Motion and path planning,deep learning methods,whole-body motion planning and control},
+    number = {2},
+    pages = {4233--4240},
+    title = {{Learning Constrained Distributions of Robot Configurations with Generative Adversarial Network}},
+    volume = {6},
+    year = {2021}
 }
 
-@ article{Ardizzone2018,
-	author    = {Lynton Ardizzone and Jakob Kruse and Sebastian J.Wirkert and Daniel Rahner and Eric W.Pellegrini and Ralf S.Klessen and Lena Maier{-}Hein and Carsten Rother and Ullrich K{\"{o}}the},
-	title     = {Analyzing Inverse Problems with Invertible Neural Networks},
-	journal   = {CoRR},
-	year      = {2018},
-	eprint    = {1808.04730}
+
+@article{Ardizzone2018,
+  title={Analyzing Inverse Problems with Invertible Neural Networks},
+  author={Ardizzone, Lynton and Kruse, Jakob and Wirkert, Sebastian and Rahner, Daniel and Pellegrini, Eric W and Klessen, Ralf S and Maier-Hein, Lena and Rother, Carsten and K{\"o}the, Ullrich},
+  journal={arXiv preprint arXiv:1808.04730},
+  year={2018}
 }
 
-@ article{Zhou2018,
-	author    = {Yi Zhou and Connelly Barnes and Jingwan Lu and Jimei Yang and Hao Li},
-	title     = {On the Continuity of Rotation Representations in Neural Networks},
-	journal   = {CoRR},
-	year      = {2018},
-	eprint    = {1812.07035}
-}
-
-@ article{\dfrac{Jurgenson2019}{Nenner},
-	author    = {Tom Jurgenson and Aviv Tamar},
-	title     = {Harnessing Reinforcement Learning for Neural Motion Planning},
-	journal   = {CoRR},
-	year      = {2019},
-	eprint    = {1906.00214}
-}
+@inproceedings{Jurgenson2019,
+	Author = {Tom Jurgenson and Aviv Tamar},
+	Booktitle = {Proc. Int. Conf. on Robotics: Science and Systems},
+	Title = {Harnessing Reinforcement Learning for Neural Motion Planning},
+	Year = {2019}
+ }
 
 
 @article{Qureshi2019,
@@ -6209,7 +6206,7 @@ year = {2021}
 }
 
 @article{Janner2022,
-  title={Planning with diffusion for flexible behavior synthesis},
+  title={Planning with Diffusion for Flexible Behavior Synthesis},
   author={Janner, Michael and Du, Yilun and Tenenbaum, Joshua B and Levine, Sergey},
   journal={arXiv preprint arXiv:2205.09991},
   year={2022}
