@@ -239,7 +239,10 @@ The goal of this project is to apply diffusion-based architectures to the proble
 
 % Johannes Pitz
 \subsubsection{Unsupervised Skill Discovery / Curiosity}
-Pretraining neural networks in an unsupervised setting showed to be extremely effective for language models. Similarly, RL agents can be pretrained in an environment with different goals in mind. Projects in this direction could (reimplement or) validate one of the papers below and extent their work with interesting ablation studies or algorithmic modifications.
+Pretraining neural networks in an unsupervised setting showed to be extremely effective for language models. Models such as GPT or Bert can be fine tuned or used directly on downstream tasks.
+Similarly, RL agents can be pretrained in an environment without an extrinsic reward signal and later be adapted to specific tasks.
+% \citet{Laskin2021} compare many different approaches on a unified benchmark.
+Projects in this direction could (reimplement or) validate one of the papers below and extent their work with interesting ablation studies or algorithmic modifications.
 \begin{itemize}
   \item \citet{Laskin2021}
   \item \citet{Hafner2021}, \cite{Hafner2023}
@@ -277,7 +280,8 @@ Pretraining neural networks in an unsupervised setting showed to be extremely ef
 % Johannes Pitz
 \subsubsection{Decision Transformer}
 The transformer architecture is extremely effective for language models, and has shown promising results on computer vision tasks.
-Therefore, researches are exploring the application of those models for reinforcement learning, e.g., \citet{DecisionTransformer2021}, \citet{Kuang-Huei2022}. In your project you could, for example:
+Therefore, researches are exploring the application of those models for reinforcement learning, e.g., \citet{DecisionTransformer2021}, \citet{Kuang-Huei2022}. Note that in this research, sequential decision problems are not solved via reinforcement learning, instead the transformer is trained on entire trajectories.
+In your project you could:
 \begin{itemize}
   \item Train a decision transformer for a (simple) benchmark task.
   \item Analyze the evaluation performance in detail, improve through different planning approaches.
