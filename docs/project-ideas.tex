@@ -239,7 +239,7 @@ The goal of this project is to apply diffusion-based architectures to the proble
 
 %%%%%%%%%%%%%%%%
 % Johannes Pitz
-
+ 
 \subsubsection{Unsupervised Skill Discovery / Curiosity}
 Pretraining neural networks in an unsupervised setting showed to be extremely effective for language models. Similarly, RL agents can be pretrained in an environment with different goals in mind. Projects in this direction could (reimplement or) validate one of the papers below and extent their work with interesting ablation studies or algorithmic modifications.
 \begin{itemize}
@@ -279,10 +279,10 @@ Pretraining neural networks in an unsupervised setting showed to be extremely ef
 
 \subsubsection{Decision Transformer}
 The transformer architecture is extremely effective for language models, and has shown promising results on computer vision tasks.
-Therefore, researches are exploring the application of those models for Reinforcement Learning \citet{DecisionTransformer2021}, \citet{Kuang-Huei2022}. In your project you could, for example:
+Therefore, researches are exploring the application of those models for reinforcement learning, e.g., \citet{DecisionTransformer2021}, \citet{Kuang-Huei2022}. In your project you could, for example:
 \begin{itemize}
-  \item Train a Decision Transformer in the cloud.
-  \item Analyze evaluation performance in detail, improve through different planning approaches.
+  \item Train a decision transformer for a (simple) benchmark task.
+  \item Analyze the evaluation performance in detail, improve through different planning approaches.
   \item Adjust intermediate training signals to improve performance.
 \end{itemize}
 
@@ -361,7 +361,7 @@ Your focus could also be what types of noise need to be applied during training 
 \subsubsection{Casting Sim2Real as Meta-Reinforcement Learning}
 The PEARL algorithm introduced by~\citet{rakelly2019} promises sample-efficient meta-reinforcement learning, meaning that it can quickly adapt to new unseen tasks. We would like use its capabilities to handle heavily randomized environments occurring in simulations that are designed to allow a real-world transfer of the policy.
 \begin{itemize}
-  \item Find a suitable benchmark environment.
+  \item Find a suitable benchmark environment (together with the tutor).
   \item Implement the PEARL algorithm on top of an existing basic RL algorithm (e.g. SAC or PPO) and compare the performance.
   \item Extend it to allow a continuous task distribution during training.
   \item Examine the reward for constant as well as dynamically changing environments.
