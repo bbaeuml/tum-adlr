@@ -237,9 +237,7 @@ The goal of this project is to apply diffusion-based architectures to the proble
 %\end{itemize}
 
 
-%%%%%%%%%%%%%%%%
 % Johannes Pitz
- 
 \subsubsection{Unsupervised Skill Discovery / Curiosity}
 Pretraining neural networks in an unsupervised setting showed to be extremely effective for language models. Similarly, RL agents can be pretrained in an environment with different goals in mind. Projects in this direction could (reimplement or) validate one of the papers below and extent their work with interesting ablation studies or algorithmic modifications.
 \begin{itemize}
@@ -247,7 +245,7 @@ Pretraining neural networks in an unsupervised setting showed to be extremely ef
   \item \citet{Hafner2021}, \cite{Hafner2023}
 \end{itemize}
 
-
+% Johannes Pitz
 % \subsubsection{Comparing Methods for Uncertainty Estimation}
 % Interesting methods include MC-Dropoout \citet{Gal2016}, Bootstrapping \citet{Osband2018}, and Normalizing Flows \citet{louizos2017multiplicative}. These methods could be compared in vastly different settings.
 % \begin{itemize}
@@ -257,7 +255,7 @@ Pretraining neural networks in an unsupervised setting showed to be extremely ef
 %   \item Come up with your own ideas.
 % \end{itemize}
 
-
+% Johannes Pitz
 % \subsubsection{Offline Datasets for Reinforcement Learning}
 % Offline/Batch RL (learning without interacting with the environment) has recently gained more attention, e.g. \citet{nair2020}, \citet{AWOpt2021}. \\
 % Available datasets: \url{github.com/rail-berkeley/d4rl}, \url{github.com/deepmind/deepmind-research/tree/master/rl_unplugged}.
@@ -268,7 +266,7 @@ Pretraining neural networks in an unsupervised setting showed to be extremely ef
 % \end{itemize}
 % % \citet{Agarwal2019},
 
-
+% Johannes Pitz
 % \subsubsection{Geometric Representations in Reinforcement Learning}
 % Note: Requires previous experience with GNNs \citet{kipf2016semisupervised}.
 % \begin{itemize}
@@ -276,7 +274,7 @@ Pretraining neural networks in an unsupervised setting showed to be extremely ef
 %   \item Use message passing network(s) in addition or instead of the MLP for value/Q function and policy in standard algorithms like PPO \citet{Schulman2017} or SAC \citet{Haarnoja2018a}.
 % \end{itemize}
 
-
+% Johannes Pitz
 \subsubsection{Decision Transformer}
 The transformer architecture is extremely effective for language models, and has shown promising results on computer vision tasks.
 Therefore, researches are exploring the application of those models for reinforcement learning, e.g., \citet{DecisionTransformer2021}, \citet{Kuang-Huei2022}. In your project you could, for example:
@@ -286,7 +284,7 @@ Therefore, researches are exploring the application of those models for reinforc
   \item Adjust intermediate training signals to improve performance.
 \end{itemize}
 
-
+% Johannes Pitz
 \subsubsection{Information Bottleneck / Ignoring Noise}
 The reinforcement learning framework allows us to specify arbitrary observation spaces.
 For robotic tasks in particular, often we have an intuitive understanding of what observations might be necessary to solve a given task.
@@ -302,13 +300,13 @@ This raises serveral questions:
 You could explore those questions on \href{https://gymnasium.farama.org/environments/mujoco/}{simple environments} and come up with network architectures, such as self-attention (cf. \citet{Tang2020}) or autoencoders, to fix arising problems.
 % (For example, \citet{Tang2020} show that for image inputs imposing self-attention bottlenecks increases parameter efficiency and generalization performance.
 
-
+% Johannes Pitz
 % \subsubsection{Taking away privilied information later during training}
 %  - auto encoder decrease dimension
 %  - increase noise
 
 
-
+% Johannes Pitz
 \subsubsection{Stability of Policies under added Noise}
 When training an robotic agent in simulation and later deploying it in the real world there will always be sim2real gap.
 In this project you could investigate if some network architectures are less prone to fail due to such a gap than others.
@@ -321,13 +319,11 @@ Your focus could also be what types of noise need to be applied during training 
 % https://openreview.net/pdf?id=z2zmSDKONK
 % https://arxiv.org/pdf/2101.08452.pdf
 
-
+% Johannes Pitz
 % \subsubsection{Procgen Benchmark}
 % Implement and experiment with different agents on this procedurally-generated benchmark \citet{procgen2020}.
 % You can compare your results with other submissions on the leaderboard (\url{github.com/openai/procgen}).
 
-% Johannes Pitz
-%%%%%%%%%%%%%%%%
 
 
 %\subsubsection{Policy Adaptation during Deployment}
