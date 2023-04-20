@@ -190,26 +190,40 @@ This tactile information is usually very sparse. The idea is to use a learning-b
   \item Combine tactile and visual depth information to infer the objects shape
 \end{itemize}
 
-\subsubsection{Representations for Tactile Exploration}
+% Felix Kroll
+% \subsubsection{Representations for Tactile Exploration}
 
-As described above it is often the case that your 3D information about the manipulated object is incomplete or super sparse.
-In order to collect more data the robot hand must explore the object.
-This can be done by utilizing (reinforcement) learning methods.
-However, the policy needs to have a memory of known as well as unknown area in order to find the next exploring action.
-Based on what representation can we encode this information best?
+% As described above it is often the case that your 3D information about the manipulated object is incomplete or super sparse.
+% In order to collect more data the robot hand must explore the object.
+% This can be done by utilizing (reinforcement) learning methods.
+% However, the policy needs to have a memory of known as well as unknown area in order to find the next exploring action.
+% Based on what representation can we encode this information best?
+
+% \begin{itemize}
+%   \item Implement a simple 2D environment with a static object (box or multiple boxes 'glued' together) and a moveable probe (like a turtle bot)
+%   \item Use a reinforcement learning algorithm of your choice (PPO, SAC etc.) to learn a strategy that can explore the shape as good as possible by using the following representations:
+%   \begin{itemize}
+%     \item Point clouds with a PointNet++ architecture (\citet{NIPS2017_d8bf84be})
+%     \item Sparse occupancy octree encoding with everything marked as occupied at first
+%     \item Basis points from ~\citet{Prokudin2019}
+%     \item Something else ...
+%   \end{itemize}
+%   \item In case there is time left you can explore the 3D case or think about the dynamic case when the explored object is not fixed...
+% \end{itemize}
+
+
+% Felix Kroll
+\subsubsection{Tactile Material Classification}
+
+~\citet{Tulbure2018} (as mentioned in the lecture) proved that one can classify a vast number of materials robustly ($\approx 95 \%$).
+Can you do better? Find a better architecture to improve the models capabilities.
 
 \begin{itemize}
-  \item Implement a simple 2D environment with a static object (box or multiple boxes 'glued' together) and a moveable probe (like a turtle bot)
-  \item Use a reinforcement learning algorithm of your choice (PPO, SAC etc.) to learn a strategy that can explore the shape as good as possible by using the following representations:
-  \begin{itemize}
-    \item Point clouds with a PointNet++ architecture (\citet{NIPS2017_d8bf84be})
-    \item Sparse occupancy octree encoding with everything marked as occupied at first
-    \item Basis points from ~\citet{Prokudin2019}
-    \item Something else ...
-  \end{itemize}
-  \item In case there is time left you can explore the 3D case or think about the dynamic case when the explored object is not fixed...
+  \item You will get the data of ~\citet{Tulbure2018}
+  \item Recent works like BYOL (\citet{Grill2020}) showed that we can train a part of a network unsupervised and later 'refine' it using labels.
+  \item In the lecture you will learn how to leverage architecture search to improve a model's classification accuracy.
+  \item Create comparison between \citet{Tulbure2018} and your improved architecture. Make sure that you use the same method for the evaluation! 
 \end{itemize}
-
 \subsubsection{Generative networks for robot grasping}
 
 Generative neural networks can be used to directly generate stable grasps for a given unkown object.
