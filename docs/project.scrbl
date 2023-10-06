@@ -13,7 +13,7 @@ The deliverables & deadlines are:
 @itemlist[
  @item{@bold{Team registration}:  @bold{23. April 2023, 24:00}}
  @item{@bold{Project proposal}: one page; @bold{04. May 2023, 24:00}}
- @item{@bold{Milestone report & presentation}: one page & 10min talk; @bold{01. June 2023}}
+ @item{@bold{Milestone report & presentation}: one page & 10min talk; @bold{01. June 2023} (deadline for report on 04. June 2023)}
  @item{@bold{Final report & presentation}: three pages & 10min talk; @bold{end of July 2023}}]
 
 In addition, you will have to provide the code of the project via sharing the GitHub repository with your tutor.
