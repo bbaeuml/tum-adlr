@@ -111,8 +111,10 @@ Similarly, RL agents can be pretrained in an environment without an extrinsic re
   \item Implement and compare them with the results reported by URLB.
 \end{itemize}
 
-%%%$
+
+%%%%%%%%%%%%%%%%%%%%%
 % Johannes Tenhumberg
+
 \subsubsection{Learning the Inverse Kinematics}
 Look at the possibilities for representing inverse problems with neural networks.
 ~\citet{Ardizzone2018} compare different flavors of GANs, VAEs and INN(theirs) for inverse problems in general.
@@ -128,6 +130,7 @@ How can we use this knowledge to our advantage?
         How can one best represent the $SO(3)$?
 \end{itemize}
 
+% Johannes Tenhumberg
 \subsubsection{Harnessing Reinforcement Learning for Neural Motion Planning}
  \citet{Jurgenson2019} tackle motion planning with RL.
 Random exploration does not always find a feasible solution for difficult cases.
@@ -139,6 +142,7 @@ A comparison between pure DDPG, DDPG+HER, and DDPG-MP(theirs) shows the potentia
   \item Look at modern approaches to represent the environment in which the robot moves (ie. Basis Points Set ~\citet{Prokudin2019}; PointNet for Motion Planning ~\citet{Strudel2020})
 \end{itemize}
 
+% Johannes Tenhumberg
 \subsubsection{Motion Planning with Diffusion}
 Look into generative models for robotic motion planning based on the ideas work by \citet{Janner2022}.
 The core of their approach lies in a diffusion probabilistic model that plans by iteratively denoising trajectories.
@@ -163,7 +167,7 @@ The core of their approach lies in a diffusion probabilistic model that plans by
 %\end{itemize}
 
 % Johannes Tenhumberg
-%%%
+%%%%%%%%%%%%%%%%%%%%%
 
 
 \subsubsection{Trajectory Planning with Moving Obstacles}
