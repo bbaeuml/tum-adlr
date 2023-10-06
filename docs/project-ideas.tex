@@ -319,11 +319,13 @@ Differentiable filters are a promising approach for combining the algorithmic st
 
 % Johannes Pitz
 \subsubsection{Diffusion Policies}
-Diffusion-based architectures~\cite{ho2020denoising} have shown exciting results in image generation.
+Diffusion-based architectures have shown exciting results in image generation.
 Recently, researchers started to apply them to policy learning. 
+% ~\cite{ho2020denoising}
 \citet{Chi2023DiffusionPolicy} show promising imitation learning results with both vision- and state-based policies.
 \begin{itemize}
-  \item Apply the diffusion policy~\cite{Chi2023DiffusionPolicy} to simple benchmark environments with expert \href{https://github.com/Farama-Foundation/d4rl/wiki/Tasks}{offline data}.
+  \item Apply the diffusion policy~\cite{Chi2023DiffusionPolicy} to simple benchmark environments with expert offline data (\href{https://github.com/Farama-Foundation/d4rl/wiki/Tasks}{link}).
+  % (\href{https://github.com/Farama-Foundation/d4rl/wiki/Tasks}{\url{d4rl/wiki/Tasks}}).
   \item Analyze if the approach is better suited for specific types of environments (e.g. planning vs. control).
   \item Adapt the diffusion architecture for other types of environments.
   \item Optional: Develop and implement ideas on how the architecture can be used in a reinforcement learning setting. 
@@ -355,7 +357,7 @@ This raises serveral questions:
   %  - x, e, x+e
   \item Can the agant learn to ignore noise inputs?
 \end{itemize}
-Explore those questions on \href{https://gymnasium.farama.org/environments/mujoco/}{simple environments} and come up with network architectures, such as self-attention (cf. \citet{Tang2020}) or autoencoders, to fix arising problems.
+Explore those questions on simple environments (\href{https://gymnasium.farama.org/environments/mujoco/}{link}) and come up with network architectures, such as self-attention (cf. \citet{Tang2020}) or autoencoders, to fix arising problems.
 % (For example, \citet{Tang2020} show that for image inputs imposing self-attention bottlenecks increases parameter efficiency and generalization performance.
 % % Johannes Pitz
 % \subsubsection{Taking away privilied information later during training}
