@@ -404,10 +404,13 @@ Your task is to:
   \end{itemize}
   \item Determine general framework parameters that create an interesting competition.
   \item Provide feedback on the technical setup.
-\end{itemize} 
+\end{itemize}
 
-
-
+% Leon
+\subsubsection{Investigating Rapid Motor Adaption}
+\citet{qi2022inhand} use Rapid Motor Adaption to train a robust in-hand manipulation policy in simulation, which can be deployed on the actual system without any further adaptation.
+We are interested in looking into the possibilities and limits of this approach.
+After the initial setup and an analysis of the capabilities, changes to the training, architecture, and parameterization can be investigated with respect to the overall performance.
 
 %\subsubsection{Policy Adaptation during Deployment}
 %Training RL agents in simulation can accelerate learning substantially, and may sometimes be the only viable option due to hardware constraints. However, it is difficult to model the system in simulation accurately enough such that trained policies also work in the real world. \citet{Hansen2021} propose to close this sim2real gap using self-supervision during deployment.
