@@ -409,16 +409,15 @@ Your task is to:
 % Leon
 \subsubsection{Investigating Rapid Motor Adaption}
 \citet{qi2022inhand} use Rapid Motor Adaption to train a robust in-hand manipulation policy in simulation, which can be deployed on the actual system without any further adaptation.
-This is facilitated by a dedicated part of the neural network predicting the parameterization of the current world in an end-2-end learned latent space in order to mak the policy more robust - first conditioned on the whole set of available states in the simulation, later on only those measurable when deployed on the final system.
-We want to find out the possible performance improvements as well as the limits of this approach in a simulation-only setting.
+This is facilitated by a dedicated part of the neural network predicting the current world in an end-2-end learned latent space in order to make the policy more robust - first conditioned on a set of available states in simulation, later on only those measurable when deployed on the real system.
+We want to find the possible performance improvements and the limits of this approach in a simulation-only setting.
 % After the initial setup and an analysis of the capabilities, changes to the training, architecture, and parameterization can be investigated with respect to the overall performance.
 \begin{itemize}
-  \item Define and set up a training environment together with your tutor.
+  \item Define and set up a training environment with your tutor.
   For example, we are interested in generating a robust in-hand manipulation policy.
   Also we decide wether you want to use an existing RL framework or implement the algorithm from scratch, depending on the focus you chose.
   \item Analyze the performance gains as well as the limits of the Rapid Motor Adapton algorithm.
-  \item Expand the algorithm in order to tackle these identified problems.
-  This could be for example a different encoder architecture or changed loss functions, depending on your identified problems and feedback by the tutor.
+  \item Expand the algorithm in order to tackle these identified problems, for example a different encoder architecture or changed loss functions, depending on your identified problems and feedback by the tutor.
 \end{itemize}
 
 
