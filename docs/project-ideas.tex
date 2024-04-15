@@ -326,7 +326,7 @@ Recently, researchers started to apply them to policy learning.
 \begin{itemize}
   \item Apply the diffusion policy~\cite{Chi2023DiffusionPolicy} to simple benchmark environments with expert offline data (\href{https://github.com/Farama-Foundation/d4rl/wiki/Tasks}{link}).
   % (\href{https://github.com/Farama-Foundation/d4rl/wiki/Tasks}{\url{d4rl/wiki/Tasks}}).
-  \item Analyze if the approach is better suited for specific types of environments (e.g. planning vs. control).
+  \item Analyze if the approach is better suited for specific types of environments (e.g., planning vs. control).
   \item Adapt the diffusion architecture for other types of environments.
   \item Optional: Develop and implement ideas on how the architecture can be used in a reinforcement learning setting. 
   % Exploration
@@ -356,7 +356,7 @@ The PEARL algorithm introduced by~\citet{rakelly2019} and the $RL^2$ algorithm e
 The reinforcement learning framework allows us to specify arbitrary observation spaces.
 For robotic tasks, in particular, we often intuitively understand what observations might be necessary to solve a given task.
 However, it is usually unclear what additional (readily available) information benefits training times and real-world performance.
-For practical purposes, it would be convenient to pass all the available information on to the agent.
+For practical purposes, it would be convenient to pass all the available information to the agent.
 That raises several questions:
 \begin{itemize}
   \item Can we pass too much information?
@@ -364,7 +364,7 @@ That raises several questions:
   %  - x, e, x+e
   \item Can the agent learn to ignore noise inputs?
 \end{itemize}
-Explore those questions on simple environments (\href{https://gymnasium.farama.org/environments/mujoco/}{link}) and come up with network architectures, such as self-attention (cf. \citet{Tang2020}) or autoencoders, to fix arising problems.
+Explore those questions on simple environments (\href{https://gymnasium.farama.org/environments/mujoco/}{link}) and come up with network architectures, such as self-attention (cf. \citet{Tang2020}) or simple world models (encoder/decoder nets), to fix arising problems.
 % (For example, \citet{Tang2020} show that for image inputs imposing self-attention bottlenecks increases parameter efficiency and generalization performance.
 % % Johannes Pitz
 % \subsubsection{Taking away privilied information later during training}
