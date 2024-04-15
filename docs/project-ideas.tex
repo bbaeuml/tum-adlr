@@ -52,10 +52,9 @@ A way of dealing with sparse reward signals is to utilize ``expert demonstration
   \item Coupling the policy learning with the RRT-based data collection e.g. by sampling starting states according to RRT and executing actions according to the current policy
 \end{itemize}
 
-% Dominik
 \subsubsection{Tactile exploration of objects}
 For grasping an object with a robotic hand, often a full 3D model of the given object is required.
-Using a (depth-)camera, one is able to infer the surface of the visible part of the object, however also the surface of the occluded parts is usually needed to, e.g., robustly grasp the object.
+Using (depth-)camera, one is able to infer the surface of the visible part of the object, however also the surface of the occluded parts is usually needed to, e.g., robustly grasp the object.
 With tactile exploration (i.e., slowly moving the robotic hand until the fingers touch the object), it is possible to observe even the occluded parts of the object.
 This tactile information is usually very sparse. The idea is to use a learning-based approach to complete the full shape from this sparse contact information.
 
@@ -66,42 +65,19 @@ This tactile information is usually very sparse. The idea is to use a learning-b
   \item Combine tactile and visual depth information to infer the objects shape
 \end{itemize}
 
-\subsubsection{Self-supervised learning for robot grasping}
-Although grasping training data can be generated in simulation, it is computationally expensive to find high quality grasps.
-Therefore, the training process should be as data-efficient as possible.
-In Deep Learning, one prominent way to reduce the amount of required labelled data is self-supervised learning.
-This has been shown generate useful features across various modalities like images, audio and text.
-In this project, the goal is to apply self-supervised learning to 3D objects and use the resulting features for grasping.
-\begin{itemize}
-  \item Familiarize yourself with the data2vec framework~\cite{baevski2022data2vec}
-  \item Reimplement data2vec for 3D objects using a CNN
-  \item Evaluate the learned features in grasping as a downstream task (data will be provided~\cite{winkelbauer2022})
-  \item Optional: Replace the CNN with a transformer
-\end{itemize}
-
-
-\subsubsection{Grasping via online adaptation}
-One way to find grasps for a given object is to train a grasp success classifier and use that as an objective function for an online grasp optimization.
-Specifically, one differentiates through the grasp score prediction network to optimize the grasp parameters (input to the network) such that the grasp score (output of the network) gets maximized.
-
-\begin{itemize}
-  \item A dataset of multi-finger grasps will be provided~\cite{winkelbauer2022}
-  \item Preprocess the data
-  \item Train a grasp score prediction network
-  \item Implement an optimization procedure to perform grasping inference
-  \item Optional: Train a small generative grasping network to provide better starting points for the optimization
-\end{itemize}
 
 \subsubsection{Generative networks for robot grasping}
 Generative neural networks can be used to directly generate stable grasps for a given unkown object.
 For a parallel jaw gripper, the network learns a distribution over 6D end effector poses conditioned on the observed object.
-For this application, different architectures are possible: Variational Autoencoder, Generative Adversarial Networks, diffusion-based architectures~\cite{ho2020denoising} and autoregressive architectures~\cite{winkelbauer2022}.
-The goal of this project is to apply one of the generative architectures to the problem of grasp generation.
+For this application, different architectures have been evaluated, including Variational Autoencoder, Generative Adversarial Networks and autoregressive architectures~\citet{winkelbauer2022}.
+Recently, diffusion-based architectures~\cite{ho2020denoising} have shown exciting results in image generation.
+The goal of this project is to apply diffusion-based architectures to the problem of grasp generation.
 \begin{itemize}
-  \item For training, we make use of the existing public training dataset Acronym~\cite{acronym2020}
-  \item Preprocess the data
-  \item Adapt the generative architecture for robotic grasping
-  \item Optional: Extend the approach to generating grasps constraint to lie on a specified part of the object~\cite{lundell2023constrained}
+  \item For training, we make use of the existing public training dataset Acronym~\cite{acronym2020}.
+  \item Preprocess the data and make it ready for our learning approach.
+  \item Adapt the diffusion architecture for robotic grasping.
+  \item Compare the results with an existing architecture.
+  \item Optional: Extend the approach to generating grasps constraint to lie on a specified part of the object~\cite{lundell2023constrained}.
 \end{itemize}
 
 % Felix Kroll
@@ -111,8 +87,8 @@ The goal of this project is to apply one of the generative architectures to the 
 
 \begin{itemize}
   \item You will get the data of \citet{Tulbure2018}
-  \item Often it is way easier to collect unlabelled samples than labelled. Can we learn a representation without the labels? Recent work in this direction is, e.g. BYOL (\citet{Grill2020}) or a Joint Embedded Predictive Architecture (\citet{assran2023selfsupervised}).
-  \item Maybe you can improve the classification performance and "beat" \citet{Tulbure2018} by using hyperparameter and neural architecture search. You find the methods in the lecture 3 of the course.
+  \item It is way easier to collect unlabelled samples than labelled. Can we learn a representation without the labels? Recent work in this direction is, e.g. a Joint Embedded Predictive Architecture (\citet{assran2023selfsupervised}).
+  \item Instead of a Transform model you should start with the TacNet (CNN) architecture of \citet{Tulbure2018} and check if you can validate the claims of \citet{assran2023selfsupervised} for the spatio-temporal tactile signals. 
 \end{itemize}
 
 %\subsubsection{Exploring Munchausen Reinforcement Learning}
@@ -428,21 +404,9 @@ Your task is to:
   \end{itemize}
   \item Determine general framework parameters that create an interesting competition.
   \item Provide feedback on the technical setup.
-\end{itemize}
+\end{itemize} 
 
-% Leon
-\subsubsection{Investigating Rapid Motor Adaption}
-\citet{qi2022inhand} use Rapid Motor Adaption to train a robust in-hand manipulation policy in simulation, which can be deployed on the actual system without any further adaptation.
-This is facilitated by a dedicated part of the neural network predicting the current world in an end-2-end learned latent space in order to make the policy more robust - first conditioned on a set of available states in simulation, later on only those measurable when deployed on the real system.
-We want to find the possible performance improvements and the limits of this approach in a simulation-only setting.
-% After the initial setup and an analysis of the capabilities, changes to the training, architecture, and parameterization can be investigated with respect to the overall performance.
-\begin{itemize}
-  \item Define and set up a training environment with your tutor.
-  For example, we are interested in generating a robust in-hand manipulation policy.
-  Also we decide wether you want to use an existing RL framework or implement the algorithm from scratch, depending on the focus you chose.
-  \item Analyze the performance gains as well as the limits of the Rapid Motor Adapton algorithm.
-  \item Expand the algorithm in order to tackle these identified problems, for example a different encoder architecture or changed loss functions, depending on your identified problems and feedback by the tutor.
-\end{itemize}
+
 
 
 %\subsubsection{Policy Adaptation during Deployment}
