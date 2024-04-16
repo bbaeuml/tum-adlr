@@ -45,12 +45,12 @@ In~\citet{Chebotar2018} an efficient method for solving the sim2real problem by 
 % \end{itemize}
 
 % Lennart
-\subsubsection{Non-sequential Reinforcement Learning for Hard Exploration Problems}
-A way of dealing with sparse reward signals is to utilize ``expert demonstrations'' in promising regions of the state space. In the absence of experts, \citet{blau2021learning} propose to first generate successful trajectories by RRT-based planning algorithms and then initialize a policy using that data. Based on this idea, you could experiment with:
-\begin{itemize}
-  \item Implementing different heuristics for choosing states to explore from (see e.g. \citet{ecoffet2019go}) or implementing an entirely different planning algorithm.
-  \item Coupling the policy learning with the RRT-based data collection e.g. by sampling starting states according to RRT and executing actions according to the current policy
-\end{itemize}
+% \subsubsection{Non-sequential Reinforcement Learning for Hard Exploration Problems}
+% A way of dealing with sparse reward signals is to utilize ``expert demonstrations'' in promising regions of the state space. In the absence of experts, \citet{blau2021learning} propose to first generate successful trajectories by RRT-based planning algorithms and then initialize a policy using that data. Based on this idea, you could experiment with:
+% \begin{itemize}
+%   \item Implementing different heuristics for choosing states to explore from (see e.g. \citet{ecoffet2019go}) or implementing an entirely different planning algorithm.
+%   \item Coupling the policy learning with the RRT-based data collection e.g. by sampling starting states according to RRT and executing actions according to the current policy
+% \end{itemize}
 
 \subsubsection{Tactile exploration of objects}
 For grasping an object with a robotic hand, often a full 3D model of the given object is required.
@@ -227,18 +227,20 @@ A Julia framework is provided for this project, including the differentiable mod
 
 % Lennart
 \subsubsection{Recurrent Off-Policy Reinforcement Learning in POMDPs}
-In partially observable Markov decision processes (POMDPs), an RL agent has to be equipped with some sort of memory in order to be able to act optimally. A well known method addressing this issue is to encode the history of observations by recurrent neural networks (RNNs).
+In partially observable Markov decision processes (POMDPs), an RL agent has to be equipped with some sort of memory in order to be able to act optimally.
+A well known method addressing this issue is to encode the history of observations by recurrent neural networks (RNNs).
 For the class of off-policy methods, \citet{heess2015} combine RNNs with the DDPG algorithm and \citet{kapturowski2018} study the interplay of DQN-based algorithms with recurrent experience replay.
 Based on this work:
 \begin{itemize}
-  \item Choose or implement environments that require the use of memory to be solved optimally.
+  \item Your tutor will provide you with an environment that requires the use of memory to be solved optimally.
   \item Implement a recurrent version of the SAC algorithm by~\citet{Haarnoja2018a}.
-  \item Assess the effect of different design choices and hyperparameters (e.g. hidden state initialization strategy in the experience replay buffer, truncated BPTT, ...)
+  \item Assess the effect of different design choices and hyperparameters (e.g.~hidden state initialization strategy in the experience replay buffer, truncated BPTT, ...)
 \end{itemize}
 
 \subsubsection{Differentiable Bayesian Filters}
 \textit{*Prior knowledge of Bayesian filters highly recommended*}\\
-Differentiable filters are a promising approach for combining the algorithmic structure of bayesian filter techniques with the power of learning-based methods (for an overview over existing methods, see e.g. \citet{kloss2021train}). Importantly, differentiable filters offer a systematic way of dealing with aleatoric uncertainty in state estimation problems.
+Differentiable filters are a promising approach for combining the algorithmic structure of bayesian filter techniques with the power of learning-based methods (for an overview over existing methods, see e.g. \citet{kloss2021train}).
+Importantly, differentiable filters offer a systematic way of dealing with aleatoric uncertainty in state estimation problems.
 \begin{itemize}
   \item Implement a \textit{differentiable} filter of your choice, for example EKF, UKF or Particle Filter.
   \item Consider the simple tracking experiment VI from \citet{kloss2021train}. Implement interesting modification to the experiment. For example:
@@ -389,6 +391,21 @@ Explore those questions on simple environments (\href{https://gymnasium.farama.o
 % \subsubsection{Procgen Benchmark}
 % Implement and experiment with different agents on this procedurally-generated benchmark \citet{procgen2020}.
 % You can compare your results with other submissions on the leaderboard (\url{github.com/openai/procgen}).
+
+
+\subsubsection{Model Predictive Control for Robotic Manipulation}
+
+Model predictive control (MPC) is a popular control strategy in robotics. 
+Prior implementations in simulation~\cite{MujocoMPC} often assume that the underlying physical model is precisely known, 
+which is, however, rarely the case in practice. 
+Instead, Domain Randomization (DR) should be applied to cover the range of possible physical behaviors encountered in the real world.
+This project aims to investigate the limitations of simple MPC-based approaches in the presence of model uncertainty.
+
+\begin{itemize}
+  \item If you feel comfortable coding in C++, extend the implementation provided in~\cite{MujocoMPC} to include randomization of different physical parameters (friction, masses, contact behavior ...).
+  \item If not, implement a simple stochastic MPC~\cite{Howell2022-uj} in Python and a simple test environment that allows for randomization of physical parameters (with the help of you tutor).
+  \item Analyze the sensitivity of the MPC controller to randomization of different types physical parameters, and randomization ranges. 
+\end{itemize} 
 
 % Competition
 \subsubsection{Factory Manipulation Challenge}
