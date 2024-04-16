@@ -391,19 +391,20 @@ Explore those questions on simple environments (\href{https://gymnasium.farama.o
 % You can compare your results with other submissions on the leaderboard (\url{github.com/openai/procgen}).
 
 % Competition
-\subsubsection{Design of a Conveyor Belt Competition}
-We are considering to run the projects as a competition in future semesters.
-For this project, we will provide a simple MuJoCo environment with two robot arms that should pick objects from a moving conveyor belt and throw them into a basket.
-Your task is to:
+\subsubsection{Factory Manipulation Challenge}
+
+For this project, we will provide a MuJoCo environment with two robot arms and a conveyor belt. 
+The task is to pick as many objects objets as possbile from the conveyor belt and put them into a basket. 
+We also provide you with a baseline policy that solves the task by means of classic methods from robotic control.
+
+If you decide to take on this project, we encourage you tackle ONE OF the following problems:
 \begin{itemize}
-  \item Use Reinforcement Learning to solve the pick-and-throw task.
-  \begin{itemize}
-    \item Design reward function, termination criteria, \dots
-    \item Analyze different input representations and network architectures.
-    \item Compare algorithms and adapt them.
-  \end{itemize}
-  \item Determine general framework parameters that create an interesting competition.
-  \item Provide feedback on the technical setup.
+  \item Use Reinforcement Learning (RL) from-scratch to improve upon the provided baseline. 
+  This will involve designing a reward function and termination criteria, analyzing different input representations and network architectures, and choosing RL algorithms.
+  \item Use Imitation Learning techniques (e.g.~\cite{Ross2010-ny}), leveraging the provided baseline policy as a teacher. 
+  Can you use its demonstrations while still arriving at a better final policy?
+  \item Consider the setting in which the two robots work together to maximize the total number of objects collected. 
+  Train a RL policy to operate cooperatively, alongside the provided baseline policy, and analyze the emergent behavior.
 \end{itemize} 
 
 
