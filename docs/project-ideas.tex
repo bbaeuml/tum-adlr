@@ -115,7 +115,6 @@ Similarly, RL agents can be pretrained in an environment without an extrinsic re
 
 %%%%%%%%%%%%%%%%%%%%%
 % Johannes Tenhumberg
-
 \subsubsection{Learning the Inverse Kinematics}
 Look at the possibilities for representing inverse problems with neural networks.
 ~\citet{Ardizzone2018} compare different flavors of GANs, VAEs and INN(theirs) for inverse problems in general.
@@ -131,30 +130,42 @@ How can we use this knowledge to our advantage?
         How can one best represent the $SO(3)$?
 \end{itemize}
 
-% Johannes Tenhumberg
-%\subsubsection{Harnessing Reinforcement Learning for Neural Motion Planning}
-% \citet{Jurgenson2019} tackle motion planning with RL.
-% Random exploration does not always find a feasible solution for difficult cases.
-% By using RRT* to generate expert knowledge they can guide the exploration more efficiently.
-% A comparison between pure DDPG, DDPG+HER, and DDPG-MP(theirs) shows the potential of this approach.
-% \begin{itemize}
-%   \item Modify their code  for a planar robotic arm it for different robots and environments.
-%   \item Is this expert knowledge necessary or can this also be achieved with a well designed curriculum?
-%   \item Look at modern approaches to represent the environment in which the robot moves (ie. Basis Points Set ~\citet{Prokudin2019}; PointNet for Motion Planning ~\citet{Strudel2020})
-% \end{itemize}
 
 % Johannes Tenhumberg
 \subsubsection{Motion Planning with Diffusion}
-Look into generative models for robotic motion planning based on the ideas work by \citet{Janner2022}.
+Look into generative models for robotic motion planning based on the work by \citet{Janner2022}.
 The core of their approach lies in a diffusion probabilistic model that plans by iteratively denoising trajectories.
 \begin{itemize}
   \item Use a simple 2D robot to get familiar with the diffusion approach in the robotic context.
-  \item Include the changing environment as central part of the planning problem
-  \item Extend the framework to more complex robots
+  \item Include the changing environment as a central part of the planning problem.
+  \item Extend the framework to more complex robots.
+  \item Alternatively, the Inverse Kinematics, with its inherent ambiguity, is a second promising testbed for the diffusion models. 
 \end{itemize}
 
 
-% Back-ups
+% Johannes Tenhumberg
+\subsubsection{Coverage Path Planning}
+For search and rescue missions (or vacuum cleaners), exploring the environment quickly and efficiently is vital. 
+The goal of coverage path planning~\cite{Jonnarth2023lcoverage} is to navigate collision-free in a (possibly unknown) map and visit all unseen regions. 
+\begin{itemize}
+	\item Build a simple test environment; focus on simple point robots in 2D/ 3D, no additional complexity through kinematics
+	\item Formulate the objective: how do we measure and represent good coverage?
+	\item Add more realism by incorporating a sensor model (e.g., avalanche beacon) 
+\end{itemize}
+
+
+\subsubsection{Learning Robot and Environment Representations}
+    A crucial aspect when using learning-based techniques in robotics is the representation and encoding of the relevant aspects of the problem.
+    In the context of collision avoidance, the robot itself and the environment with different obstacles need to be modeled. 
+The latter is especially relevant when considering dynamic settings with rapid changes.  
+The goal is to explore one promising representation and analyze its potential for robot motion planning.
+\begin{itemize}
+	\item Learn convex decomposition of arbitrary maps~\cite{Deng2020cvxnet}
+	\item Predict the Swept Volume of robot motions~\cite{Chiang2018SweptVolume}
+	\item Build a robot-centered signed distance field~\cite{Liu2023linkSDF}
+\end{itemize}
+
+% Johannes Tenhumberg
 %\subsubsection{Learning to Optimize Motion Planning}
 %Explore the ideas proposed by "Learning to Optimize" ~\citet{LiM16b} in the context of optimization based motion planning \citet{Zucker2013}.
 %Can Reinforcement Learning guide an optimizer to speed up robotic path planning?
@@ -167,8 +178,20 @@ The core of their approach lies in a diffusion probabilistic model that plans by
 %  \item What are advantages of this hybrid approach over using RL directly on motion planning?
 %\end{itemize}
 
+
 % Johannes Tenhumberg
+%\subsubsection{Harnessing Reinforcement Learning for Neural Motion Planning}
+% \citet{Jurgenson2019} tackle motion planning with RL.
+% Random exploration does not always find a feasible solution for difficult cases.
+% By using RRT* to generate expert knowledge they can guide the exploration more efficiently.
+% A comparison between pure DDPG, DDPG+HER, and DDPG-MP(theirs) shows the potential of this approach.
+% \begin{itemize}
+%   \item Modify their code  for a planar robotic arm it for different robots and environments.
+%   \item Is this expert knowledge necessary or can this also be achieved with a well designed curriculum?
+%   \item Look at modern approaches to represent the environment in which the robot moves (ie. Basis Points Set ~\citet{Prokudin2019}; PointNet for Motion Planning ~\citet{Strudel2020})
+% \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%
+
 
 
 \subsubsection{Trajectory Planning with Moving Obstacles}
