@@ -4,7 +4,7 @@
 \usepackage[numbers]{natbib}
 
 \renewcommand{\thesubsubsection}{\arabic{subsubsection}}
-\title{IN2349 ADLR: Project Ideas}
+\title{CIT433027 ADLR: Project Ideas}
 \author{}
 
 \begin{document}
@@ -450,6 +450,21 @@ This project aims to investigate the limitations of simple MPC-based approaches 
   \item Analyze the sensitivity of the MPC controller to the randomization of different types of physical parameters. 
 \end{itemize} 
 
+% Leon
+\subsubsection{Investigating Rapid Motor Adaption}
+\citet{qi2022inhand} use Rapid Motor Adaption to train a robust in-hand manipulation policy in simulation, which can be deployed on the actual system without any further adaptation.
+This is facilitated by a dedicated part of the neural network predicting the current world in an end-to-end learned latent space to make the policy more robust - first conditioned on a set of available states in simulation, later on only those measurable when deployed on the real system.
+We want to find the possible performance improvements and the limits of this approach in a simulation-only setting.
+% After the initial setup and an analysis of the capabilities, changes to the training, architecture, and parameterization can be investigated with respect to the overall performance.
+\begin{itemize}
+  \item Define and set up a training environment with your tutor.
+  For example, we are interested in generating a robust in-hand manipulation policy.
+  Also, we will decide whether you want to use an existing RL framework or implement the algorithm from scratch, depending on your focus.
+  \item Analyze the performance gains as well as the limits of the Rapid Motor Adapton algorithm.
+  \item Expand the algorithm to tackle these identified problems, for example, a different encoder architecture or changed loss functions, depending on your identified problems and feedback from the tutor.
+\end{itemize}
+
+
 % Competition
 \subsubsection{Factory Manipulation Challenge}
 
@@ -467,19 +482,6 @@ If you decide to take on this project, we encourage you to tackle ONE of the fol
   Train an RL policy to operate cooperatively alongside the provided baseline policy and analyze the emergent behavior.
 \end{itemize} 
 
-% Leon
-\subsubsection{Investigating Rapid Motor Adaption}
-\citet{qi2022inhand} use Rapid Motor Adaption to train a robust in-hand manipulation policy in simulation, which can be deployed on the actual system without any further adaptation.
-This is facilitated by a dedicated part of the neural network predicting the current world in an end-to-end learned latent space to make the policy more robust - first conditioned on a set of available states in simulation, later on only those measurable when deployed on the real system.
-We want to find the possible performance improvements and the limits of this approach in a simulation-only setting.
-% After the initial setup and an analysis of the capabilities, changes to the training, architecture, and parameterization can be investigated with respect to the overall performance.
-\begin{itemize}
-  \item Define and set up a training environment with your tutor.
-  For example, we are interested in generating a robust in-hand manipulation policy.
-  Also, we will decide whether you want to use an existing RL framework or implement the algorithm from scratch, depending on your focus.
-  \item Analyze the performance gains as well as the limits of the Rapid Motor Adapton algorithm.
-  \item Expand the algorithm to tackle these identified problems, for example, a different encoder architecture or changed loss functions, depending on your identified problems and feedback from the tutor.
-\end{itemize}
 
 
 %\subsubsection{Policy Adaptation during Deployment}

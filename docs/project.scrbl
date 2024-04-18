@@ -11,10 +11,11 @@ For each team we will provide at least $1000 credits in the Google Compute Engin
 
 The deliverables & deadlines are:
 @itemlist[
- @item{@bold{Team registration}:  @bold{24. October 2023, 24:00}}
- @item{@bold{Project proposal}: one page; @bold{08. November 2023, 24:00}}
- @item{@bold{Milestone report & presentation}: one page & 10min talk; @bold{21. December 2023} (deadline for report on 02. January 2024)}
- @item{@bold{Final report & presentation}: three pages & 10min talk; @bold{end of January 2024}}]
+ @item{@bold{Team registration}:  @bold{23. April 2024, 24:00}}
+ @item{@bold{Project proposal}: one page; @bold{05. May 2024, 24:00}}
+ @item{@bold{Topic presentation}: 10min talk; (dates to come)}
+ @item{@bold{Milestone presentation}: 10min talk; (dates to come)}
+ @item{@bold{Final report & poster session}: three pages & poster; @bold{early August  2024}}]
 
 In addition, you will have to provide the code of the project via sharing the GitHub repository with your tutor.
 
@@ -22,10 +23,10 @@ The project will give 50% of your final grade, the other 50% are from the exam a
 
 @section[#:style 'unnumbered]{Organizational}
 
-@bold{Teams} For finding a team mate, you can use Piazza’s “Search for Teammates” feature. Only teams of two students are allowed.
+@bold{Teams} For finding a team mate, you can use the Module forum “Search for Teammates”. Only teams of two students are allowed.
 
 @bold{Registration} Your team must be registered by one of the two team members by sending an email (with the other team member in CC) to @verbatim{berthold.baeuml@"@"tum.de} with the following content:
-@verbatim{Subject: [IN2349] team registration
+@verbatim{Subject: [CIT433027] team registration
 
  <matrikel number of member 1>
  <matrikel number of member 2>
@@ -34,16 +35,17 @@ The project will give 50% of your final grade, the other 50% are from the exam a
  
 Send this email by the registration deadline the latest, including a first draft version of your project proposal (title, bullet points, papers).
 
-@bold{Tutoring} After registration, we will assign a project-id and a tutor to your team. Before writing the final project proposal, you will have a meeting with your tutor to discuss your topic and resolve potential conflicts/overlapp with the projects of other teams (the better your draft proposal is the higher is the chance that your team "wins" the topic).
+@bold{Tutoring} After registration, we will assign a project-id and a tutor to your team. Before writing the final project proposal, you will have a meeting with your tutor to discuss your topic and resolve potential conflicts/overlapp with the projects of other teams (you can provide up to two other topics you would be interested in).
 
-The biweekly meetings of a team with its tutor are done via Zoom video meetings. In addition, each team gets a private group in Piazza for offline communication with their tutor.
+The (bi)weekly meetings of a team with its tutor are done via Zoom video meetings. In addition, each team gets a private forum in Moodle for offline communication with their tutor.
 
-@bold{Submission} All submissions are done via the team's private Piazza group. The proposal, the reports as well as the slides of your presentations have to be sent as pdf files where the filename ends with your project-id, e.g.,@(linebreak)
+@bold{Submission} All submissions are done via the team's private Moodle forum. The proposal, the reports as well as the slides of your presentations have to be sent as pdf files where the filename ends with your project-id, e.g.,@(linebreak)
 @tt{proposal-07.pdf},@(linebreak)
-@tt{milestone-report-07.pdf}, @tt{milestone-slides-07.pdf},@(linebreak)
-@tt{final-report-07.pdf}, @tt{final-slides-07.pdf}.
+@tt{topic-slides-07.pdf},@(linebreak)
+@tt{milestone-slides-07.pdf},@(linebreak)
+@tt{final-report-07.pdf}, @tt{final-poster-07.pdf}.
 
-The format for the proposal, milestone and final report has to be the standard IEEE conference format: @(hyperlink "https://www.ieee.org/conferences/publishing/templates.html" "https://www.ieee.org/conferences/publishing/templates.html")
+The format for the proposal, and final report has to be the standard IEEE conference format: @(hyperlink "https://www.ieee.org/conferences/publishing/templates.html" "https://www.ieee.org/conferences/publishing/templates.html")
 
 
 
@@ -67,7 +69,7 @@ Here are some  examples of weak proposals and how to improve them.
            @elem[(linebreak)]
            @italic{Strong}: investigate the algorithm’s robustness to more interesting tweaks (e.g. in reinforcement learning investigate sparse rewards instead of dense), and pursue a solution.}]
 
-@bold{@(hyperlink "./project-ideas.pdf" "List of ideas")} If you are looking for ideas for your project, take a look at the @(hyperlink "./project-ideas.pdf" "list of ideas")  we collected. Though, we also encourage you to come up with your own idea.
+@bold{@(hyperlink "./project-ideas.pdf" "List of ideas")} If you are looking for ideas for your project, take a look at list we collected. Though, we also encourage you to come up with your own idea.
 
 @section[#:style 'unnumbered]{Writing the Proposal}
 
@@ -81,20 +83,18 @@ The project proposal should be a @bold{one page + references} single-spaced exte
 For the team registraion, you have to provide a first @bold{draft proposal}. This draft should at least include a title, desribe in a few bullet points the topic and main idea of your project, and reference the most relevant paper(s) you want to base your project on (a similar format as we used in the @(hyperlink "./project-ideas.pdf" "list of ideas")).
 
 
-@section[#:style 'unnumbered]{Milestone Report and Presentation}
-Your milestone report should be @bold{one page} and answer the following questions:
+@section[#:style 'unnumbered]{Milestone Presentation}
+Your milestone presentationt (8min talk +3min Q&A) should and answer the following questions:
 @itemlist[#:style 'ordered
 @item{What experiments have you conducted so far?}
 @item{Are there any changes to the research hypothesis or problem statement from the pro- posal?}]
 
-The milestone report must report on at least one experiment that you have done since the proposal. This experiment does not need to be successful, but you should have attempted something. If it did not work as expected, you should briefly discuss why. You are encouraged to include a plot or figure. 
+The milestone presentation must show on at least one experiment that you have done since the topic presentation. This experiment does not need to be successful, but you should have attempted something. If it did not work as expected, you should briefly discuss why. You are encouraged to include a plot or figure. 
 
-In addition, you have to do a milestone presentation (8min talk +3min Q&A) in a Zoom meeting, presenting your project idea and the first results to the whole class.
+One  presentation is required per team (each team member should do about half of the presentation).
 
-One report and presentation is required per team (each team member should do about half of the presentation).
-
-@section[#:style 'unnumbered]{Final Report and Presentation}
+@section[#:style 'unnumbered]{Final Report and Poster Session}
 The final report should be in the style of a short research paper of about three pages (one page text) and should describe and motivate the method, and discuss the results, including any relevant figures or plots.
 
-In addition, each team has to present their results in a Zoom meeting.
+In addition, each team has to present their results in a poster session.
 

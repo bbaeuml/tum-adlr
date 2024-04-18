@@ -6,8 +6,8 @@
 
 @itemlist[         
           @item{Lecturer: Berthold Bäuml}
-          @item{ECTS: 6}
-          @item{2V + 2P}]
+          @item{ECTS: 8}
+          @item{2V + 3P}]
 
 @itemlist[         
  @item{All videos and slides of all lectures are provided from the beginning on this website.}

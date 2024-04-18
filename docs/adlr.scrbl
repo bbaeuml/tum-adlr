@@ -2,7 +2,7 @@
 @(require pict)
  
 @title{Advanced Deep Learning for Robotics}
-ADLR    IN2349
+ADLR    CIT433027
 
 This is the advanced deep learning lecture with a specific focus on  Robotics and deep reinforcement learning (including a guest lecture from DeepMind).
 
