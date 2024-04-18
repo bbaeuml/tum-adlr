@@ -227,20 +227,16 @@ Use this representation for neural motion planning ~\citet{Qureshi2021MPN}.
   \item Come up with a state representation for dynamic environments.
   \item Set up a simple 2D (and later 3D) environment in which an agent can navigate through moving obstacles.
   \item Use RL to plan optimal trajectories in this environment.
-        %  \item Optional: Extend the method to fixed-wing drones in three-dimensional space and test your approach in our own simulator \citet{BionicVTOL} or in the DodgeDrone challenge \citet{DodgeDroneChallenge}.
   \item Optional: Extend the method to work with uncertainties in the motion prediction of the collision objects.
 \end{itemize}
 
 
 \subsubsection{Learning to Fly Beyond RL – Analytic Policy Gradient}
-Video introduction at: \href{https://flyonic.de/in2349/}{https://flyonic.de/in2349/}.\newline
 Fixed-wing VTOL (Vertical Take-Off and Landing) drones combine the ability to take off vertically and exploit lift for efficient cross-country flight. The disadvantage is more complicated control. Learned controllers are a promising solution here. \citet{wiedemann2023training} presents a method to directly exploit the differentiability of models and thus skip the detour via reinforcement learning.
 \begin{itemize}
   \item Setting up the learning pipeline with a simple quadrotor model (simple control).
-  \item Transfer the approaches to a VTOL model (complicated control)
-  \item Optional: Replace the policy with a PID controller. Exploit the pipeline for automatic parameter tuning.
+  \item Replace the policy with a PID controller. Exploit the pipeline for automatic parameter tuning.
 \end{itemize}
-A Julia framework is provided for this project, including the differentiable models. Julia~\cite{WebJulia} is a modern programming language that has the speed of C but is as easy to program as Python.
 
 
 %\subsubsection{Learning to Fly}
