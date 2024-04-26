@@ -2,7 +2,7 @@
  
 @title[#:tag "project" #:style 'unnumbered]{Project}
 
-The semester long project in this course requires implementing, evaluating, and documenting a new, research-style idea in the field of deep learning and robotics. Each project is done in a team of two students. The teams must form themselves and come up with a proposal for their project. Based on the proposal, a tutor will be assigned and will meet with each team individually on a biweekly basis to discuss the results and the next steps of the project. 
+The semester long project in this course requires implementing, evaluating, and documenting a new, research-style idea in the field of deep learning and robotics. Each project is done in a team of two students. The teams must form themselves and come up with a proposal for their project. Based on the proposal, a tutor will be assigned and will meet with each team individually on a weekly basis to discuss the results and the next steps of the project. 
 
 For each team we will provide at least $1000 credits in the Google Compute Engine.
 
@@ -12,10 +12,9 @@ For each team we will provide at least $1000 credits in the Google Compute Engin
 The deliverables & deadlines are:
 @itemlist[
  @item{@bold{Team registration}:  @bold{23. April 2024, 24:00}}
- @item{@bold{Project proposal}: one page; @bold{05. May 2024, 24:00}}
- @item{@bold{Topic presentation}: 10min talk; (dates to come)}
- @item{@bold{Milestone presentation}: 10min talk; (dates to come)}
- @item{@bold{Final report & poster session}: three pages & poster; @bold{early August  2024}}]
+ @item{@bold{Project proposal}: one page; @bold{10. May 2024, 24:00}}
+ @item{@bold{Milestone presentation}: 10min talk; 6. June 2024}
+ @item{@bold{Final report & poster session}: four pages & poster; @bold{early August  2024}}]
 
 In addition, you will have to provide the code of the project via sharing the GitHub repository with your tutor.
 
@@ -37,11 +36,10 @@ Send this email by the registration deadline the latest, including a first draft
 
 @bold{Tutoring} After registration, we will assign a project-id and a tutor to your team. Before writing the final project proposal, you will have a meeting with your tutor to discuss your topic and resolve potential conflicts/overlapp with the projects of other teams (you can provide up to two other topics you would be interested in).
 
-The (bi)weekly meetings of a team with its tutor are done via Zoom video meetings. In addition, each team gets a private forum in Moodle for offline communication with their tutor.
+The weekly meetings of a team with its tutor are done via Zoom video meetings. In addition, each team gets a private forum in Moodle for offline communication with their tutor.
 
 @bold{Submission} All submissions are done via the team's private Moodle forum. The proposal, the reports as well as the slides of your presentations have to be sent as pdf files where the filename ends with your project-id, e.g.,@(linebreak)
 @tt{proposal-07.pdf},@(linebreak)
-@tt{topic-slides-07.pdf},@(linebreak)
 @tt{milestone-slides-07.pdf},@(linebreak)
 @tt{final-report-07.pdf}, @tt{final-poster-07.pdf}.
 
@@ -86,15 +84,17 @@ For the team registraion, you have to provide a first @bold{draft proposal}. Thi
 @section[#:style 'unnumbered]{Milestone Presentation}
 Your milestone presentationt (8min talk +3min Q&A) should and answer the following questions:
 @itemlist[#:style 'ordered
+@item{What is your topic about and what is your goal with what methods?}
 @item{What experiments have you conducted so far?}
-@item{Are there any changes to the research hypothesis or problem statement from the pro- posal?}]
+@item{What are the next milestones? Are there any changes to the research hypothesis or problem statement from the pro-posal?}
+]
 
-The milestone presentation must show on at least one experiment that you have done since the topic presentation. This experiment does not need to be successful, but you should have attempted something. If it did not work as expected, you should briefly discuss why. You are encouraged to include a plot or figure. 
+The milestone presentation must show on at least one experiment that you have done since the start of the project. This experiment does not need to be successful, but you should have attempted something. If it did not work as expected, you should briefly discuss why. You are encouraged to include a plot or figure. 
 
 One  presentation is required per team (each team member should do about half of the presentation).
 
 @section[#:style 'unnumbered]{Final Report and Poster Session}
-The final report should be in the style of a short research paper of about three pages (one page text) and should describe and motivate the method, and discuss the results, including any relevant figures or plots.
+The final report should be in the style of a short research paper of about four pages and should describe and motivate the method, and discuss the results, including any relevant figures or plots.
 
 In addition, each team has to present their results in a poster session.
 
