@@ -45,12 +45,16 @@ In~\citet{Chebotar2018}, an efficient method for solving the sim2real problem by
 % \end{itemize}
 
 % Lennart
-% \subsubsection{Non-sequential Reinforcement Learning for Hard Exploration Problems}
-% A way of dealing with sparse reward signals is to utilize ``expert demonstrations'' in promising regions of the state space. In the absence of experts, \citet{blau2021learning} propose to first generate successful trajectories by RRT-based planning algorithms and then initialize a policy using that data. Based on this idea, you could experiment with:
-% \begin{itemize}
-%   \item Implementing different heuristics for choosing states to explore from (see e.g. \citet{ecoffet2019go}) or implementing an entirely different planning algorithm.
-%   \item Coupling the policy learning with the RRT-based data collection e.g. by sampling starting states according to RRT and executing actions according to the current policy
-% \end{itemize}
+\subsubsection{Non-sequential Reinforcement Learning for Hard Exploration Problems}
+A way of overcoming the problems associated with sparse rewards in Reinforcement Learning is to utilize ``expert demonstrations'' in promising regions of the state space.
+\citet{bauza2024demostart} use (suboptimal) expert demonstrations for providing a curriculum of interesting states to the agent during learning.
+In the absence of human experts, \citet{blau2021learning} propose to first generate successful trajectories by RRT-based planning algorithms and then initialize a policy using that data. 
+
+Based on one of the above papers, you could e.g. study one of the following problems (or come up with your own ideas):
+\begin{itemize}
+  \item Implement different heuristics for choosing states to explore from. Can you also find a metric to decide when to \textit{stop} an episode early?
+  \item Implement an entirely different planning algorithms for obtaining expert demonstrations. Analyse the dependency between the quality of the demonstrations and the final performance of the policy.
+\end{itemize}
 
 % Dominik
 \subsubsection{Tactile exploration of objects}
@@ -285,7 +289,7 @@ Fixed-wing VTOL (Vertical Take-Off and Landing) drones combine the ability to ta
 \subsubsection{Recurrent Off-Policy Reinforcement Learning in POMDPs}
 In partially observable Markov decision processes (POMDPs), an RL agent has to be equipped with some sort of memory in order to be able to act optimally.
 A well-known method addressing this issue is to encode the history of observations by recurrent neural networks (RNNs).
-For the class of off-policy methods, \citet{heess2015} combine RNNs with the DDPG algorithm, and \citet{kapturowski2018} study the interplay of DQN-based algorithms with recurrent experience replay.
+For example, for the class of off-policy methods, \citet{heess2015} combine RNNs with the DDPG algorithm, and \citet{kapturowski2018} study the interplay of DQN-based algorithms with recurrent experience replay.
 Based on this work:
 \begin{itemize}
   \item Your tutor will provide you with an environment that requires the use of memory to be solved optimally.
@@ -297,18 +301,17 @@ Based on this work:
 \textit{*Prior knowledge of Bayesian filters highly recommended*}\\
 Differentiable filters are a promising approach for combining the algorithmic structure of Bayesian filter techniques with the power of learning-based methods (for an overview of existing methods, see, e.g., \citet{kloss2021train}).
 Importantly, differentiable filters offer a systematic way of dealing with aleatoric uncertainty in state estimation problems.
+In this project you will:
 \begin{itemize}
   \item Implement a \textit{differentiable} filter of your choice, for example, EKF, UKF, or Particle Filter.
-  \item Consider the simple tracking experiment VI from \citet{kloss2021train}. Implement interesting modifications to the experiment. For example:
-        \begin{itemize}
-          \item use the distance to (a subset of) beacons instead of images as measurements
-          \item implement collisions
-          \item additionally, estimate parameters from the system dynamics on-the-fly
-        \end{itemize}
-  % \item Alternatively, filters can be used to estimate static parameters of a system, like mass or friction coefficients. You can investigate the performance of \textit{differentiable} filters in these use cases.
-  \item Compare your filter to recurrent neural networks and discuss the pros and cons.
+  \item Your tutor will provide you with a dataset of a pose estimation problem for supervised learning and the code to modify the data generation.
+  \item Train the filter on the dataset and conduct one or more of the follwing experiments:
+  \begin{itemize}
+    \item Compare the performance of your differentiable filter with standard filter variants (where available) on the dataset.
+    \item Extend the filtering problem to estimation of physical parameters of a system, like mass or friction coefficients.
+    \item Compare the bayesian filter to baselines using Recurrent Neural Networks or Transformers. How do they compare in the low-data and high-data regimes?
+  \end{itemize}
 \end{itemize}
-
 
 
 % Felix Kroll
