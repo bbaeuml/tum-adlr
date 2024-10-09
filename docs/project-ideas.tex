@@ -112,24 +112,21 @@ The goal of this project is to apply one of the generative architectures to the 
 \subsubsection{Tactile Material Classification}
 
 \citet{Tulbure2018} (as mentioned in the lecture) proved that one can classify a vast number of materials robustly ($\approx 95 \%$) using only the spatio-temporal signal of a tactile skin.
-For this project you can use the data of \citet{Tulbure2018} from \url{https://dlr-alr.github.io/dlr-tactmat/}.
+For this project you can use the data of \citet{Tulbure2018} from \url{https://dlr-alr.github.io/dlr-tactmat/} and choose \emph{one} of the following two options: 
 
-\paragraph{Self-Supervised Learning}
+\paragraph{Option 1 - Self-Supervised Learning}
 \begin{itemize}
   \item It is way easier to collect unlabeled samples than labeled. Can we learn a representation without the labels? Recent work in this direction is, e.g., a Joint Embedded Predictive Architecture (\citet{assran2023selfsupervised}).
   \item Instead of a Transformer model, you should start with the TacNet (CNN) architecture of \citet{Tulbure2018} and check if you can validate the claims of \citet{assran2023selfsupervised} for the spatio-temporal tactile signals. 
 \end{itemize}
 
-\paragraph{Normalizing Flows \& Invertible Neuronal Networks}
+\paragraph{Option 2 - Normalizing Flows \& Invertible Neuronal Networks}
 \begin{itemize}
-  \item Regular classification with a CNN sometimes provides very misleading predictions if the model is presented with data that is out of the training distribution (OoD). The capability to check if data is OoD would be a useful tool to see if we can improve our set of training data with the detected data further.   
+  \item Regular classification with a CNN sometimes provides very misleading predictions if the model is presented with data that is out of the training distribution (OoD). To increase the robustness and to get further insight of misclassification it is important to go beyond SotA deep learning CNN classifiers.   
   \item The authors of the work of \citeauthor{mackowiak_generative_2021} provide a promising method to train a Normalizing Flow that is cable of detecting if a data sample is OoD.
   \item Use the method presented in work of \citeauthor{mackowiak_generative_2021} to train a generative classifier with information bootle neck for tactile material classification.
   \item We will provide you with OoD data so you can validate the models capabilities. 
 \end{itemize}
-
-
-% Felix Kroll
 
 
 %\subsubsection{Exploring Munchausen Reinforcement Learning}
