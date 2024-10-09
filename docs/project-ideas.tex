@@ -498,6 +498,24 @@ If you decide to take on this project, we encourage you to tackle ONE of the fol
   Train an RL policy to operate cooperatively alongside the provided baseline policy and analyze the emergent behavior.
 \end{itemize} 
 
+% Ulf
+\subsubsection{Representing Shapes as Latent Codes}
+Efficient representations of 3D geometries are crucial for many robotic related task. For example, in-hand manipulation or grasping can be conditioned on the geometry on the object. Another task is tactile shape detection, where the geometry of an unknown object should be determined. \citet{park2019deepsdf} use a "auto-decoder" structure to find a latent parametrization of 3D geometries.
+\begin{itemize}
+  \item Generate a data set of 2D geometries by composing primitive shapes.
+  \item Train a auto-decoder to find a latent space as in \cite{park2019deepsdf}.
+  \item Use the latent representation for tactile shape detection.
+  \item Possibly expand to 3D.
+\end{itemize}
+
+% Ulf
+\subsubsection{Learning the Model of a Tactile Skin}
+Tactile sensing is crucial for fine manipulation with robotic hands. Modeling a tactile skin sensor, however, requires soft contacts to capture the softness of the fingers. This is computationally expensive and, hence, inefficient when used together with reinforcement learning. \citet{narang2021sim} train a neural network to map basic contact information such as the contact point and force to the deformation and the sensor response. 
+\begin{itemize}
+  \item Familiarize yourself with our sensor model.
+  \item Think of an efficient representation of the local geometry.
+  \item Generate a data set and train the mapping.
+\end{itemize}
 
 
 %\subsubsection{Policy Adaptation during Deployment}
