@@ -479,21 +479,12 @@ We want to find the possible performance improvements and the limits of this app
 
 
 % Competition
-\subsubsection{Factory Manipulation Challenge}
+\subsubsection{Residual Policies for Factory Manipulation}
 
 For this project, we will provide a MuJoCo environment with two robot arms and a conveyor belt:~\url{https://youtu.be/IpwQPmgOLW0?si=mNzBQyJiv-8xCxzo/}.
 The task is to pick as many objects as possible from the conveyor belt and put them into a basket. 
 We also provide you with a baseline policy that solves the task using classic methods from robotic control.
-
-If you decide to take on this project, we encourage you to tackle ONE of the following problems:
-\begin{itemize}
-  \item Use Reinforcement Learning (RL) from scratch to improve upon the provided baseline. 
-  This will involve designing a reward function and termination criteria, analyzing different input representations and network architectures, and choosing RL algorithms.
-  \item Use Imitation Learning techniques (e.g.~\cite{Ross2010-ny}), leveraging the provided baseline policy as a teacher. 
-  Can you use its demonstrations while still arriving at a better final policy?
-  \item Consider the setting where the two robots work together to maximize the total number of objects collected. 
-  Train an RL policy to operate cooperatively alongside the provided baseline policy and analyze the emergent behavior.
-\end{itemize} 
+Exploring the idea of \textit{Residual Policy Learning}~\cite{Silver2018-kz}, your goal in this project is to improve upon the baseline by learning a residual policy by RL.
 
 % Ulf
 \subsubsection{Representing Shapes as Latent Codes}
@@ -513,8 +504,6 @@ Tactile sensing is crucial for fine manipulation with robotic hands. Modeling a 
   \item Think of an efficient representation of the local geometry.
   \item Generate a data set and train the mapping.
 \end{itemize}
-
-
 %\subsubsection{Policy Adaptation during Deployment}
 %Training RL agents in simulation can accelerate learning substantially, and may sometimes be the only viable option due to hardware constraints. However, it is difficult to model the system in simulation accurately enough such that trained policies also work in the real world. \citet{Hansen2021} propose to close this sim2real gap using self-supervision during deployment.
 %\begin{itemize}
