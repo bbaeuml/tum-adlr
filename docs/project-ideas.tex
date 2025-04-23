@@ -533,21 +533,36 @@ Exploring the idea of \textit{Residual Policy Learning}~\cite{Silver2018-kz}, yo
 
 % Ulf
 \subsubsection{Representing Shapes as Latent Codes}
-Efficient representations of 3D geometries are crucial for many robotic related task. For example, in-hand manipulation or grasping can be conditioned on the geometry of the object. Another task is tactile shape detection, where the geometry of an unknown object should be determined. \citet{park2019deepsdf} use a "auto-decoder" structure to find a latent parametrization of 3D geometries.
+Efficient representations of 3D geometries are crucial for many robotic related task. 
+For example, in-hand manipulation or grasping can be conditioned on the geometry of the object. 
+Another task is tactile shape detection, where the geometry of an unknown object should be determined. 
+\citet{park2019deepsdf} use a "auto-decoder" structure to find a latent parametrization of 3D geometries.
 \begin{itemize}
-  \item Generate a data set of 2D geometries by composing primitive shapes.
-  \item Train a auto-decoder to find a latent space as in \cite{park2019deepsdf}.
-  \item Use the latent representation for tactile shape detection.
-  \item Possibly expand to 3D.
+  \item Start off with a simple 2D data set (e.g. segmentation masks), then transfer to 3D (e.g. single category of Shapenet)
+  \item Train an auto-decoder architecture as in \cite{park2019deepsdf} to find a latent space representation of shapes.
+  \item Implement and investigate improvements on the original paper:
+  \begin{itemize}
+    \item Add additional regularization on the normal vectors as suggested in \cite{gropp2020implicit}.
+    Investigate whether these regularization lead to a more complete and continuous latent space.
+    \item Add the mode switching suggested in \cite{liu2022regularized}. 
+    Investigate whether this can also improve the shape reconstruction or just leads to better behavior far away from the object.
+    \item Think of ways to use the learned latent space for generative models. Maybe one can make the auto-decoder variational?
+  \end{itemize}
 \end{itemize}
 
 % Ulf
 \subsubsection{Learning the Model of a Tactile Skin}
-Tactile sensing is crucial for fine manipulation with robotic hands. Modeling a tactile skin sensor, however, requires soft contacts to capture the softness of the fingers. This is computationally expensive and, hence, inefficient when used together with reinforcement learning. \citet{narang2021sim} train a neural network to map basic contact information such as the contact point and force to the deformation and the sensor response. 
+Tactile sensing is crucial for fine manipulation with robotic hands. 
+Modeling a tactile skin sensor, however, requires soft contacts to capture the softness of the fingers. 
+This is computationally expensive and, hence, inefficient when used together with reinforcement learning. 
+\citet{narang2021sim} train a neural network to map basic contact information such as the contact point and force to the deformation and the sensor response.
+Our sensor model \cite{kasolowsky2024fine} includes an expensive raycast operation and an equilibrium search that slow down the simulation. 
+This could be mitigated by learning the sensor model beforehand.
 \begin{itemize}
-  \item Familiarize yourself with our sensor model.
+  \item Familiarize yourself with our sensor model (code will be provided).
   \item Think of an efficient representation of the local geometry.
-  \item Generate a data set and train the mapping.
+  For instance, in \cite{zobeidi2021deep} they learn a directional distance function that could replace the raycasting.
+  \item Learn the mapping for the correct deformation. This can either be done in an end-to-end fashion or starting from the raycast that provides the local geometry.
 \end{itemize}
 %\subsubsection{Policy Adaptation during Deployment}
 %Training RL agents in simulation can accelerate learning substantially, and may sometimes be the only viable option due to hardware constraints. However, it is difficult to model the system in simulation accurately enough such that trained policies also work in the real world. \citet{Hansen2021} propose to close this sim2real gap using self-supervision during deployment.
