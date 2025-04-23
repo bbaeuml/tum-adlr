@@ -15,6 +15,7 @@ Take this as an inspiration for your project.
 Some ideas are rather ”big”, meaning they could result in multiple projects.
 After registering your team (including a draft proposal), you will discuss the extent of your final proposal with your assigned tutor.
 
+
 % Leon
 \subsubsection{Closing the Sim-to-Real Loop: Adapting Simulation Randomization with Real World Experience}
 In~\citet{Chebotar2018}, an efficient method for solving the sim2real problem by iteratively adapting the simulation parameters to the real system is proposed.
@@ -44,8 +45,9 @@ In~\citet{Chebotar2018}, an efficient method for solving the sim2real problem by
 %   \item Another option is, to apply the method to an path planning agent which often has to recover from dead-end-situations in static environments.
 % \end{itemize}
 
+
 % Lennart
-\subsubsection{Non-sequential Reinforcement Learning for Hard Exploration Problems}
+\subsubsection{Non-sequential Reinforcement Learning for Hard Exploration \\ Problems}
 A way of overcoming the problems associated with sparse rewards in Reinforcement Learning is to utilize ``expert demonstrations'' in promising regions of the state space.
 \citet{bauza2024demostart} use (suboptimal) expert demonstrations for providing a curriculum of interesting states to the agent during learning.
 In the absence of human experts, \citet{blau2021learning} propose to first generate successful trajectories by RRT-based planning algorithms and then initialize a policy using that data. 
@@ -56,8 +58,9 @@ Based on one of the above papers, you could e.g. study one of the following prob
   \item Implement an entirely different planning algorithms for obtaining expert demonstrations. Analyse the dependency between the quality of the demonstrations and the final performance of the policy.
 \end{itemize}
 
+
 % Dominik
-\subsubsection{Tactile exploration of objects}
+\subsubsection{Tactile Exploration of Objects}
 For grasping an object with a robotic hand, often a full 3D model of the given object is required.
 Using a (depth-)camera, one can infer the surface of the visible part of the object. However, the surface of the occluded parts is also usually needed, e.g., to robustly grasp the object.
 With tactile exploration (i.e., slowly moving the robotic hand until the fingers touch the object), it is possible to observe even the occluded parts of the object.
@@ -70,7 +73,8 @@ This tactile information is usually very sparse. The idea is to use a learning-b
   \item Combine tactile and visual depth information to infer the object's shape
 \end{itemize}
 
-\subsubsection{Self-supervised learning for robot grasping}
+
+\subsubsection{Self-supervised Learning for Robot Grasping}
 Although grasping training data can be generated in simulation, it is computationally expensive to find high-quality grasps.
 Therefore, the training process should be as data-efficient as possible.
 In Deep Learning, self-supervised learning is one prominent way to reduce the required labeled data.
@@ -84,7 +88,7 @@ In this project, the goal is to apply self-supervised learning to 3D objects and
 \end{itemize}
 
 
-\subsubsection{Grasping via online adaptation}
+\subsubsection{Grasping via Online Adaptation}
 One way to find grasps for a given object is to train a grasp success classifier and use that as an objective function for an online grasp optimization.
 Specifically, one differentiates through the grasp score prediction network to optimize the grasp parameters (input to the network) such that the grasp score (output of the network) gets maximized.
 
@@ -96,7 +100,8 @@ Specifically, one differentiates through the grasp score prediction network to o
   \item Optional: Train a small generative grasping network to provide better starting points for the optimization
 \end{itemize}
 
-\subsubsection{Generative networks for robot grasping}
+
+\subsubsection{Generative Networks for Robot Grasping}
 Generative neural networks can be used to directly generate stable grasps for a given unknown object.
 For a parallel jaw gripper, the network learns a distribution over 6D end effector poses conditioned on the observed object.
 For this application, different architectures are possible: Variational Autoencoder, Generative Adversarial Networks, diffusion-based architectures~\cite{ho2020denoising} and autoregressive architectures~\cite{winkelbauer2022}.
@@ -107,6 +112,7 @@ The goal of this project is to apply one of the generative architectures to the 
   \item Adapt the generative architecture for robotic grasping
   \item Optional: Extend the approach to generating grasps constraint to lie on a specified part of the object~\cite{lundell2023constrained}
 \end{itemize}
+
 
 % Felix Kroll
 \subsubsection{Tactile Material Classification}
@@ -150,7 +156,7 @@ When encountering something for the first time, we approach it with uncertainty,
   \item Use the uncertainty estimates from the GP layer to design your filter.
   \item Validate the performance of your filter using ground truth data, and compare it to a traditional filter design (e.g., Low-Pass filter).
 \end{enumerate}
-Paper to start with: \citet{200610108v2}
+Paper to start with: \citet{Liu2020}
 
 
 %\subsubsection{Exploring Munchausen Reinforcement Learning}
@@ -177,33 +183,22 @@ Paper to start with: \citet{200610108v2}
 % https://neurips.cc/virtual/2024/poster/95213
 % https://sites.google.com/view/effective-metric-exploration
 
+
 %%%%%%%%%%%%%%%%%%%%%
 % Johannes Tenhumberg
-\subsubsection{Learning the Inverse Kinematics}
+\subsubsection{Learning the Inverse Problem}
 Look at the possibilities for representing inverse problems with neural networks.
 ~\citet{Ardizzone2018inverse} compare different flavors of GANs, VAEs and INN(theirs) for inverse problems in general.
-Extend their simple robotic example of a planner arm to 3D, more DoFs, or multiple TCPs.
-Unlike in computer vision, for the robot kinematic we have solid metrics to describe how well the generation task was performed.
-How can we use this knowledge to our advantage?
+Extend their work into the robotic context, with more complex kinematics or sensor models.
+For the robot kinematic we have objective metrics to describe how well the generation task was performed.
+How can we use this knowledge to improve the training?
 \begin{itemize}
-  \item What is the best approach to represent the high dimensional nullspaces for complex robot geometries?
+  \item What is the best approach to represent the high dimensional nullspaces for complex robot kinematics?
+  \item When using a simple sensor (contact measurement between two fingers) we have only limited information about the true state of the robot, can we learn the distributions leading to the observed states? 
   \item ~\citet{Lembono2021GAN} use an ensemble of GANs to reduce the mode collapse.
-        What other options do we have to improve the generative model?
-  \item How to measure the performance if the real nullspace is not known?
-  \item Predict not only the position of the TCP but also its rotation.
-        How can one best represent the $SO(3)$?
-\end{itemize}
+        What other options do we have to improve the generative model? 
+        How to measure the performance if the real distribution is not known?
 
-
-% Johannes Tenhumberg
-\subsubsection{Motion Planning with Diffusion}
-Look into generative models for robotic motion planning based on the work by \citet{Janner2022diffusionPlanning}.
-The core of their approach lies in a diffusion probabilistic model that plans by iteratively denoising trajectories.
-\begin{itemize}
-  \item Use a simple 2D robot to get familiar with the diffusion approach in the robotic context.
-  \item Include the changing environment as a central part of the planning.
-  \item Extend the framework to more complex robots.
-  \item Alternatively, the Inverse Kinematics, with its inherent ambiguity, is a second promising testbed for the diffusion models. 
 \end{itemize}
 
 
@@ -212,9 +207,23 @@ The core of their approach lies in a diffusion probabilistic model that plans by
 For search and rescue missions (or vacuum cleaners), exploring the environment quickly and efficiently is vital. 
 The goal of coverage path planning~\cite{Jonnarth2023lcoverage} is to navigate collision-free in a (possibly unknown) map and visit all unseen regions. 
 \begin{itemize}
-	\item Build a simple test environment; focus on simple point robots in 2D/ 3D, no additional complexity through kinematics.
+	\item Build a simple test environment; focus on point robots in 2D/ 3D; no additional complexity through kinematics.
 	\item Formulate the objective: how do we measure and represent good coverage?
-	\item Add more realism by incorporating a sensor model (e.g., avalanche beacon). 
+	\item Add more realism by including a sensor model (e.g., avalanche beacon). 
+\end{itemize}
+
+
+% Johannes Tenhumberg
+\subsubsection{Self-Supervised Learning for Robot Motion Planning}
+In Optimization-based Motion Planning, one formulates the problem of moving collision-free from A to B as 
+finding the minimum of an objective function. 
+We can use this objective directly to train a neural network without needing expensive data generation. 
+This was already demonstrated to solve the Inverse Kinematics of a robot ~\cite{Tenhumberg2023ik}. 
+The goal is to extend the idea to the full motion planning problem (a library to compute the objectives is provided).
+\begin{itemize}
+	\item Investigate the different aspects of motion planning and train individual networks for self-collision, collision with the environment, dynamics, ...  
+	\item Combine the various terms into the full motion planning problem 
+	\item Replace the standard Gradient Descent / ADAM to update the network weights with a constrained-based optimizer to ensure the feasibility of the predictions
 \end{itemize}
 
 
@@ -229,6 +238,7 @@ The goal is to explore ONE promising representation and analyze its potential fo
 	\item Build a robot-centered signed distance field~\cite{Liu2023linkSDF}.
 \end{itemize}
 
+
 % Johannes Tenhumberg
 %\subsubsection{Learning to Optimize Motion Planning}
 %Explore the ideas proposed by "Learning to Optimize" ~\citet{LiM16b} in the context of optimization based motion planning \citet{Zucker2013}.
@@ -242,6 +252,16 @@ The goal is to explore ONE promising representation and analyze its potential fo
 %  \item What are advantages of this hybrid approach over using RL directly on motion planning?
 %\end{itemize}
 
+% Johannes Tenhumberg
+%\subsubsection{Motion Planning with Diffusion}
+%Look into generative models for robotic motion planning based on the work by \citet{Janner2022diffusionPlanning}.
+%The core of their approach lies in a diffusion probabilistic model that plans by iteratively denoising trajectories.
+%\begin{itemize}
+%  \item Use a simple 2D robot to get familiar with the diffusion approach in the robotic context.
+%  \item Include the changing environment as a central part of the planning.
+%  \item Extend the framework to more complex robots.
+%  \item Alternatively, the Inverse Kinematics, with its inherent ambiguity, is a second promising testbed for the diffusion models. 
+%\end{itemize}
 
 % Johannes Tenhumberg
 %\subsubsection{Harnessing Reinforcement Learning for Neural Motion Planning}
@@ -255,10 +275,8 @@ The goal is to explore ONE promising representation and analyze its potential fo
 %   \item Look at modern approaches to represent the environment in which the robot moves (ie. Basis Points Set ~\citet{Prokudin2019}; PointNet for Motion Planning ~\citet{Strudel2020})
 % \end{itemize}
 
-% Johannes Tenhumberg
-%%%%%%%%%%%%%%%%%%%%%
 
-
+%
 \subsubsection{Trajectory Planning with Moving Obstacles}
 Drones not only have to plan flight paths through static environments, but also avoid collisions with dynamic objects.
 To learn such trajectories, a suitable encoding of the changing environment is crucial.
