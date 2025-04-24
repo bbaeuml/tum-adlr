@@ -135,30 +135,43 @@ For this project you can use the data of \citet{Tulbure2018} from \url{https://d
   \item Optional: Implement or use other Bayesian Deep Learning methods like ensembles or Laplace approximations for your comparison.
 \end{itemize}
 
+% Finn Süberkrüb 24_04_2025
+\subsubsection{FAST Tokenization for Time-Discrete Control: Learning with Compressed Action Representations}
+Modern Vision-Language-Action (VLA) models (e.g. $\pi_0$, OpenVLA) rely on effective action tokenization to handle high-frequency control data. FAST (Frequency-space Action Sequence Tokenization) is a recent method that leverages DCT compression to reduce sequence length and improve training speed in autoregressive models. 
+
+This project explores the use of compression-based action tokenization for learning control policies in simple physics-based simulation environments such as CartPole or Pendulum. Instead of using continuous control signals, you will train an autoregressive model (e.g. a small Transformer) to predict sequences of tokenized actions.
+\begin{itemize}
+	\item Implement or use an existing simulation with a continuous action space (e.g. Pendulum)
+	\item Collect action trajectories (e.g. 1-second sequences) using a PID controller
+	\item Implement a FAST-style tokenization pipeline: DCT → quantization → BPE
+	\item Train an autoregressive model that outputs action tokens based on observations
+	\item Evaluate model on: Control stability and accuracy, Training speed and token efficiency, Robustness to changing dynamics
+\end{itemize}
+Paper to start with: %\citet{}.
 
 % Finn Süberkrüb 16_10_2024
-\subsubsection{Active Learning for Physical Models}
-In Lectures 4 and 5, you will learn more about “All models are wrong, but models that know when they are wrong are useful.” (inspired by George E. P. Box). In this project, we explore how physical models can be approximated by machine learning and how incorrect behavior can be prevented.
-\begin{enumerate}
-  \item Simulate a Physical Model: Create a time-invariant nonlinear system with Gaussian noise.
-  \item Baseline Model: Generate data and fit a neural network using supervised learning to reproduce the behavior of the Physical Model.
-  \item Active Learning: Implement a probabilistic model (e.g., Bayesian Neural Network) and an acquisition function to iteratively query new data points from the Physical Model. Try to minimize the necessary data points while matching the baseline accuracy.
-  \item Visualization: Show how the active learning approach reproduces the Physical model with fewer data points than the Baseline Model.
-  \item Scaling Complexity: Increase the model’s complexity and demonstrate the benefits of active learning compared to the baseline. It's up to you how pioneering you want to be.
-\end{enumerate}
-Paper to start with: \citet{Tang2023ActivelyLD}
+%\subsubsection{Active Learning for Physical Models}
+%In Lectures 4 and 5, you will learn more about “All models are wrong, but models that know when they are wrong are useful.” (inspired by George E. P. Box). In this project, we explore how physical models can be approximated by machine learning and how incorrect behavior can be prevented.
+%\begin{enumerate}
+%  \item Simulate a Physical Model: Create a time-invariant nonlinear system with Gaussian noise.
+%  \item Baseline Model: Generate data and fit a neural network using supervised learning to reproduce the behavior of the Physical Model.
+%  \item Active Learning: Implement a probabilistic model (e.g., Bayesian Neural Network) and an acquisition function to iteratively query new data points from the Physical Model. Try to minimize the necessary data points while matching the baseline accuracy.
+%  \item Visualization: Show how the active learning approach reproduces the Physical model with fewer data points than the Baseline Model.
+%  \item Scaling Complexity: Increase the model’s complexity and demonstrate the benefits of active learning compared to the baseline. It's up to you how pioneering you want to be.
+%\end{enumerate}
+%Paper to start with: \citet{Tang2023ActivelyLD}
 
 % Finn Süberkrüb 16_10_2024
-\subsubsection{Distance Aware - Input Filtering}
-When encountering something for the first time, we approach it with uncertainty, trying to determine if it works as expected. In Lecture 5, you will learn how robots struggle with anomalies, including an example where a human fatality occurred due to such issues. 
-\begin{enumerate}
-  \item Define, generate, or select a dataset (e.g., acceleration sensor data) containing both in-distribution and out-of-distribution (OOD) data. OOD data could be introduced by abnormal or unexpected sensor readings (e.g., spikes, random noise, or values outside the normal operating range).
-  \item Train a deep neural network (DNN) to learn the patterns in your dataset. Apply spectral normalization to the model weights to ensure the hidden layers preserve the distance between in-distribution and OOD data.
-  \item Replace the final layer with a Gaussian Process (GP) layer, allowing the model to quantify uncertainty and detect OOD data (anomalies or noise).
-  \item Use the uncertainty estimates from the GP layer to design your filter.
-  \item Validate the performance of your filter using ground truth data, and compare it to a traditional filter design (e.g., Low-Pass filter).
-\end{enumerate}
-Paper to start with: \citet{Liu2020}
+%\subsubsection{Distance Aware - Input Filtering}
+%When encountering something for the first time, we approach it with uncertainty, trying to determine if it works as expected. In Lecture 5, you will learn how robots struggle with anomalies, including an example where a human fatality occurred due to such issues. 
+%\begin{enumerate}
+%  \item Define, generate, or select a dataset (e.g., acceleration sensor data) containing both in-distribution and out-of-distribution (OOD) data. OOD data could be introduced by abnormal or unexpected sensor readings (e.g., spikes, random noise, or values outside the normal operating range).
+%  \item Train a deep neural network (DNN) to learn the patterns in your dataset. Apply spectral normalization to the model weights to ensure the hidden layers preserve the distance between in-distribution and OOD data.
+%  \item Replace the final layer with a Gaussian Process (GP) layer, allowing the model to quantify uncertainty and detect OOD data (anomalies or noise).
+%  \item Use the uncertainty estimates from the GP layer to design your filter.
+%  \item Validate the performance of your filter using ground truth data, and compare it to a traditional filter design (e.g., Low-Pass filter).
+%\end{enumerate}
+%Paper to start with: \citet{Liu2020}
 
 
 %\subsubsection{Exploring Munchausen Reinforcement Learning}
