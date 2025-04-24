@@ -47,7 +47,7 @@ In~\citet{Chebotar2018}, an efficient method for solving the sim2real problem by
 
 
 % Lennart
-\subsubsection{Non-sequential Reinforcement Learning for Hard Exploration \\ Problems}
+\subsubsection{Non-sequential Reinforcement Learning for Hard Exploration Problems}
 A way of overcoming the problems associated with sparse rewards in Reinforcement Learning is to utilize ``expert demonstrations'' in promising regions of the state space.
 \citet{bauza2024demostart} use (suboptimal) expert demonstrations for providing a curriculum of interesting states to the agent during learning.
 In the absence of human experts, \citet{blau2021learning} propose to first generate successful trajectories by RRT-based planning algorithms and then initialize a policy using that data. 
@@ -207,9 +207,10 @@ How can we use this knowledge to improve the training?
 For search and rescue missions (or vacuum cleaners), exploring the environment quickly and efficiently is vital. 
 The goal of coverage path planning~\cite{Jonnarth2023lcoverage} is to navigate collision-free in a (possibly unknown) map and visit all unseen regions. 
 \begin{itemize}
-	\item Build a simple test environment; focus on point robots in 2D/ 3D; no additional complexity through kinematics.
+	\item Build a simple test environment; start with point robot in 2D.
 	\item Formulate the objective: how do we measure and represent good coverage?
 	\item Add more realism by including a sensor model (e.g., avalanche beacon). 
+    \item Add the kinematics to the problem and explore with a robotic arm~\cite{Meli2025RobotExploration}.  
 \end{itemize}
 
 
@@ -222,8 +223,8 @@ This was already demonstrated to solve the Inverse Kinematics of a robot ~\cite{
 The goal is to extend the idea to the full motion planning problem (a library to compute the objectives is provided).
 \begin{itemize}
 	\item Investigate the different aspects of motion planning and train individual networks for self-collision, collision with the environment, dynamics, ...  
-	\item Combine the various terms into the full motion planning problem 
-	\item Replace the standard Gradient Descent / ADAM to update the network weights with a constrained-based optimizer to ensure the feasibility of the predictions
+	\item Combine the various terms into the full motion planning problem.
+	\item Replace the default Gradient Descent to update the network weights with a constrained-based optimizer to ensure the feasibility of the predictions.
 \end{itemize}
 
 
@@ -280,8 +281,8 @@ The goal is to explore ONE promising representation and analyze its potential fo
 \subsubsection{Trajectory Planning with Moving Obstacles}
 Drones not only have to plan flight paths through static environments, but also avoid collisions with dynamic objects.
 To learn such trajectories, a suitable encoding of the changing environment is crucial.
-Start with the Basis Points Set ~\citet{Prokudin2019BPS} and extend it to dynamic environments.
-Use this representation for neural motion planning ~\citet{Qureshi2021MPN}.
+Start with the Basis Points Set ~\cite{Prokudin2019BPS} and extend it to dynamic environments.
+Use this representation for neural motion planning ~\cite{Qureshi2021MPN}.
 \begin{itemize}
   \item Come up with a state representation for dynamic environments.
   \item Set up a simple 2D (and later 3D) environment in which an agent can navigate through moving obstacles.
