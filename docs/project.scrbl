@@ -11,10 +11,10 @@ For each team we will provide at least $1000 credits in the Google Compute Engin
 
 The deliverables & deadlines are:
 @itemlist[
- @item{@bold{Team registration}:  @bold{22. October 2024, 24:00}}
- @item{@bold{Project proposal}: one page; @bold{03. November 2024, 24:00}}
- @item{@bold{Milestone presentation}: 10min talk; @bold{19. December 2024}}
- @item{@bold{Final report & poster session}: four pages & poster; @bold{early February  2024}}]
+ @item{@bold{Team registration}:  @bold{29. April 2025, 24:00}}
+ @item{@bold{Project proposal}: one page; @bold{11. May 2025, 24:00}}
+ @item{@bold{Milestone presentation}: 10min talk; @bold{12. June 2025}}
+ @item{@bold{Final report & poster session}: four pages & poster; @bold{end of semester}}]
 
 In addition, you will have to provide the code of the project via sharing the GitHub repository with your tutor.
 
@@ -78,7 +78,8 @@ The project proposal should be a @bold{one page + references} single-spaced exte
 @item{@bold{Related Work} 1/4 page. Briefly review the most relevant prior work, and highlight where those works fall short of meeting the objectives described above.}
 @item{@bold{Technical Outline} 1/2 page. Explain your approach at a high-level, making clear the novel technical contribution.}]
 
-For the team registraion, you have to provide a first @bold{draft proposal}. This draft should at least include a title, desribe in a few bullet points the topic and main idea of your project, and reference the most relevant paper(s) you want to base your project on (a similar format as we used in the @(hyperlink "./project-ideas.pdf" "list of ideas")).
+For the team registraion, you have to provide a first @bold{draft proposal} (as a pdf file!). This draft should at least include a title, desribe in a few bullet points the topic and main idea of your project, and reference the most relevant paper(s) you want to base your project on (a similar format as we used in the @(hyperlink "./project-ideas.pdf" "list of ideas")).
+We heavily recommend to provide at least one alternative topic you would be interested in in case your desired topic is "overbooked".
 
 
 @section[#:style 'unnumbered]{Milestone Presentation}
