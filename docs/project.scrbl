@@ -22,7 +22,7 @@ The project will give 50% of your final grade, the other 50% are from the exam a
 
 @section[#:style 'unnumbered]{Organizational}
 
-@bold{Teams} For finding a team mate, you can use the Module forum “Search for Teammates”. Only teams of two students are allowed.
+@bold{Teams} For finding a team mate, you can use the Mooodle forum “Search for Teammates”. Only teams of two students are allowed.
 
 @bold{Registration} Your team must be registered by one of the two team members by sending an email (with the other team member in CC) to @verbatim{berthold.baeuml@"@"tum.de} with the following content:
 @verbatim{Subject: [CIT433027] team registration
