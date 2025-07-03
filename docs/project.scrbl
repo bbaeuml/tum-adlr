@@ -11,10 +11,10 @@ For each team we will provide at least $1000 credits in the Google Compute Engin
 
 The deliverables & deadlines are:
 @itemlist[
- @item{@bold{Team registration}:  @bold{29. April 2025, 24:00}}
- @item{@bold{Project proposal}: one page; @bold{11. May 2025, 24:00}}
- @item{@bold{Milestone presentation}: 10min talk; @bold{12. June 2025}}
- @item{@bold{Final report & poster session}: four pages & poster; @bold{end of semester}}]
+ @item{@bold{Team registration}:  }@;@bold{29. April 2025, 24:00}}
+ @item{@bold{Project proposal}: one page}
+ @item{@bold{Milestone presentation}: 10min talk; }
+ @item{@bold{Final report & poster session}: four pages & poster;}]
 
 In addition, you will have to provide the code of the project via sharing the GitHub repository with your tutor.
 
