@@ -75,20 +75,6 @@ This tactile information is usually very sparse. The idea is to use a learning-b
 \end{itemize}
 
 
-\subsubsection{Self-supervised Learning for Robot Grasping}
-Although grasping training data can be generated in simulation, it is computationally expensive to find high-quality grasps.
-Therefore, the training process should be as data-efficient as possible.
-In Deep Learning, self-supervised learning is one prominent way to reduce the required labeled data.
-This has been shown to generate useful features across various modalities like images, audio, and text.
-In this project, the goal is to apply self-supervised learning to 3D objects and use the resulting features for grasping.
-\begin{itemize}
-  \item Familiarize yourself with the data2vec framework~\cite{baevski2022data2vec}
-  \item Reimplement data2vec for 3D objects using a CNN
-  \item Evaluate the learned features in grasping as a downstream task (data will be provided~\cite{winkelbauer2022})
-  \item Optional: Replace the CNN with a transformer
-  \item Important: This is an advanced project, therefore prior experience with deep learning is recommended
-\end{itemize}
-
 
 \subsubsection{Grasping via Online Adaptation}
 One way to find grasps for a given object is to train a grasp success classifier and use that as an objective function for an online grasp optimization.
