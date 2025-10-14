@@ -103,23 +103,39 @@ The goal of this project is to apply one of the generative architectures to the 
 
 
 % Felix Kroll
-\subsubsection{Tactile Material Classification}
+\subsubsection{I know, what I don't know!}
+Investigate deep learning model capabilities to detect what was learned and what is an novel observation.
+Most deep learning models trained with maximum a posteriori only output a point mass and not a model uncertainty.
+To put it simply: they cannot know, what knowledge they have. 
+The goal of the project is to evaluate Bayesian deep learning methods from the lecture and so called normalizing flows \cite{mackowiak_generative_2021} in this context.
 
-\citet{Tulbure2018} (as mentioned in the lecture) proved that one can classify a vast number of materials robustly ($\approx 95 \%$) using only the spatio-temporal signal of a tactile skin.
-For this project you can use the data of \citet{Tulbure2018} from \url{https://dlr-alr.github.io/dlr-tactmat/} and choose \emph{one} of the following two options: 
-
-\paragraph{Option 1 - Self-Supervised Learning}
 \begin{itemize}
-  \item It is way easier to collect unlabeled samples than labeled. Can we learn a representation without the labels? Recent work in this direction is, e.g., a Joint Embedded Predictive Architecture (\citet{assran2023selfsupervised}).
-  \item Instead of a Transformer model, you should start with the TacNet (CNN) architecture of \citet{Tulbure2018} and check if you can validate the claims of \citet{assran2023selfsupervised} for the spatio-temporal tactile signals. 
+  \item You can either use a provided dataset for tactile material classification or generate your own (proprioceptive) data using a simple robotic simulation environment for the benchmark.
+  \item Implement at least two classification models or generative models depending on your benchmark (one Bayesian approximation from the lecture and one flow model).
+  \item Evaluate how well each model can detect novel observations.
+  \item Optional: Implement more models or think about scenarios where this feature is useful.
 \end{itemize}
 
-\paragraph{Option 2 - Bayesian Deep Learning}
-\begin{itemize}
-  \item The work of \citet{Tulbure2018} already leverages a mechanism to enable some notion of model uncertainty using Monte Carlo Dropout (\citet{Gal2016}). But how well does this uncertainty enable the model to "know what it does not know"?
-  \item Implement the so called "Bayes by Backprop" from the lecture (\citet{Blundell2015}) and compare the two. How well can both models identify unseen data based one the uncertainty? 
-  \item Optional: Implement or use other Bayesian Deep Learning methods like ensembles or Laplace approximations for your comparison.
-\end{itemize}
+
+
+% Felix Kroll
+% \subsubsection{Tactile Material Classification}
+
+% \citet{Tulbure2018} (as mentioned in the lecture) proved that one can classify a vast number of materials robustly ($\approx 95 \%$) using only the spatio-temporal signal of a tactile skin.
+% For this project you can use the data of \citet{Tulbure2018} from \url{https://dlr-alr.github.io/dlr-tactmat/} and choose \emph{one} of the following two options: 
+
+% \paragraph{Option 1 - Self-Supervised Learning}
+% \begin{itemize}
+%   \item It is way easier to collect unlabeled samples than labeled. Can we learn a representation without the labels? Recent work in this direction is, e.g., a Joint Embedded Predictive Architecture (\citet{assran2023selfsupervised}).
+%   \item Instead of a Transformer model, you should start with the TacNet (CNN) architecture of \citet{Tulbure2018} and check if you can validate the claims of \citet{assran2023selfsupervised} for the spatio-temporal tactile signals. 
+% \end{itemize}
+
+% \paragraph{Option 2 - Bayesian Deep Learning}
+% \begin{itemize}
+%   \item The work of \citet{Tulbure2018} already leverages a mechanism to enable some notion of model uncertainty using Monte Carlo Dropout (\citet{Gal2016}). But how well does this uncertainty enable the model to "know what it does not know"?
+%   \item Implement the so called "Bayes by Backprop" from the lecture (\citet{Blundell2015}) and compare the two. How well can both models identify unseen data based one the uncertainty? 
+%   \item Optional: Implement or use other Bayesian Deep Learning methods like ensembles or Laplace approximations for your comparison.
+% \end{itemize}
 
 % Finn Süberkrüb 24_04_2025
 \subsubsection{FAST Tokenization for Time-Discrete Control: Learning with Compressed Action Representations}
