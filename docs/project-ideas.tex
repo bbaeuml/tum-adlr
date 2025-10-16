@@ -105,7 +105,7 @@ The goal of this project is to apply one of the generative architectures to the 
 % Felix Kroll
 \subsubsection{I know, what I don't know!}
 Investigate deep learning model capabilities to detect what was learned and what is an novel observation.
-Most deep learning models trained with maximum a posteriori only output a point mass and not a model uncertainty.
+Most deep learning models trained with maximum a posteriori only output a point estimate and not a model uncertainty.
 To put it simply: they cannot know, what knowledge they have. 
 The goal of the project is to evaluate Bayesian deep learning methods from the lecture and so called normalizing flows \cite{mackowiak_generative_2021} in this context.
 
@@ -138,18 +138,18 @@ The goal of the project is to evaluate Bayesian deep learning methods from the l
 % \end{itemize}
 
 % Finn Süberkrüb 24_04_2025
-\subsubsection{FAST Tokenization for Time-Discrete Control: Learning with Compressed Action Representations}
-Modern Vision-Language-Action (VLA) models (e.g. $\pi_0$, OpenVLA) rely on effective action tokenization to handle high-frequency control data. FAST (Frequency-space Action Sequence Tokenization) is a recent method that leverages DCT compression to reduce sequence length and improve training speed in autoregressive models. 
-
-This project explores the use of compression-based action tokenization for learning control policies in simple physics-based simulation environments such as CartPole or Pendulum. Instead of using continuous control signals, you will train an autoregressive model (e.g. a small Transformer) to predict sequences of tokenized actions.
-\begin{itemize}
-	\item Implement or use an existing simulation with a continuous action space (e.g. Pendulum)
-	\item Collect action trajectories (e.g. 1-second sequences) using a PID controller
-	\item Implement a FAST-style tokenization pipeline: DCT → quantization → BPE
-	\item Train an autoregressive model that outputs action tokens based on observations
-	\item Evaluate model on: Control stability and accuracy, Training speed and token efficiency, Robustness to changing dynamics
-\end{itemize}
-Paper to start with: %\citet{}.
+%\subsubsection{FAST Tokenization for Time-Discrete Control: Learning with Compressed Action Representations}
+%Modern Vision-Language-Action (VLA) models (e.g. $\pi_0$, OpenVLA) rely on effective action tokenization to handle high-frequency control data. FAST (Frequency-space Action Sequence Tokenization) is a recent method that leverages DCT compression to reduce sequence length and improve training speed in autoregressive models. 
+%
+%This project explores the use of compression-based action tokenization for learning control policies in simple physics-based simulation environments such as CartPole or Pendulum. Instead of using continuous control signals, you will train an autoregressive model (e.g. a small Transformer) to predict sequences of tokenized actions.
+%\begin{itemize}
+%	\item Implement or use an existing simulation with a continuous action space (e.g. Pendulum)
+%	\item Collect action trajectories (e.g. 1-second sequences) using a PID controller
+%	\item Implement a FAST-style tokenization pipeline: DCT → quantization → BPE
+%	\item Train an autoregressive model that outputs action tokens based on observations
+%	\item Evaluate model on: Control stability and accuracy, Training speed and token efficiency, Robustness to changing dynamics
+%\end{itemize}
+%Paper to start with: %\citet{}.
 
 % Finn Süberkrüb 16_10_2024
 %\subsubsection{Active Learning for Physical Models}
@@ -560,7 +560,7 @@ Another task is tactile shape detection, where the geometry of an unknown object
   \item Train an auto-decoder architecture as in \cite{park2019deepsdf} to find a latent space representation of shapes.
   \item Implement and investigate improvements on the original paper:
   \begin{itemize}
-    \item Add additional regularization on the normal vectors as suggested in \cite{gropp2020implicit}.
+    \item Add additional regularization on the normal vectors as suggested in \citet{gropp2020implicit}.
     Investigate whether these regularization lead to a more complete and continuous latent space.
     \item Add the mode switching suggested in \cite{liu2022regularized}. 
     Investigate whether this can also improve the shape reconstruction or just leads to better behavior far away from the object.
@@ -580,7 +580,7 @@ This could be mitigated by learning the sensor model beforehand.
 \begin{itemize}
   \item Familiarize yourself with our sensor model (code will be provided).
   \item Think of an efficient representation of the local geometry.
-  For instance, in \cite{zobeidi2021deep} they learn a directional distance function that could replace the raycasting.
+  For instance, in \citet{zobeidi2021deep} they learn a directional distance function that could replace the raycasting.
   \item Learn the mapping for the correct deformation. This can either be done in an end-to-end fashion or starting from the raycast that provides the local geometry.
 \end{itemize}
 %\subsubsection{Policy Adaptation during Deployment}
