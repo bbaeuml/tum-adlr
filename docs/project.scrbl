@@ -79,7 +79,7 @@ The project proposal should be a @bold{one page + references} single-spaced exte
 @item{@bold{Technical Outline} 1/2 page. Explain your approach at a high-level, making clear the novel technical contribution.}]
 
 For the team registraion, you have to provide a first @bold{draft proposal} (as a pdf file!). This draft should at least include a title, desribe in a few bullet points the topic and main idea of your project, and reference the most relevant paper(s) you want to base your project on (a similar format as we used in the @(hyperlink "./project-ideas.pdf" "list of ideas")).
-We heavily recommend to provide at least one alternative topic you would be interested in in case your desired topic is "overbooked".
+@bold{We heavily recommend to provide at least one alternative topic} you would be interested in in case your desired topic is "overbooked".
 
 
 @section[#:style 'unnumbered]{Milestone Presentation}
