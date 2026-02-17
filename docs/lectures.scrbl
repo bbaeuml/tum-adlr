@@ -21,9 +21,9 @@
           (@(hyperlink "https://youtu.be/eVrW2ElNeQ0" "video"))}
           @item{@(hyperlink "./adlr-8-drl-ii.pdf" "Deep Reinforcement Learning II")  
          (@(hyperlink "https://youtu.be/w9AuKuBCtJU" "video"))}          
-          @item{Deep Reinforcement Learning III}
+	  @item{@(hyperlink "./adlr-9-drl-iii.pdf" "Deep Reinforcement Learning III")}
          @; @item{Deep Reinforcement Learning IV}
-	 @item{@(hyperlink "./adlr-vla.pdf" "Vision Language Action Models")}
+@;	 @item{@(hyperlink "./adlr-vla.pdf" "Vision Language Action Models")}
 	 @item{@(hyperlink "./adlr-10-deepmind.pdf" "Guest Lecture from DeepMind I")}
           @item{@(hyperlink "./adlr-10-deepmind.pdf" "Guest Lecture from DeepMind II")}
           @item{@(hyperlink "./adlr-intrinsic.pdf" "Guest Lecture from Intrinsic (formerly Google X Robotics)")}]
