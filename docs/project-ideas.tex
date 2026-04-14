@@ -357,6 +357,15 @@ Based on this work:
   \item Assess the effect of different design choices and hyperparameters (e.g.~hidden state initialization strategy in the experience replay buffer, truncated BPTT, ...)
 \end{itemize}
 
+% Lennart
+\subsubsection{How to Get Perfect Policies via Reinforcement Learning}
+Achieving nines of task success (i.e. going from 90\% to 99\% to 99.9\% success rate and so on) is an open problem in deep reinforcement learning.
+Even on continuous control tasks where optimal controllers provably exist, standard deep RL algorithms frequently plateau below perfect performance, or become unstable during extended training.
+Recent work has identified potential root causes as optimization pathologies — plasticity loss, the primacy bias or unbounded weight/feature norm growth \cite{lyle2023understanding, nikishin2022primacy,lee2025hyperspherical}. 
+This project selects a set of benchmark tasks known to be perfectly solvable in theory (e.g. CartPole-Swingup, Pendulum), so that any performance gap can be unambiguously attributed to optimization failure. 
+The student systematically combines known interventions and tracks diagnostic metrics (feature rank, dormant neuron fraction, weight norm growth) to identify a minimal recipe that reliably closes the gap to optimal performance across seeds.
+The goal is either a concrete configuration that achieves near-100\% success, or evidence that current interventions remain insufficient — pointing to open failure modes.
+
 % % Lennart Roestel
 % \subsubsection{Differentiable Bayesian Filters}
 % \textit{*Prior knowledge of Bayesian filters highly recommended*}\\
