@@ -104,7 +104,7 @@ The goal of this project is to apply one of the generative architectures to the 
 
 % Felix Kroll
 \subsubsection{I know, what I don't know!}
-Investigate deep learning model capabilities to detect what was learned and what is an novel observation.
+Investigate deep learning model capabilities to detect what was learned and what is a novel observation.
 Most deep learning models trained with maximum a posteriori only output a point estimate and not a model uncertainty.
 To put it simply: they cannot know, what knowledge they have. 
 The goal of the project is to evaluate Bayesian deep learning methods from the lecture and so called normalizing flows \cite{mackowiak_generative_2021} in this context.
@@ -113,6 +113,7 @@ The goal of the project is to evaluate Bayesian deep learning methods from the l
   \item You can either use a provided dataset for tactile material classification or generate your own (proprioceptive) data using a simple robotic simulation environment for the benchmark.
   \item Implement at least two classification models or generative models depending on your benchmark (one Bayesian approximation from the lecture and one flow model).
   \item Evaluate how well each model can detect novel observations.
+  \item How well can these models represent multiple modes in the posterior distribution.
   \item Optional: Implement more models or think about scenarios where this feature is useful.
 \end{itemize}
 
@@ -211,7 +212,7 @@ For the robot kinematic we have objective metrics to describe how well the gener
 How can we use this knowledge to improve the training?
 \begin{itemize}
   \item What is the best approach to represent the high dimensional nullspaces for complex robot kinematics?
-  \item When using a simple sensor (contact measurement between two fingers) we have only limited information about the true state of the robot, can we learn the distributions leading to the observed states? 
+  \item Given some contact measurement, can we compute a posterior of the robot state? 
   \item ~\citet{Lembono2021GAN} use an ensemble of GANs to reduce the mode collapse.
         What other options do we have to improve the generative model? 
         How to measure the performance if the real distribution is not known?
