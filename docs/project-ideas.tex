@@ -434,7 +434,7 @@ The goal is either a concrete configuration that achieves near-100\% success, or
 Note: Requires previous experience with GNNs \cite{kipf2016semisupervised} and ideally with pytorch-geometric (\href{https://github.com/pyg-team/pytorch_geometric}{link}).
 \begin{itemize}
   \item Similar to \citet{Wang2018nervenet}. Modify MuJoCo environments (Walker, HalfCheetah, Ant, Humanoid) such that the observations contain a graph representing the robot.
-  \item Use message passing network(s) in addition or instead of the MLP for value/Q function and policy in standard algorithms like PPO \citet{Schulman2017} or SAC \citet{Haarnoja2018a}.
+  \item Based on the three-dimensional structure of the robots, design message passing network(s) in addition or instead of the MLP for value/Q function and policy in standard algorithms like PPO \citet{Schulman2017} or SAC \citet{Haarnoja2018a}.
 \end{itemize}
 
 % % Johannes Pitz
@@ -448,20 +448,32 @@ Note: Requires previous experience with GNNs \cite{kipf2016semisupervised} and i
 %   \item Adjust intermediate training signals to improve performance.
 % \end{itemize}
 
+% % Johannes Pitz
+% \subsubsection{Diffusion Policies}
+% Diffusion-based architectures have shown exciting results in image generation.
+% Recently, researchers started to apply them to policy learning. 
+% % ~\cite{ho2020denoising}
+% \citet{Chi2023DiffusionPolicy} show promising imitation learning results with both vision- and state-based policies.
+% \begin{itemize}
+%   \item Apply the diffusion policy~\cite{Chi2023DiffusionPolicy} to simple benchmark environments with expert offline data (\href{https://github.com/Farama-Foundation/Minari}{link}).
+%   % (\href{https://github.com/Farama-Foundation/d4rl/wiki/Tasks}{\url{d4rl/wiki/Tasks}}).
+%   \item Analyze if the approach is better suited for specific types of environments (e.g., planning vs. control).
+%   \item Adapt the diffusion architecture for other types of environments.
+%   \item Optional: Develop and implement ideas on how the architecture can be used in a reinforcement learning setting. 
+%   % Exploration
+% \end{itemize}
+
 % Johannes Pitz
-\subsubsection{Diffusion Policies}
-Diffusion-based architectures have shown exciting results in image generation.
-Recently, researchers started to apply them to policy learning. 
-% ~\cite{ho2020denoising}
-\citet{Chi2023DiffusionPolicy} show promising imitation learning results with both vision- and state-based policies.
+\subsubsection{Neural Network-based World Models}
+
+Model-based reinforcement learning promises improved sample efficiency by learning a predictive model of the environment, commonly referred to as a world model. However, accurately capturing long-horizon dynamics in stochastic robotic systems remains a key challenge. In this project, we aim to investigate autoregressive world model training, based on the work of \citet{li2025robotic}. You could, for example:
+
 \begin{itemize}
-  \item Apply the diffusion policy~\cite{Chi2023DiffusionPolicy} to simple benchmark environments with expert offline data (\href{https://github.com/Farama-Foundation/Minari}{link}).
-  % (\href{https://github.com/Farama-Foundation/d4rl/wiki/Tasks}{\url{d4rl/wiki/Tasks}}).
-  \item Analyze if the approach is better suited for specific types of environments (e.g., planning vs. control).
-  \item Adapt the diffusion architecture for other types of environments.
-  \item Optional: Develop and implement ideas on how the architecture can be used in a reinforcement learning setting. 
-  % Exploration
+  \item Reproduce the results from the paper and evaluate the method on additional environments.
+  \item Run experiments with different history and forecast horizons to find their influence on error accumulation and generalization.
+  \item Investigate robustness under noise and domain shift, and assess implications for sim-to-real transfer.
 \end{itemize}
+
 
 % % Leon
 % \subsubsection{Investigate the $RL^2$ Meta-Reinforcement Learnging Algorithm}
