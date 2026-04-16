@@ -2,6 +2,12 @@
 \usepackage{hyperref}
 
 \usepackage[numbers]{natbib}
+\usepackage{etoc}
+
+\etocsetnexttocdepth{subsubsection} % Tell etoc to look down to subsubsections
+\etocsettocstyle{\subsection*{Project Ideas}}{} % Optional header
+\etocsetlevel{section}{6}       % "Hide" sections by setting level too high
+\etocsetlevel{subsection}{6}    % "Hide" subsections
 
 \renewcommand{\thesubsubsection}{\arabic{subsubsection}}
 \title{CIT433027 ADLR: Project Ideas}
@@ -15,7 +21,7 @@ Take this as an inspiration for your project.
 Some ideas are rather ”big”, meaning they could result in multiple projects.
 After registering your team (including a draft proposal), you will discuss the extent of your final proposal with your assigned tutor.
 
-
+\tableofcontents
 % Leon
 \subsubsection{Investigating Rapid Motor Adaption}
 \citet{qi2022inhand} use Rapid Motor Adaption to train a robust in-hand manipulation policy in simulation, which can be deployed on the actual system without any further adaptation.
