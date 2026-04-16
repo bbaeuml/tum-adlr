@@ -599,14 +599,14 @@ Another task is tactile shape detection, where the geometry of an unknown object
 \citet{park2019deepsdf} use a "auto-decoder" structure to find a latent parametrization of 3D geometries.
 \begin{itemize}
   \item Start off with a simple 2D data set (e.g. segmentation masks), then transfer to 3D (e.g. single category of Shapenet)
-  \item Train an auto-decoder architecture as in \cite{park2019deepsdf} to find a latent space representation of shapes.
+  \item Train an auto-decoder architecture as in \citet{park2019deepsdf} to find a latent space representation of shapes.
   \item Implement and investigate improvements on the original paper:
   \begin{itemize}
     \item Add additional regularization on the normal vectors as suggested in \citet{gropp2020implicit}.
     Investigate whether these regularization lead to a more complete and continuous latent space.
-    \item Add the mode switching suggested in \cite{liu2022regularized}. 
+    \item Add the mode switching suggested in \citet{liu2022regularized}. 
     Investigate whether this can also improve the shape reconstruction or just leads to better behavior far away from the object.
-    \item Investigate how the position encoding, suggested in \cite{comi2024touchsdf}, helps with high frequency features.
+    \item Investigate how the position encoding, suggested in \citet{comi2024touchsdf}, helps with high frequency features.
     \item Think of ways to use the learned latent space for generative models. Maybe one can make the auto-decoder variational?
   \end{itemize}
 \end{itemize}
