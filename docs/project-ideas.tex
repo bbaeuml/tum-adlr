@@ -367,6 +367,14 @@ This project selects a set of benchmark tasks known to be perfectly solvable in 
 The student systematically combines known interventions and tracks diagnostic metrics (feature rank, dormant neuron fraction, weight norm growth) to identify a minimal recipe that reliably closes the gap to optimal performance across seeds.
 The goal is either a concrete configuration that achieves near-100\% success, or evidence that current interventions remain insufficient — pointing to open failure modes.
 
+% Lennart
+
+\subsubsection{Agentic vs. Classical Hyperparameter Search for Deep RL}
+Karpathy's autoresearch~\cite{karpathy2026autoresearch} suggests frontier coding agents can drive overnight ML research loops, but it offers no controlled comparison against established hyperparameter optimization methods — this project supplies one in the RL setting, where hyperparameter sensitivity and high seed variance make the comparison both meaningful and methodologically demanding. 
+On a fixed RL benchmark (e.g. PPO on a small Gym suite) with identical per-trial and total compute budgets, benchmark a coding agent against random search and Bayesian optimization over the same hyperparameter space. 
+The agent is evaluated in two regimes — restricted to editing a config file, and free to modify the full training code — to disentangle gains from search strategy versus code-editing freedom. 
+The intended contribution is not a winner but a calibrated answer to whether, and under what budget regime, agentic search is actually competitive with classical HPO on noisy RL objectives.
+
 % % Lennart Roestel
 % \subsubsection{Differentiable Bayesian Filters}
 % \textit{*Prior knowledge of Bayesian filters highly recommended*}\\
