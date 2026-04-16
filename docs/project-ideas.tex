@@ -202,6 +202,18 @@ The goal of the project is to evaluate Bayesian deep learning methods from the l
 % https://sites.google.com/view/effective-metric-exploration
 
 
+% Leon
+\subsubsection{PrivilegedDreamer: Learning to Estimate Unknown Parameterizations on the Fly}
+When deployed into the real world, agents trained in simulation have to deal with uncertainties due to unmodeled effects and unknown parameters.
+\citet{Byrd2025} are analyzing how the groundbreaking work for the DreamerV2 world model \cite{Hafner2022} can be extended to deal with the uncertainties of Hidden Parameter MDPs.
+After reimplementing and testing the proposed algorithm, it is interesting to
+\begin{itemize}
+  \item Analyze its limits
+  \item The proposed method only deals with aleatoric uncertainties of the estimated parameters.
+        For an actual deployment, epistemic uncertainties are playing a major role.
+        The framework can be extended to also provide a measure for critical situations unseen during training.
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%
 % Johannes Tenhumberg
 \subsubsection{Learning the Inverse Problem}
