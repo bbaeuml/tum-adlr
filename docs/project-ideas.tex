@@ -320,6 +320,15 @@ Use this representation for neural motion planning ~\cite{Qureshi2021MPN}.
   \item Optional: Extend the method to work with uncertainties in the motion prediction of the collision objects.
 \end{itemize}
 
+% Lennard
+\subsubsection{Planning in Latent Spaces}
+Optimization-based path planners iteratively refine joint angle sequences to generate short, collision-free paths. However, joint angles and robot geometry live in two fundamentally different geometries: the shortest path in configuration space rarely translates to natural motions in the workspace.
+Based on the work by Hung et al. \cite{hung2022reaching}, you implement Variational Autoencoders (VAEs) to learn a latent manifold that integrates kinematics, collision avoidance, and custom optimality criteria. We provide simulation and data-generation tools to support your work.
+\begin{itemize}
+    \item Develop a self-supervised pipeline to train a VAE. Would other generative models be more suitable?
+    \item Apply Activation Maximization for planning and inverse kinematics.
+    \item Encode diverse optimality criteria. Can we enfore dynamically consistent paths?
+\end{itemize}
 
 %\subsubsection{Learning to Fly Beyond RL – Analytic Policy Gradient}
 %Fixed-wing VTOL (Vertical Take-Off and Landing) drones combine the ability to take off vertically and exploit lift for efficient cross-country flight. The disadvantage is more complicated control. Learned controllers are a promising solution here. \citet{wiedemann2023training} presents a method to directly exploit the differentiability of models and thus skip the detour via reinforcement learning.
@@ -656,16 +665,6 @@ This could be mitigated by learning the sensor model beforehand.
 
 %\subsubsection{Generalization in Environments with Continuous Action Spaces}
 %\citet{igl2019} highlighted improvements to boost generalization performance of RL algorithms in maze-like environments. Investigate how these tweaks can be applied to more physics-inspired tasks including domain randomization and continuous action spaces.
-
-% Lennard
-\subsubsection{Planning in Latent Spaces}
-Optimization-based path planners iteratively refine joint angle sequences to generate short, collision-free paths. However, joint angles and robot geometry live in two fundamentally different geometries: the shortest path in configuration space rarely translates to natural motions in the workspace.
-Based on the work by Hung et al. \cite{hung2022reaching}, you implement Variational Autoencoders (VAEs) to learn a latent manifold that integrates kinematics, collision avoidance, and custom optimality criteria. We provide simulation and data-generation tools to support your work.
-\begin{itemize}
-    \item Develop a self-supervised pipeline to train a VAE. Would other generative models be more suitable?
-    \item Apply Activation Maximization for planning and inverse kinematics.
-    \item Encode diverse optimality criteria. Can we enfore dynamically consistent paths?
-\end{itemize}
 
 
 \bibliographystyle{unsrtnat}
