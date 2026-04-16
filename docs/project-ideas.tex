@@ -383,18 +383,18 @@ Based on this work:
 \subsubsection{How to Get Perfect Policies via Reinforcement Learning}
 Achieving nines of task success (i.e. going from 90\% to 99\% to 99.9\% success rate and so on) is an open problem in deep reinforcement learning.
 Even on continuous control tasks where optimal controllers provably exist, standard deep RL algorithms frequently plateau below perfect performance, or become unstable during extended training.
-Recent work has identified potential root causes as optimization pathologies — plasticity loss, the primacy bias or unbounded weight/feature norm growth \cite{lyle2023understanding, nikishin2022primacy,lee2025hyperspherical}. 
+Recent work has identified potential root causes as optimization pathologies such as plasticity loss or unbounded weight/feature norm growth \citet{lee2025hyperspherical}. 
 This project selects a set of benchmark tasks known to be perfectly solvable in theory (e.g. CartPole-Swingup, Pendulum), so that any performance gap can be unambiguously attributed to optimization failure. 
 The student systematically combines known interventions and tracks diagnostic metrics (feature rank, dormant neuron fraction, weight norm growth) to identify a minimal recipe that reliably closes the gap to optimal performance across seeds.
 The goal is either a concrete configuration that achieves near-100\% success, or evidence that current interventions remain insufficient — pointing to open failure modes.
 
 % Lennart
 
-\subsubsection{Agentic vs. Classical Hyperparameter Search for Deep RL}
-Karpathy's autoresearch~\cite{karpathy2026autoresearch} suggests frontier coding agents can drive overnight ML research loops, but it offers no controlled comparison against established hyperparameter optimization methods — this project supplies one in the RL setting, where hyperparameter sensitivity and high seed variance make the comparison both meaningful and methodologically demanding. 
-On a fixed RL benchmark (e.g. PPO on a small Gym suite) with identical per-trial and total compute budgets, benchmark a coding agent against random search and Bayesian optimization over the same hyperparameter space. 
-The agent is evaluated in two regimes — restricted to editing a config file, and free to modify the full training code — to disentangle gains from search strategy versus code-editing freedom. 
-The intended contribution is not a winner but a calibrated answer to whether, and under what budget regime, agentic search is actually competitive with classical HPO on noisy RL objectives.
+% \subsubsection{Agentic vs. Classical Hyperparameter Search for Deep RL}
+% Karpathy's autoresearch~\cite{karpathy2026autoresearch} suggests frontier coding agents can drive overnight ML research loops, but it offers no controlled comparison against established hyperparameter optimization methods — this project supplies one in the RL setting, where hyperparameter sensitivity and high seed variance make the comparison both meaningful and methodologically demanding. 
+% On a fixed RL benchmark (e.g. PPO on a small Gym suite) with identical per-trial and total compute budgets, benchmark a coding agent against random search and Bayesian optimization over the same hyperparameter space. 
+% The agent is evaluated in two regimes — restricted to editing a config file, and free to modify the full training code — to disentangle gains from search strategy versus code-editing freedom. 
+% The intended contribution is not a winner but a calibrated answer to whether, and under what budget regime, agentic search is actually competitive with classical HPO on noisy RL objectives.
 
 % % Lennart Roestel
 % \subsubsection{Differentiable Bayesian Filters}
