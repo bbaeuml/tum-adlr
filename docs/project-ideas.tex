@@ -30,9 +30,8 @@ This is facilitated by a dedicated part of the neural network predicting the cur
 We want to find the possible performance improvements and the limits of this approach in a simulation-only setting.
 % After the initial setup and an analysis of the capabilities, changes to the training, architecture, and parameterization can be investigated with respect to the overall performance.
 \begin{itemize}
-  \item Define and set up a training environment with your tutor.
-  For example, we are interested in generating a robust in-hand manipulation policy.
-  Also, we will decide whether you want to use an existing RL framework or implement the algorithm from scratch, depending on your focus.
+  \item Define and set up a simple training environment.
+  \item Implement the algorithm from scratch
   \item Analyze the performance gains as well as the limits of the Rapid Motor Adapton algorithm.
   \item Expand the algorithm to tackle these identified problems, for example, a different encoder architecture or changed loss functions, depending on your identified problems and feedback from the tutor.
 \end{itemize}
@@ -521,8 +520,8 @@ Model-based reinforcement learning promises improved sample efficiency by learni
 \subsubsection{Casting Sim2Real as Meta-Reinforcement Learning}
 The $RL^2$ algorithm evaluated by \citet{Yu2017} promise sample-efficient meta-reinforcement learning, meaning that the algorithm can quickly adapt to new unseen tasks. We would like to use the capabilities to handle heavily randomized environments occurring in simulations that are designed to allow a real-world transfer of the policy.
 \begin{itemize}
-  \item Find a suitable benchmark environment.
-  \item Implement the algorithm on top of an existing basic RL algorithm and compare the performance.
+  \item Find a simple suitable benchmark environment.
+  \item Implement the algorithm from scratch and compare the performance.
   % \item Extend it to allow a continuous task distribution during training.
   \item Examine the reward for constant as well as dynamically changing environments.
   \item Analyze different loss terms and evaluate the performance.
