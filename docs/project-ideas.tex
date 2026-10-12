@@ -25,7 +25,7 @@ After registering your team (including a draft proposal), you will discuss the e
 %\pagebreak
 % Leon
 \subsubsection{Investigating Rapid Motor Adaption}
-\citet{qi2022inhand} use Rapid Motor Adaption to train a robust in-hand manipulation policy in simulation, which can be deployed on the actual system without any further adaptation.
+\citet{Qi2022inhand} use Rapid Motor Adaption to train a robust in-hand manipulation policy in simulation, which can be deployed on the actual system without any further adaptation.
 This is facilitated by a dedicated part of the neural network predicting the current world in an end-to-end learned latent space to make the policy more robust - first conditioned on a set of available states in simulation, later on only those measurable when deployed on the real system.
 We want to find the possible performance improvements and the limits of this approach in a simulation-only setting.
 % After the initial setup and an analysis of the capabilities, changes to the training, architecture, and parameterization can be investigated with respect to the overall performance.
@@ -37,7 +37,7 @@ We want to find the possible performance improvements and the limits of this app
 \end{itemize}
 
 % \subsubsection{Meta Reinforcement Learning for Sim-to-real Domain Adaptation}
-% \citet{Arndt19} show that the sim2real problem can be tackled by applying Meta RL to learned low dimensional projections of the action space.
+% \citet{Arndt2020} show that the sim2real problem can be tackled by applying Meta RL to learned low dimensional projections of the action space.
 % \begin{itemize}
 %  \item Implement the algorithm
 %  \item Change the experimental setup to a sim2sim setting because no real robot is available (i.e., try to adapt one simulation to a given one with unknown parameters).
@@ -45,7 +45,7 @@ We want to find the possible performance improvements and the limits of this app
 % \end{itemize}
 
 % \subsubsection{Solving Complex Sparse Reinforcement Learning Tasks}
-% When defining Reinforcement Learning Tasks for robots, it is often desirable to stick to sparse rewards in order to avoid reward shaping. Not only does is it ease the setup since a task can be solely defined by its final desired outcome, but the optimal policy can be found "outside of the box" without a human prior given through the reward function. Unfortunately, in big state spaces random exploration is not able to find these sparse success signals. Therefore, \citet{riedmiller2018} introduce SAC-X.
+% When defining Reinforcement Learning Tasks for robots, it is often desirable to stick to sparse rewards in order to avoid reward shaping. Not only does is it ease the setup since a task can be solely defined by its final desired outcome, but the optimal policy can be found "outside of the box" without a human prior given through the reward function. Unfortunately, in big state spaces random exploration is not able to find these sparse success signals. Therefore, \citet{Riedmiller2018} introduce SAC-X.
 % \begin{itemize}
 %   \item Implement the algorithm
 %   \item Investigate how the presented method can be used for finer and more dexterous object manipulation e.g. with a hand.
@@ -56,8 +56,8 @@ We want to find the possible performance improvements and the limits of this app
 % Lennart
 % \subsubsection{Non-sequential Reinforcement Learning for Hard Exploration Problems}
 % A way of overcoming the problems associated with sparse rewards in Reinforcement Learning is to utilize ``expert demonstrations'' in promising regions of the state space.
-% \citet{bauza2024demostart} use (suboptimal) expert demonstrations for providing a curriculum of interesting states to the agent during learning.
-% In the absence of human experts, \citet{blau2021learning} propose to first generate successful trajectories by RRT-based planning algorithms and then initialize a policy using that data. 
+% \citet{Bauza2025demostart} use (suboptimal) expert demonstrations for providing a curriculum of interesting states to the agent during learning.
+% In the absence of human experts, \citet{Blau2021learning} propose to first generate successful trajectories by RRT-based planning algorithms and then initialize a policy using that data. 
 
 % Based on one of the above papers, you could e.g. study one of the following problems (or come up with your own ideas):
 % \begin{itemize}
@@ -74,7 +74,7 @@ With tactile exploration (i.e., slowly moving the robotic hand until the fingers
 This tactile information is usually very sparse. The idea is to use a learning-based approach to complete the full shape from this sparse contact information.
 
 \begin{itemize}
-  \item Start in 2D: Train a neural network to complete a 2D shape based on a few given points similar to \citet{watkins2019multi} did in the more complex 3D case.
+  \item Start in 2D: Train a neural network to complete a 2D shape based on a few given points similar to \citet{Watkins2019multi} did in the more complex 3D case.
   \item Develop a strategy that determines the best way for the next tactile exploration based on previous points using reinforcement learning.
   \item Bring it into 3D: Complete 3D shapes in the same way as done for 2D
   \item Combine tactile and visual depth information to infer the object's shape
@@ -87,9 +87,9 @@ One way to find grasps for a given object is to train a grasp success classifier
 Specifically, one differentiates through the grasp score prediction network to optimize the grasp parameters (input to the network) such that the grasp score (output of the network) gets maximized.
 
 \begin{itemize}
-  \item A dataset of multi-finger grasps will be provided~\cite{winkelbauer2022}
+  \item A dataset of multi-finger grasps will be provided~\cite{Winkelbauer2022}
   \item Preprocess the data
-  \item Train a grasp score prediction network~\cite{van2020learning}
+  \item Train a grasp score prediction network~\cite{Van2020learning}
   \item Implement an optimization procedure to perform grasping inference
   \item Optional: Train a small generative grasping network to provide better starting points for the optimization
 \end{itemize}
@@ -98,13 +98,13 @@ Specifically, one differentiates through the grasp score prediction network to o
 \subsubsection{Generative Networks for Robot Grasping}
 Generative neural networks can be used to directly generate stable grasps for a given unknown object.
 For a parallel jaw gripper, the network learns a distribution over 6D end effector poses conditioned on the observed object.
-For this application, different architectures are possible: Variational Autoencoder, Generative Adversarial Networks, diffusion-based architectures~\cite{ho2020denoising} and autoregressive architectures~\cite{winkelbauer2022}.
+For this application, different architectures are possible: Variational Autoencoder, Generative Adversarial Networks, diffusion-based architectures~\cite{Ho2020denoising} and autoregressive architectures~\cite{Winkelbauer2022}.
 The goal of this project is to apply one of the generative architectures to the problem of grasp generation.
 \begin{itemize}
-  \item For training, we make use of the existing public training dataset Acronym~\cite{acronym2020}
+  \item For training, we make use of the existing public training dataset Acronym~\cite{Acronym2021}
   \item Preprocess the data
   \item Adapt the generative architecture for robotic grasping
-  \item Optional: Extend the approach to generating grasps constraint to lie on a specified part of the object~\cite{lundell2023constrained}
+  \item Optional: Extend the approach to generating grasps constraint to lie on a specified part of the object~\cite{Lundell2023constrained}
 \end{itemize}
 
 
@@ -113,7 +113,7 @@ The goal of this project is to apply one of the generative architectures to the 
 Investigate deep learning model capabilities to detect what was learned and what is a novel observation.
 Most deep learning models trained with maximum a posteriori only output a point estimate and not a model uncertainty.
 To put it simply: they cannot know, what knowledge they have. 
-The goal of the project is to evaluate Bayesian deep learning methods from the lecture and so called normalizing flows \cite{mackowiak_generative_2021} in this context.
+The goal of the project is to evaluate Bayesian deep learning methods from the lecture and so called normalizing flows \cite{Mackowiak_generative_2021} in this context.
 
 \begin{itemize}
   \item You can either use a provided dataset for tactile material classification or generate your own (proprioceptive) data using a simple robotic simulation environment for the benchmark.
@@ -133,8 +133,8 @@ The goal of the project is to evaluate Bayesian deep learning methods from the l
 
 % \paragraph{Option 1 - Self-Supervised Learning}
 % \begin{itemize}
-%   \item It is way easier to collect unlabeled samples than labeled. Can we learn a representation without the labels? Recent work in this direction is, e.g., a Joint Embedded Predictive Architecture (\citet{assran2023selfsupervised}).
-%   \item Instead of a Transformer model, you should start with the TacNet (CNN) architecture of \citet{Tulbure2018} and check if you can validate the claims of \citet{assran2023selfsupervised} for the spatio-temporal tactile signals. 
+%   \item It is way easier to collect unlabeled samples than labeled. Can we learn a representation without the labels? Recent work in this direction is, e.g., a Joint Embedded Predictive Architecture (\citet{Assran2023selfsupervised}).
+%   \item Instead of a Transformer model, you should start with the TacNet (CNN) architecture of \citet{Tulbure2018} and check if you can validate the claims of \citet{Assran2023selfsupervised} for the spatio-temporal tactile signals. 
 % \end{itemize}
 
 % \paragraph{Option 2 - Bayesian Deep Learning}
@@ -184,12 +184,12 @@ The goal of the project is to evaluate Bayesian deep learning methods from the l
 
 
 %\subsubsection{Exploring Munchausen Reinforcement Learning}
-%Recently, \citet{vieillard2020munchausen} proposed an appealingly simple, yet surprisingly effective extension to DQN; using the policy for bootstrapping. Exploring the implications of this idea, projects could for example address a (sub) set of the following problems:
+%Recently, \citet{Vieillard2020munchausen} proposed an appealingly simple, yet surprisingly effective extension to DQN; using the policy for bootstrapping. Exploring the implications of this idea, projects could for example address a (sub) set of the following problems:
 %
 %\begin{itemize}
 %  \item Extend the idea to continuous action spaces (e.g. by augmenting SAC).
 %  \item Apply Munchausen RL to robotic tasks and see what it brings to the table. Does it improve the baselines? If yes, under what circumstances? If no, investigate the causes.
-%  \item Come up with adaptive strategies to deal with the additional hyperparameters introduced by \citet{vieillard2020munchausen}.
+%  \item Come up with adaptive strategies to deal with the additional hyperparameters introduced by \citet{Vieillard2020munchausen}.
 %\end{itemize}
 
 
@@ -199,7 +199,7 @@ The goal of the project is to evaluate Bayesian deep learning methods from the l
 % Similarly, RL agents can be pretrained in an environment without an extrinsic reward signal and later be adapted to specific tasks.
 % \citet{Laskin2021} compare many different approaches on a unified benchmark (\href{https://github.com/rll-research/url_benchmark}{URLB}).
 % \begin{itemize}
-%   \item Skim recent literature on unsupervised RL (e.g.~\cite{Hafner2023, Laskin2022, Li2023InternalReward})
+%   \item Skim recent literature on unsupervised RL (e.g.~\cite{Hafner2025, Laskin2022, Li2023InternalReward})
 %   \item Choose one/come up with your own ideas or modifications.
 %   \item Implement and compare them with the results reported by URLB.
 % \end{itemize}
@@ -211,7 +211,7 @@ The goal of the project is to evaluate Bayesian deep learning methods from the l
 % Leon
 \subsubsection{PrivilegedDreamer: Learning to Estimate Unknown Parameterizations on the Fly}
 When deployed into the real world, agents trained in simulation have to deal with uncertainties due to unmodeled effects and unknown parameters.
-\citet{Byrd2025} are analyzing how the groundbreaking work for the DreamerV2 world model \cite{Hafner2022} can be extended to deal with the uncertainties of Hidden Parameter MDPs.
+\citet{Byrd2025} are analyzing how the groundbreaking work for the DreamerV2 world model \cite{Hafner2021} can be extended to deal with the uncertainties of Hidden Parameter MDPs.
 After reimplementing and testing the proposed algorithm, it is interesting to
 \begin{itemize}
   \item Analyze its limits
@@ -249,7 +249,7 @@ The goal is to extend the idea to the full motion planning problem of a robot (a
 % LennardS
 \subsubsection{Planning in Latent Spaces}
 Optimization-based path planners iteratively refine joint angle sequences to generate short, collision-free paths. However, joint angles and robot geometry live in two fundamentally different geometries: the shortest path in configuration space rarely translates to natural motions in the workspace.
-Based on the work by Hung et al. \cite{hung2022reaching}, you implement Variational Autoencoders (VAEs) to learn a latent manifold that integrates kinematics, collision avoidance, and custom optimality criteria. We provide simulation and data-generation tools to support your work.
+Based on the work by Hung et al. \cite{Hung2022reaching}, you implement Variational Autoencoders (VAEs) to learn a latent manifold that integrates kinematics, collision avoidance, and custom optimality criteria. We provide simulation and data-generation tools to support your work.
 \begin{itemize}
     \item Develop a self-supervised pipeline to train a VAE. Would other generative models be more suitable?
     \item Apply Activation Maximization for planning and inverse kinematics.
@@ -258,7 +258,7 @@ Based on the work by Hung et al. \cite{hung2022reaching}, you implement Variatio
 
 
 %\subsubsection{Learning to Fly Beyond RL – Analytic Policy Gradient}
-%Fixed-wing VTOL (Vertical Take-Off and Landing) drones combine the ability to take off vertically and exploit lift for efficient cross-country flight. The disadvantage is more complicated control. Learned controllers are a promising solution here. \citet{wiedemann2023training} presents a method to directly exploit the differentiability of models and thus skip the detour via reinforcement learning.
+%Fixed-wing VTOL (Vertical Take-Off and Landing) drones combine the ability to take off vertically and exploit lift for efficient cross-country flight. The disadvantage is more complicated control. Learned controllers are a promising solution here. \citet{Wiedemann2023training} presents a method to directly exploit the differentiability of models and thus skip the detour via reinforcement learning.
 %\begin{itemize}
 %  \item Setting up the learning pipeline with a simple quadrotor model (simple control).
 %  \item Replace the policy with a PID controller. Exploit the pipeline for automatic parameter tuning.
@@ -297,7 +297,7 @@ Based on the work by Hung et al. \cite{hung2022reaching}, you implement Variatio
 % \subsubsection{Recurrent Off-Policy Reinforcement Learning in POMDPs}
 % In partially observable Markov decision processes (POMDPs), an RL agent has to be equipped with some sort of memory in order to be able to act optimally.
 % A well-known method addressing this issue is to encode the history of observations by recurrent neural networks (RNNs).
-% For example, for the class of off-policy methods, \citet{heess2015} combine RNNs with the DDPG algorithm, and \citet{kapturowski2018} study the interplay of DQN-based algorithms with recurrent experience replay.
+% For example, for the class of off-policy methods, \citet{Heess2015} combine RNNs with the DDPG algorithm, and \citet{Kapturowski2019} study the interplay of DQN-based algorithms with recurrent experience replay.
 % Based on this work:
 % \begin{itemize}
 %   \item Your tutor will provide you with an environment that requires the use of memory to be solved optimally.
@@ -309,7 +309,7 @@ Based on the work by Hung et al. \cite{hung2022reaching}, you implement Variatio
 % \subsubsection{How to Get Perfect Policies via Reinforcement Learning}
 % Achieving nines of task success (i.e. going from 90\% to 99\% to 99.9\% success rate and so on) is an open problem in deep reinforcement learning.
 % Even on continuous control tasks where optimal controllers provably exist, standard deep RL algorithms frequently plateau below perfect performance, or become unstable during extended training.
-% Recent work has identified potential root causes as optimization pathologies such as plasticity loss or unbounded weight/feature norm growth \citet{lee2025hyperspherical}. 
+% Recent work has identified potential root causes as optimization pathologies such as plasticity loss or unbounded weight/feature norm growth \citet{Lee2025hyperspherical}. 
 % This project selects a set of benchmark tasks known to be perfectly solvable in theory (e.g. CartPole-Swingup, Pendulum), so that any performance gap can be unambiguously attributed to optimization failure. 
 % The student systematically combines known interventions and tracks diagnostic metrics (feature rank, dormant neuron fraction, weight norm growth) to identify a minimal recipe that reliably closes the gap to optimal performance across seeds.
 % The goal is either a concrete configuration that achieves near-100\% success, or evidence that current interventions remain insufficient — pointing to open failure modes.
@@ -317,7 +317,7 @@ Based on the work by Hung et al. \cite{hung2022reaching}, you implement Variatio
 % Lennart
 
 % \subsubsection{Agentic vs. Classical Hyperparameter Search for Deep RL}
-% Karpathy's autoresearch~\cite{karpathy2026autoresearch} suggests frontier coding agents can drive overnight ML research loops, but it offers no controlled comparison against established hyperparameter optimization methods — this project supplies one in the RL setting, where hyperparameter sensitivity and high seed variance make the comparison both meaningful and methodologically demanding. 
+% Karpathy's autoresearch~\cite{Karpathy2026autoresearch} suggests frontier coding agents can drive overnight ML research loops, but it offers no controlled comparison against established hyperparameter optimization methods — this project supplies one in the RL setting, where hyperparameter sensitivity and high seed variance make the comparison both meaningful and methodologically demanding. 
 % On a fixed RL benchmark (e.g. PPO on a small Gym suite) with identical per-trial and total compute budgets, benchmark a coding agent against random search and Bayesian optimization over the same hyperparameter space. 
 % The agent is evaluated in two regimes — restricted to editing a config file, and free to modify the full training code — to disentangle gains from search strategy versus code-editing freedom. 
 % The intended contribution is not a winner but a calibrated answer to whether, and under what budget regime, agentic search is actually competitive with classical HPO on noisy RL objectives.
@@ -325,7 +325,7 @@ Based on the work by Hung et al. \cite{hung2022reaching}, you implement Variatio
 % % Lennart Roestel
 % \subsubsection{Differentiable Bayesian Filters}
 % \textit{*Prior knowledge of Bayesian filters highly recommended*}\\
-% Differentiable filters are a promising approach for combining the algorithmic structure of Bayesian filter techniques with the power of learning-based methods (for an overview of existing methods, see, e.g., \citet{kloss2021train}).
+% Differentiable filters are a promising approach for combining the algorithmic structure of Bayesian filter techniques with the power of learning-based methods (for an overview of existing methods, see, e.g., \citet{Kloss2021train}).
 % Importantly, differentiable filters offer a systematic way of dealing with aleatoric uncertainty in state estimation problems.
 % In this project you will:
 % \begin{itemize}
@@ -366,28 +366,28 @@ Based on the work by Hung et al. \cite{hung2022reaching}, you implement Variatio
 
 % % Johannes Pitz
 % \subsubsection{Comparing Methods for Uncertainty Estimation}
-% Interesting methods include MC-Dropoout \citet{Gal2016}, Bootstrapping \citet{Osband2018}, and Normalizing Flows \citet{louizos2017multiplicative}. These methods could be compared in vastly different settings.
+% Interesting methods include MC-Dropoout \citet{Gal2016}, Bootstrapping \citet{Osband2018}, and Normalizing Flows \citet{Louizos2017multiplicative}. These methods could be compared in vastly different settings.
 % \begin{itemize}
 %   \item Investigate how the uncertainty estimation changes during the training process (relevant to RL since we generally don’t update the networks until convergence before collecting more data).
-%   \item Investigate which methods are best suited for active learning in the framework proposed by \citet{gal2017active}.
-%   \item Investigate which methods perform best for DQNs in simple environments similar (\citet{BSuit2020}, \citet{touati2018randomized}).
+%   \item Investigate which methods are best suited for active learning in the framework proposed by \citet{Gal2017active}.
+%   \item Investigate which methods perform best for DQNs in simple environments similar (\citet{BSuit2020}, \citet{Touati2019randomized}).
 %   \item Come up with your own ideas.
 % \end{itemize}
 
 % % Johannes Pitz
 % \subsubsection{Offline Datasets for Reinforcement Learning}
-% Offline/Batch RL (learning without interacting with the environment) has recently gained more attention, e.g. \citet{nair2020}, \citet{AWOpt2021}. \\
+% Offline/Batch RL (learning without interacting with the environment) has recently gained more attention, e.g. \citet{Nair2020}, \citet{AWOpt2021}. \\
 % Available datasets: \url{github.com/rail-berkeley/d4rl}, \url{github.com/deepmind/deepmind-research/tree/master/rl_unplugged}.
 % \begin{itemize}
 %   \item Compare different Batch RL algorithms.
 %   \item Test new environments.
 %   \item Benchmark against online algorithms.
 % \end{itemize}
-% % \citet{Agarwal2019},
+% % \citet{Agarwal2020},
 
 % Johannes Pitz
 \subsubsection{Geometric Representations in Reinforcement Learning}
-Note: Requires previous experience with GNNs \cite{kipf2016semisupervised} and ideally with pytorch-geometric (\href{https://github.com/pyg-team/pytorch_geometric}{link}).
+Note: Requires previous experience with GNNs \cite{Kipf2017semisupervised} and ideally with pytorch-geometric (\href{https://github.com/pyg-team/pytorch_geometric}{link}).
 \begin{itemize}
   \item Similar to \citet{Wang2018nervenet}. Modify MuJoCo environments (Walker, HalfCheetah, Ant, Humanoid) such that the observations contain a graph representing the robot.
   \item Based on the three-dimensional structure of the robots, design message passing network(s) in addition or instead of the MLP for value/Q function and policy in standard algorithms like PPO \citet{Schulman2017} or SAC \citet{Haarnoja2018a}.
@@ -408,7 +408,7 @@ Note: Requires previous experience with GNNs \cite{kipf2016semisupervised} and i
 % \subsubsection{Diffusion Policies}
 % Diffusion-based architectures have shown exciting results in image generation.
 % Recently, researchers started to apply them to policy learning. 
-% % ~\cite{ho2020denoising}
+% % ~\cite{Ho2020denoising}
 % \citet{Chi2023DiffusionPolicy} show promising imitation learning results with both vision- and state-based policies.
 % \begin{itemize}
 %   \item Apply the diffusion policy~\cite{Chi2023DiffusionPolicy} to simple benchmark environments with expert offline data (\href{https://github.com/Farama-Foundation/Minari}{link}).
@@ -422,7 +422,7 @@ Note: Requires previous experience with GNNs \cite{kipf2016semisupervised} and i
 % Johannes Pitz
 \subsubsection{Neural Network-based World Models}
 
-Model-based reinforcement learning promises improved sample efficiency by learning a predictive model of the environment, commonly referred to as a world model. However, accurately capturing long-horizon dynamics in stochastic robotic systems remains a key challenge. In this project, we aim to investigate autoregressive world model training, based on the work of \citet{li2025robotic}. You could, for example:
+Model-based reinforcement learning promises improved sample efficiency by learning a predictive model of the environment, commonly referred to as a world model. However, accurately capturing long-horizon dynamics in stochastic robotic systems remains a key challenge. In this project, we aim to investigate autoregressive world model training, based on the work of \citet{Li2025robotic}. You could, for example:
 
 \begin{itemize}
   \item Reproduce the results from the paper and evaluate the method on additional environments.
@@ -432,7 +432,7 @@ Model-based reinforcement learning promises improved sample efficiency by learni
 
 % Leon
 \subsubsection{Casting Sim2Real as Meta-Reinforcement Learning}
-The $RL^2$ algorithm evaluated by \citet{Yu2017} promise sample-efficient meta-reinforcement learning, meaning that the algorithm can quickly adapt to new unseen tasks. We would like to use the capabilities to handle heavily randomized environments occurring in simulations that are designed to allow a real-world transfer of the policy.
+The $RL^2$ algorithm evaluated by \citet{Yu2019} promise sample-efficient meta-reinforcement learning, meaning that the algorithm can quickly adapt to new unseen tasks. We would like to use the capabilities to handle heavily randomized environments occurring in simulations that are designed to allow a real-world transfer of the policy.
 \begin{itemize}
   \item Find a simple suitable benchmark environment.
   \item Implement the algorithm from scratch and compare the performance.
@@ -480,7 +480,7 @@ Explore those questions on simple environments (\href{https://gymnasium.farama.o
 
 % % Johannes Pitz
 % \subsubsection{Procgen Benchmark}
-% Implement and experiment with different agents on this procedurally-generated benchmark \citet{procgen2020}.
+% Implement and experiment with different agents on this procedurally-generated benchmark \citet{Procgen2020}.
 % You can compare your results with other submissions on the leaderboard (\url{github.com/openai/procgen}).
 
 
@@ -512,8 +512,8 @@ This project aims to investigate the limitations of simple MPC-based approaches 
 Efficient representations of 3D geometries are crucial for many robotic related task. 
 For example, in-hand manipulation or grasping can be conditioned on the geometry of the object. 
 Another task is tactile shape detection, where the geometry of an unknown object should be determined. 
-\citet{chou2023diffusion} use a variational auto-encoder to find a latent parametrization of 3D geometries using an implicit surface representation.
-\citet{luo2021diffusion} find a latent representation by training a point cloud diffusion model conditioned on a latent code generated by an encoder.
+\citet{Chou2023diffusion} use a variational auto-encoder to find a latent parametrization of 3D geometries using an implicit surface representation.
+\citet{Luo2021diffusion} find a latent representation by training a point cloud diffusion model conditioned on a latent code generated by an encoder.
 \begin{itemize}
   \item Start off with a simple 3D data set (e.g. single category of Shapenet)
   \item Implement an auto-encoder architecture to find a latent representation of shapes.
@@ -530,13 +530,13 @@ Another task is tactile shape detection, where the geometry of an unknown object
 Tactile sensing is crucial for fine manipulation with robotic hands. 
 Modeling a tactile skin sensor, however, requires soft contacts to capture the softness of the fingers. 
 This is computationally expensive and, hence, inefficient when used together with reinforcement learning. 
-\citet{narang2021sim} train a neural network to map basic contact information such as the contact point and force to the deformation and the sensor response.
-Our sensor model \cite{kasolowsky2024fine} includes an expensive raycast operation and an equilibrium search that slow down the simulation. 
+\citet{Narang2021sim} train a neural network to map basic contact information such as the contact point and force to the deformation and the sensor response.
+Our sensor model \cite{Kasolowsky2024fine} includes an expensive raycast operation and an equilibrium search that slow down the simulation. 
 This could be mitigated by learning the sensor model beforehand.
 \begin{itemize}
   \item Familiarize yourself with our sensor model (code will be provided).
   \item Think of an efficient representation of the local geometry.
-  For instance, in \citet{zobeidi2021deep} they learn a directional distance function that could replace the raycasting.
+  For instance, in \citet{Zobeidi2024deep} they learn a directional distance function that could replace the raycasting.
   \item Learn the mapping for the correct deformation. This can either be done in an end-to-end fashion or starting from the raycast that provides the local geometry.
 \end{itemize}
 %\subsubsection{Policy Adaptation during Deployment}
@@ -548,10 +548,10 @@ This could be mitigated by learning the sensor model beforehand.
 
 % \subsubsection{NeRF based Kinematic Calibration}
 % Neuronal radiance fields are quite popular these days in the computer vision community.
-% While they are often used for novel view synthesis, to create impossible camera effects with real world footage, they also provide a new way to calibrate camera extrinsics and intrinsics \citet{lin2021barf, Sucar:etal:ICCV2021, wang2021nerfmm, SCNeRF2021}.
+% While they are often used for novel view synthesis, to create impossible camera effects with real world footage, they also provide a new way to calibrate camera extrinsics and intrinsics \citet{Lin2021barf, Sucar:etal:ICCV2021, Wang2021nerfmm, SCNeRF2021}.
 % This is possible because the extrinsics and intrinsics can be trained together with the model.
 
-% We still require tracking of visual markers to calibrate the kinematic of a robot (see the work of \citet{Birbach2014} as an example).
+% We still require tracking of visual markers to calibrate the kinematic of a robot (see the work of \citet{Birbach2015} as an example).
 % However, implicit neuronal scene representations might enable us to learn the robot's kinematic end-to-end.
 
 % \begin{itemize}
@@ -571,7 +571,7 @@ This could be mitigated by learning the sensor model beforehand.
 
 
 %\subsubsection{Generalization in Environments with Continuous Action Spaces}
-%\citet{igl2019} highlighted improvements to boost generalization performance of RL algorithms in maze-like environments. Investigate how these tweaks can be applied to more physics-inspired tasks including domain randomization and continuous action spaces.
+%\citet{Igl2019} highlighted improvements to boost generalization performance of RL algorithms in maze-like environments. Investigate how these tweaks can be applied to more physics-inspired tasks including domain randomization and continuous action spaces.
 
 
 \bibliographystyle{unsrtnat}
