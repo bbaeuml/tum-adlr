@@ -221,120 +221,41 @@ After reimplementing and testing the proposed algorithm, it is interesting to
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%
-% Johannes Tenhumberg
-\subsubsection{Learning the Inverse Problem}
-Look at the possibilities for representing inverse problems with neural networks.
-~\citet{Ardizzone2018inverse} compare different flavors of GANs, VAEs and INN(theirs) for inverse problems in general.
-Extend their work into the robotic context, with more complex kinematics or sensor models.
-For the robot kinematic we have objective metrics to describe how well the generation task was performed.
-How can we use this knowledge to improve the training?
-\begin{itemize}
-  \item What is the best approach to represent the high dimensional nullspaces for complex robot kinematics?
-  \item Given some contact measurement, can we compute a posterior of the robot state? 
-  \item ~\citet{Lembono2021GAN} use an ensemble of GANs to reduce the mode collapse.
-        What other options do we have to improve the generative model? 
-        How to measure the performance if the real distribution is not known?
-
-\end{itemize}
-
-
-% Johannes Tenhumberg
-\subsubsection{Coverage Path Planning}
-For search and rescue missions (or vacuum cleaners), exploring the environment quickly and efficiently is vital. 
-The goal of coverage path planning~\cite{Jonnarth2023lcoverage} is to navigate collision-free in a (possibly unknown) map and visit all unseen regions. 
-\begin{itemize}
-	\item Build a simple test environment; start with point robot in 2D.
-	\item Formulate the objective: how do we measure and represent good coverage?
-	\item Add more realism by including a sensor model (e.g., avalanche beacon). 
-    \item Add the kinematics to the problem and explore with a robotic arm~\cite{Meli2025RobotExploration}.  
-\end{itemize}
-
-
-% Johannes Tenhumberg
+% Motion Planning
+% JohannesT
 \subsubsection{Self-Supervised Learning for Robot Motion Planning}
-In Optimization-based Motion Planning, one formulates the problem of moving collision-free from A to B as 
-finding the minimum of an objective function. 
-We can use this objective directly to train a neural network without needing expensive data generation. 
-This was already demonstrated to solve the Inverse Kinematics of a robot ~\cite{Tenhumberg2023ik}. 
-The goal is to extend the idea to the full motion planning problem (a library to compute the objectives is provided).
+In optimization-based motion planning, the problem of moving collision-free from A to B is formulated as finding the minimum of an objective function.
+This objective can be used directly to train a neural network, without expensive data generation~\cite{Pandy2021unsupervised} 
+The goal is to extend the idea to the full motion planning problem of a robot (a library to compute the objectives is provided).
 \begin{itemize}
-	\item Investigate the different aspects of motion planning and train individual networks for self-collision, collision with the environment, dynamics, ...  
-	\item Combine the various terms into the full motion planning problem.
-	\item Replace the default Gradient Descent to update the network weights with a constrained-based optimizer to ensure the feasibility of the predictions.
+  \item Investigate the different aspects of motion planning and train individual networks for self-collision, collision with the environment, dynamics, \dots
+  \item Combine the various terms into the full motion planning problem.
+  \item Replace the default gradient descent for updating the network weights with a constraint-based optimizer to ensure the feasibility of the predictions.
 \end{itemize}
 
-
+% JohannesT
 \subsubsection{Learning Robot and Environment Representations}
-    A crucial aspect when using learning-based techniques in robotics is the representation and encoding of the relevant aspects of the problem.
-    In the context of collision avoidance, the robot itself and the environment with different obstacles need to be modeled. 
-The latter is especially relevant when considering dynamic settings with rapid changes.  
-The goal is to explore ONE promising representation and analyze its potential for robot motion planning.
-\begin{itemize}
-	\item Learn convex decomposition of arbitrary maps~\cite{Deng2020cvxnet}.
-	\item Predict the Swept Volume of robot motions~\cite{Baxter2020SweptVolume}.
-	\item Build a robot-centered signed distance field~\cite{Liu2023linkSDF}.
-\end{itemize}
+    How the robot and its surroundings are represented largely determines what a motion planner can do.
+    Classical geometric primitives, distance fields, and learned implicit models each trade off accuracy, query speed, and differentiability.
+    The goal of this project is to take \emph{one} promising representation, examine it closely, and assess its potential for robot motion planning.
+    \begin{itemize}
+        \item Learn a distance field in configuration space from collision labels~\cite{Zheng2026cosdf}.
+        %\item Learn a convex decomposition of arbitrary maps~\cite{Deng2020cvxnet}.
+        \item Predict the swept volume of robot motions~\cite{Baxter2020SweptVolume}.
+        \item Build a robot-centered signed distance field~\cite{Liu2023linkSDF}.
+    \end{itemize}
 
 
-% Johannes Tenhumberg
-%\subsubsection{Learning to Optimize Motion Planning}
-%Explore the ideas proposed by "Learning to Optimize" ~\citet{LiM16b} in the context of optimization based motion planning \citet{Zucker2013}.
-%Can Reinforcement Learning guide an optimizer to speed up robotic path planning?
-%How does it relate to the approach of "Unsupervised Path Regression Networks" ~\citet{Pandy2020}.
-%Can we combine those ideas?
-%
-%\begin{itemize}
-%  \item Set up an optimizer for a simple robot (with help from the tutor).
-%  \item Test ideas to guide the optimization problem of motion planning.
-%  \item What are advantages of this hybrid approach over using RL directly on motion planning?
-%\end{itemize}
-
-% Johannes Tenhumberg
-%\subsubsection{Motion Planning with Diffusion}
-%Look into generative models for robotic motion planning based on the work by \citet{Janner2022diffusionPlanning}.
-%The core of their approach lies in a diffusion probabilistic model that plans by iteratively denoising trajectories.
-%\begin{itemize}
-%  \item Use a simple 2D robot to get familiar with the diffusion approach in the robotic context.
-%  \item Include the changing environment as a central part of the planning.
-%  \item Extend the framework to more complex robots.
-%  \item Alternatively, the Inverse Kinematics, with its inherent ambiguity, is a second promising testbed for the diffusion models. 
-%\end{itemize}
-
-% Johannes Tenhumberg
-%\subsubsection{Harnessing Reinforcement Learning for Neural Motion Planning}
-% \citet{Jurgenson2019} tackle motion planning with RL.
-% Random exploration does not always find a feasible solution for difficult cases.
-% By using RRT* to generate expert knowledge they can guide the exploration more efficiently.
-% A comparison between pure DDPG, DDPG+HER, and DDPG-MP(theirs) shows the potential of this approach.
-% \begin{itemize}
-%   \item Modify their code  for a planar robotic arm it for different robots and environments.
-%   \item Is this expert knowledge necessary or can this also be achieved with a well designed curriculum?
-%   \item Look at modern approaches to represent the environment in which the robot moves (ie. Basis Points Set ~\citet{Prokudin2019}; PointNet for Motion Planning ~\citet{Strudel2020})
-% \end{itemize}
-
-
-%
-\subsubsection{Trajectory Planning with Moving Obstacles}
-Drones not only have to plan flight paths through static environments, but also avoid collisions with dynamic objects.
-To learn such trajectories, a suitable encoding of the changing environment is crucial.
-Start with the Basis Points Set ~\cite{Prokudin2019BPS} and extend it to dynamic environments.
-Use this representation for neural motion planning ~\cite{Qureshi2021MPN}.
-\begin{itemize}
-  \item Come up with a state representation for dynamic environments.
-  \item Set up a simple 2D (and later 3D) environment in which an agent can navigate through moving obstacles.
-  \item Use RL to plan optimal trajectories in this environment.
-  \item Optional: Extend the method to work with uncertainties in the motion prediction of the collision objects.
-\end{itemize}
-
-% Lennard
+% LennardS
 \subsubsection{Planning in Latent Spaces}
 Optimization-based path planners iteratively refine joint angle sequences to generate short, collision-free paths. However, joint angles and robot geometry live in two fundamentally different geometries: the shortest path in configuration space rarely translates to natural motions in the workspace.
 Based on the work by Hung et al. \cite{hung2022reaching}, you implement Variational Autoencoders (VAEs) to learn a latent manifold that integrates kinematics, collision avoidance, and custom optimality criteria. We provide simulation and data-generation tools to support your work.
 \begin{itemize}
     \item Develop a self-supervised pipeline to train a VAE. Would other generative models be more suitable?
     \item Apply Activation Maximization for planning and inverse kinematics.
-    \item Encode diverse optimality criteria. Can we enfore dynamically consistent paths?
+    \item Encode diverse optimality criteria. Can we enforce dynamically consistent paths?
 \end{itemize}
+
 
 %\subsubsection{Learning to Fly Beyond RL – Analytic Policy Gradient}
 %Fixed-wing VTOL (Vertical Take-Off and Landing) drones combine the ability to take off vertically and exploit lift for efficient cross-country flight. The disadvantage is more complicated control. Learned controllers are a promising solution here. \citet{wiedemann2023training} presents a method to directly exploit the differentiability of models and thus skip the detour via reinforcement learning.
@@ -342,7 +263,6 @@ Based on the work by Hung et al. \cite{hung2022reaching}, you implement Variatio
 %  \item Setting up the learning pipeline with a simple quadrotor model (simple control).
 %  \item Replace the policy with a PID controller. Exploit the pipeline for automatic parameter tuning.
 %\end{itemize}
-
 
 %\subsubsection{Learning to Fly}
 %Fixed-wing VTOL (Vertical Take-Off and Landing) drones are highly efficient in long-range flight, but difficult to control during gusty landing phases.
