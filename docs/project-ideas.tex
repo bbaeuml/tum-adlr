@@ -109,18 +109,22 @@ The goal of this project is to apply one of the generative architectures to the 
 
 
 % Felix Kroll
+
 \subsubsection{I know, what I don't know!}
-Investigate deep learning model capabilities to detect what was learned and what is a novel observation.
+Investigate the capabilities of deep learning models in robotics to detect what was learned and what is a novel/out-of-distribution observation.
 Most deep learning models trained with maximum a posteriori only output a point estimate and not a model uncertainty.
-To put it simply: they cannot know, what knowledge they have. 
-The goal of the project is to evaluate Bayesian deep learning methods from the lecture and so called normalizing flows \cite{Mackowiak_generative_2021} in this context.
+To put it simply: they cannot know, what they don't know. 
+The goal of the project is to evaluate Bayesian deep learning methods from the lecture (\cite{Gal2016} or \cite{Blundell2015}) in the context of robotics.
 
 \begin{itemize}
-  \item You can either use a provided dataset for tactile material classification or generate your own (proprioceptive) data using a simple robotic simulation environment for the benchmark.
-  \item Implement at least two classification models or generative models depending on your benchmark (one Bayesian approximation from the lecture and one flow model).
-  \item Evaluate how well each model can detect novel observations.
-  \item How well can these models represent multiple modes in the posterior distribution.
-  \item Optional: Implement more models or think about scenarios where this feature is useful.
+  \item You can either use a provided dataset (tactile recordings for material classification) or generate your own (proprioceptive) data using a simple robotic simulation environment for your evalutation.
+  \item Start with implementing at least two Bayesian methods for training models for your evaluation.
+  \item Evaluate how well each model can detect out of distribution observations in your task.
+  \item You can explore different directions from here:
+  \begin{itemize}
+    \item Think of ways to refine the method (especially interesting for \cite{Blundell2015}).
+    \item Deploy your model in an reinforcement learning task and leverage the model uncertainty for exploration.
+  \end{itemize}
 \end{itemize}
 
 
