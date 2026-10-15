@@ -11,14 +11,14 @@ For each team we will provide at least $1000 credits in the Google Compute Engin
 
 The deliverables & deadlines are:
 @itemlist[
- @item{@bold{Team registration} (including draft proposal):  @bold{20. April 2026, 24:00}}
- @item{@bold{Full project proposal}: one page: @bold{30. April 2026, 24:00}}
- @item{@bold{Milestone presentation}: 10min talk: @bold{28. May 2026} }
- @item{@bold{Final poster session & report}: poster & four pages: @bold{end of semester}}]
+ @item{@bold{Team registration} (including draft proposal):  @bold{19. October 2026, 24:00}}
+ @item{@bold{Full project proposal}: one page: @bold{29. October 2026, 24:00}}
+ @item{@bold{Milestone presentation}: 10min talk: @bold{17. December 2026} }
+ @item{@bold{Final poster session & report}: poster & four pages: @bold{18. February 2027}}]
 
 In addition, you will have to provide the code of the project via sharing the GitHub repository with your tutor.
 
-The project will give 50% of your final grade, the other 50% are from the exam at the end of the semester. All deliverables contribute to the project grade with about 33.3% for the reports, 33.3% for the presentations and 33.3% for code quality.
+The project will give 50% of your final grade, the other 50% are from the exam at the end of the semester. All deliverables contribute to the project grade as well as the weekly sessions with the tutors.
 
 @section[#:style 'unnumbered]{Organizational}
 
